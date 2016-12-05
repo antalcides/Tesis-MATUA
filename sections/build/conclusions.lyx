@@ -1,0 +1,314 @@
+#LyX file created by tex2lyx 2.0.4
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding T1
+\font_roman charter
+\font_sans helvet
+\font_typewriter courier
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref 1
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 1
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref section
+\pdf_pdfusetitle 1
+\pdf_quoted_options "pdftex,setpagesize=true,pdfhighlight=/P,linktocpage=true,plainpages=false,linkcolor=blue,%
+anchorcolor=yellow,%
+citecolor=green,%
+menucolor=cyan,%
+pagecolor=red,%
+urlcolor=magenta"
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancyplain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+
+
+\begin_inset Argument
+status collapsed
+
+
+\begin_layout Standard
+
+Conclusions
+\end_layout
+
+\end_inset
+
+
+\series bold
+C
+\series default
+onclusions
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:conclusions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+thesis!concl@conclusions
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+lettrine
+\end_layout
+
+\end_inset
+
+[lines=4,loversize=-0.1,lraise=0.1,lhang=.2]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+T
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+he TF-map alignments can be very useful
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ to efficiently perform searches of promoter elements that might be conserved in different species. In short, the research presented here has contributed to improve the computational characterization of gene transcription regulatory regions in the following aspects:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{menumerate}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+We have designed a new family of algorithms, which are named TF-map alignments or simply meta-alignments, to detect conserved high-order configurations of functional elements that do not show discernible sequence conservation. The meta-alignment algorithm does not directly compare the primary sequences. Instead, the algorithm aligns the map of high-level elements obtained with an external mapping function over the original sequences, taking into account their position, the element class and the mapping score.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+We have generalized the pairwise meta-alignment algorithm to deal with multiple maps. We followed a progressive approach in which the multiple meta-alignment is build up in a stepwise manner: a first multiple alignment is created with the two most similar maps, and the rest of maps or groups of maps are then aligned to this initial multiple meta-alignment following a guide tree.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+We have investigated the structure and the shape of the resulting meta-alignments. We have incorporated some modifications in the basic algorithm in order to detect non-collinear configurations in the alignments without additional computational cost.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+We have successfully applied the meta-alignment algorithms on the biological problem of eukaryotical promoter characterization. First, we have manually curated a collection of orthologous transcription factor binding sites from the literature, that are experimentally verified in human, mouse, rat or chicken. Next, we have trained the meta-alignment program on a subset of well characterized human-mouse promoters, extracted from this collection. Then, we have shown the TF-map alignments are more accurate than conventional sequence alignment to distinguish pairwise gene co-expression in a large collection of microarray results.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+We have also used the meta-alignment approach to distinguish promoters from other gene regions in a set of well characterized human-rodent gene pairs and their corresponding orthologs in chicken and zebrafish. In this particular problem, the multiple meta-alignment identified correctly most orthologous promoter regions, even when comparing to protein coding regions that presented a stronger sequence conservation.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+We have comprehensively reviewed the topic of sequence alignment, specially focusing on the pioneering algorithms that have mostly contributed to the field. In addition, we have also contributed to extend our expertise in the areas of computational gene finding and promoter characterization, within the field of bioinformatics. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{menumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

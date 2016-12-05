@@ -1,0 +1,64 @@
+%%
+%% $Id: signatures.tex 11 2005-03-29 00:58:58Z jabril $
+%%
+\def\thyauthor{Ejemplo de Tesis}
+\thispagestyle{empty}
+
+%%% UPF logo
+
+\begin{figure}[!ht]
+ \begin{center}
+ %\framebox{
+  \inclogos{1.25}{1.25}{logo_ua2}
+ %} %framebox
+ \end{center}
+\end{figure}
+
+%%% Title
+\vfill%\vspace{2cm}
+
+\begin{center}
+{\avantgarboldHuge\mytitle\vfill}
+\end{center}
+
+\vfill\vspace{0.5cm}
+
+%%% Author
+
+\begin{center}
+{\avantgarboldLarge\thyauthor}\\[3cm]
+{\small\textsf
+Trabajo de grado  presentado para optar al grado Maestr\'ia en Matem\'{a}tica \\
+para la Universidad del Atl\'{a}ntico (UA)\\[2ex]
+
+Este trabajo de investigaci\'{o}n  ha sido realizada bajo la  direcci\'{o}n  de\\
+Dr. Director   \textbf{\thyadvisor}$^\dagger$ \\[2ex]
+
+$\dagger$ Departamento de Matem\'{a}tica,\\
+Universidad del Atl\'{a}ntico (UA)
+}
+
+\vspace{0.25cm}
+\hrule
+\vspace{0.25cm}
+
+{\small\textsf
+Trabajo de investigaci\'{o}n en Matem\'{a}tica,\\
+Universidad del Atl\'{a}ntico  (UA)\\[2ex]
+
+Dr. advisors:\\ DR. \textbf{\thyadvisor}$^\dagger$ \\[2ex]
+
+$\dagger$ Departamento de Matem\'{a}tica \\
+Universidad del Atl\'{a}ntico (UA)
+
+}
+
+\end{center}
+
+%%% Date
+
+\vspace{.5cm}
+
+\begin{center}
+ {\avantgar Barranquilla, \thydate}
+\end{center}

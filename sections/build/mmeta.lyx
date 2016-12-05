@@ -1,0 +1,8413 @@
+#LyX file created by tex2lyx 2.0.4
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding T1
+\font_roman charter
+\font_sans helvet
+\font_typewriter courier
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref 1
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 1
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref section
+\pdf_pdfusetitle 1
+\pdf_quoted_options "pdftex,setpagesize=true,pdfhighlight=/P,linktocpage=true,plainpages=false,linkcolor=blue,%
+anchorcolor=yellow,%
+citecolor=green,%
+menucolor=cyan,%
+pagecolor=red,%
+urlcolor=magenta"
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancyplain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Multiple Non-Collinear TF-map
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Alignment of Promoter Regions
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+
+\begin_inset Argument
+status collapsed
+
+
+\begin_layout Standard
+
+Multiple Non-Collinear TF-map Alignment
+\end_layout
+
+\end_inset
+
+
+\series bold
+M
+\series default
+ultiple Non-Collinear
+\begin_inset Newline newline
+\end_inset
+
+ TF-map Alignment
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:mma"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sectiongreen*
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Summary
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fcolorbox{blue}{verylightgrey}{
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}[][4cm][c]{0.8
+\backslash
+linewidth}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+sffamily
+\end_layout
+
+\begin_layout Standard
+
+The generalization of the pairwise TF-map alignment is presented here. First, the 
+\end_layout
+
+\begin_layout Standard
+
+formal definition of a multiple map alignment and how to compute the optimal score
+\end_layout
+
+\begin_layout Standard
+
+is provided. Next, we use a progressive approach to build up a multiple alignment in
+\end_layout
+
+\begin_layout Standard
+
+a stepwise manner. Then, we have studied how to break the non-collinearity property 
+\end_layout
+
+\begin_layout Standard
+
+inherent to the alignments produced by dynamic programming techniques. Results
+\end_layout
+
+\begin_layout Standard
+
+on biological data indicate that multiple TF-map alignments are able to locate regulatory
+\end_layout
+
+\begin_layout Standard
+
+elements in several promoters that are not conserved at sequence level.
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+[2ex] 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "90line%"
+special "none"
+height "4cm"
+height_special "none"
+status open
+
+
+\begin_layout Plain Layout
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sectiongreen
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+The need for multiple TF-map alignment
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:motiv"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% A. (MULTIPLE) SEQUENCE ALIGNMENT IS IMPORTANT
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+lettrine
+\end_layout
+
+\end_inset
+
+[lines=4,loversize=-0.1,lraise=0.1,lhang=.2]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+S
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+equence comparisons are one of the most important computational tools
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ in molecular biology. Sequences are good symbolic representations of biological molecules that encode relevant information about their structure, function and history. From the analysis of several related sequences, biologically significant facts can be inferred. For instance, genomic sequence comparisons are performed in order to identificate genes or regulatory sites across different genomes, as these functional elements tend to exhibit conservational patterns different from those observed in regions that are not functional.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%B. MULTIPLE SEQUENCE ALIGNMENT: PROGRESSIVE
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+In attempt to allow for multiple sequence comparisons, the basic dynamic programming recurrences introduced in the 1970s to align efficiently two sequences of 
+\begin_inset Formula $n$
+\end_inset
+
+ symbols in 
+\begin_inset Formula $O(n^2)$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "needleman:1970a,sellers:1974a"
+
+\end_inset
+
+, can be naturally extended for 
+\begin_inset Formula $k$
+\end_inset
+
+ sequences, with an exponential cost 
+\begin_inset Formula $O(n^k)$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "waterman:1976a"
+
+\end_inset
+
+. As this cost is unaffordable in practice, many heuristics have appeared to provide acceptable solutions with a minor cost. The most popular of them is the hierarchical or clustering method 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "feng:1987a,thompson:1994a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+This procedure, also called progressive alignment, is a greedy algorithm that runs in 
+\begin_inset Formula $O(k^2 n^2)$
+\end_inset
+
+ time. In a first step, this method performs all of the pairwise alignments to build an evolutionary tree. In a second step, an initial alignment is constructed from the two closest sequences, incorporating then the rest to the profile following the guide tree. Such a procedure does not guarantee to find the optimal solution in mathematical terms. However, the results are generally in good agreement with the biological problem of aligning correctly bases of homologous functional elements. See Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algorithms"
+
+\end_inset
+
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:msa"
+
+\end_inset
+
+ for a comprehensive review of this topic.
+\end_layout
+
+\begin_layout Standard
+
+Progressive alignment has also commonly used in the genome-wide alignment methods that perform rapid multiple genomic alignments to identify conserved biological features between distant species. Basically, these algorithms identify local similarities between two genomes that are then used as anchors to align the interleaving regions 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "delcher:1999a"
+
+\end_inset
+
+. The progressive technique is then combined with these genome pairwise aligners to build up the multiple genome alignment 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "brudno:2003a,bray:2004a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% C. THINGS ARE NOT ALWAYS CONSERVED AT THE SEQ LEVEL
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+These comparisons at the sequence level have limitations however. Although similar sequences do tend to play similar biological functions, the opposite is not necessarily true. Often similar functions are encoded in higher order sequence elements that are not necessarily conserved at the sequence level. As a result, similar functions are frequently encoded by diverse sequences which are undetectable by conventional sequence alignment methods.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% D. PROMOTERS
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Gene promoter regions are a good example. The information that governs the RNA synthesis is mostly encoded in the gene promoter, a region normally 
+\begin_inset Formula $200$
+\end_inset
+
+ to 
+\begin_inset Formula $2,000$
+\end_inset
+
+ nucleotides long upstream of the transcription start site of the gene (TSS). Transcription factors (TFs) bind to sequence specific motifs (the TF binding sites, TFBSs) within the promoters. TFBSs are 
+\begin_inset Formula $5-8$
+\end_inset
+
+ nucleotides long and one promoter region contains on the order of 
+\begin_inset Formula $10$
+\end_inset
+
+ to 
+\begin_inset Formula $50$
+\end_inset
+
+ of them 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "wray:2003a"
+
+\end_inset
+
+. Such motifs appear to be arranged in specific configurations that define the temporal and spatial transcriptional pattern program of each gene. Genes presenting similar expression patterns are assumed to share similar configurations of TFBSs in their promoters. However, TFBSs associated to the same TF are known to contain sequence substitutions, being in many cases completely different. Promoter regions of genes with similar expression pattern may not be similar at the sequence level, even though they may be co-regulated.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% E. PREVIOUS WORK
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+In the previous chapter 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, we suggested the existence of regulatory information conserved between related promoters that could not be detected at the sequence level. Let 
+\begin_inset Formula $\Sigma_{TF}$
+\end_inset
+
+ be the alphabet of TFs denoting symbols. We initially defined the process of mapping a nucleotide sequence into a sequence in 
+\begin_inset Formula $\Sigma_{TF}$
+\end_inset
+
+ (the TF-maps). Then, we developed an efficient algorithm to obtain the global pairwise alignment between two TF-maps 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+. Finally, we showed the TF-map alignments were more accurate than conventional sequence alignment to distinguish pairwise gene co-expression in a collection of microarray results 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 1: dummy mapping
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/dmapping
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:dmapping
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+TF-mapping in a simple example
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+TF-mapping in a simple example.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% F. PRESENT THIS PAPER 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+In this chapter, we present an efficient implementation of the multiple TF-map alignment based in the progressive alignment paradigm. We have introduced some modifications in the pairwise global TF-map alignment algorithm to align two clusters of TF-maps, eventually allowing non-collinear arrangements of TFBSs in the results without additional cost. Most dynamic programming global alignments rarely cope with the presence of rearrangements observed in the DNA, being only partially identified by combining global and local alignment strategies 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "brudno:2004a,darling:2004a"
+
+\end_inset
+
+. This problem is particularly relevant in the case of the regulatory regions, where non-collinear configurations of TFBSs are prone to be conserved 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "nix:2005a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% G. STRUCTURE OF THE PAPER
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+The structure of the chapter is the following: first, we briefly reviewed the concept of mapping functions and provide the formal definition of a multiple TF-map alignment. Then, we introduce the main algorithm that performs the progressive alignment of multiple TF-maps. Next, we detail the algorithm to compute the optimal pairwise alignment of two clusters of maps. Later, we define formally a non-collinear alignment, introducing some modifications in the pairwise algorithm to allow the detection of these cases. Finally, we systematically estimate the optimal parameters of the alignment to distinguish promoters from other gene regions in a set of well characterized human-rodent gene pairs and their corresponding orthologs in chicken and zebrafish. These results are compared to those obtained by conventional sequence alignment methods, showing the validness of our approach. Several particular examples are presented in which multiple TF-map alignments characterize conserved regulatory elements that are otherwise imperceptible in sequence-level comparisons.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 2: dummy real
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+,height=3cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/oneline
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/extended
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:rmapping
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+TF-mapping of the human promoter NM_015900
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+TF-mapping of the human promoter NM_015900 (
+\begin_inset Formula $500$
+\end_inset
+
+ nucleotides).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+(A) Condensed representation of the TRANSFAC predictions. (B) The same set of predictions displayed in a non-overlapping format.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Definitions            %%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sectiongreen
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Basic definitions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+Mapping a promoter sequence into a TF-map
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Let 
+\begin_inset Formula $\Sigma_{DNA}$
+\end_inset
+
+ be the alphabet of four nucleotides. Let 
+\begin_inset Formula $\Sigma_{TF}$
+\end_inset
+
+ be the alphabet of TFs denoting symbols. In a previous work 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, we defined a mapping function as a procedure to translate a promoter region 
+\begin_inset Formula $S = s_1 s_2 \ldots s_k$
+\end_inset
+
+ where each nucleotide 
+\begin_inset Formula $s_i \in \Sigma_{DNA}$
+\end_inset
+
+, into a sequence of TF-tuples 
+\begin_inset Formula $M = m_1 m_2 \ldots m_n$
+\end_inset
+
+ where each TF-tuple 
+\begin_inset Formula $m_i=<m_i^f,m_i^{p1},m_i^{p2},m_i^s>$
+\end_inset
+
+ denotes the match of a binding site for the TF 
+\begin_inset Formula $m_i^f \in \Sigma_{TF}$
+\end_inset
+
+ occurring between the position 
+\begin_inset Formula $m_i^{p1}$
+\end_inset
+
+ and the position 
+\begin_inset Formula $m_i^{p2}$
+\end_inset
+
+ over the sequence 
+\begin_inset Formula $S$
+\end_inset
+
+ with score 
+\begin_inset Formula $m_i^s$
+\end_inset
+
+. Different mapping functions can be used to obtain the translation from 
+\begin_inset Formula $S$
+\end_inset
+
+ to 
+\begin_inset Formula $M$
+\end_inset
+
+ such as a collection of weight matrices representing TFBSs (JASPAR 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "vlieghe:2006a"
+
+\end_inset
+
+, PROMO 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "farre:2003a"
+
+\end_inset
+
+ or TRANSFAC 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "matys:2006a"
+
+\end_inset
+
+). For each match over a given threshold, we register a new TF-tuple in 
+\begin_inset Formula $M$
+\end_inset
+
+ defined by the label 
+\begin_inset Formula $(m_i^f)$
+\end_inset
+
+ of the TF associated to the PWM, the positions 
+\begin_inset Formula $(m_i^{p1},m_i^{p2})$
+\end_inset
+
+ and the score 
+\begin_inset Formula $(m_i^s)$
+\end_inset
+
+ of the match (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:dmapping"
+
+\end_inset
+
+, for an example). Other mapping functions can used instead, such as pattern discovery programs that identify a set of unknown motifs conserved in several promoters (e.g. MEME 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "bailey:1994a"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+Matches are annotated at a given location irrespective of their orientation in which they occur. This translation preserves the order of 
+\begin_inset Formula $S$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+, that is if 
+\begin_inset Formula $i<j$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+ then 
+\begin_inset Formula $(m_i^{p1} < m_j^{p1})$
+\end_inset
+
+. Matches to different TFs may possibly occur at the same position, being false positives in most cases (see a real example in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:rmapping"
+
+\end_inset
+
+). We refer to the resulting sequence of TF-tuples 
+\begin_inset Formula $M$
+\end_inset
+
+ as a Transcription Factor Map, or simply a TF-map.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+Multiple alignment of TF-maps
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+alignment!mtfma@multiple TF-map alignments
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+alignment!mmeta@multiple meta-alignments
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+TF-map alignments!mmetatf@multiple TF-map alignments
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+multiple TF-map alignments
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $M_1,M_2,\ldots,M_k$
+\end_inset
+
+ be a set of TF-maps where each map is denoted as 
+\begin_inset Formula $M_i = m_{i,1} m_{i,2} \ldots m_{i,|M_i|}$
+\end_inset
+
+ and each TFBS is denoted as 
+\begin_inset Formula $m_{i,j}^f \in \Sigma_{TF}$
+\end_inset
+
+. Let 
+\begin_inset Formula $M_1^*,M_2^*,\ldots,M_k^*$
+\end_inset
+
+ be the extended set of TF-maps where each map is denoted as 
+\begin_inset Formula $M_i^* =
+m_{i,1}^* m_{i,2}^* \ldots m_{i,|M_i^*|}^*$
+\end_inset
+
+, and each TFBS is denoted as 
+\begin_inset Formula $m_{i,j}^{*f} \in \Sigma_{TF} \cup \{-\}$
+\end_inset
+
+. The symbol 
+\begin_inset Formula $'-'$
+\end_inset
+
+ indicates a gap, which can be considered as a particular TF-tuple 
+\begin_inset Formula $<'-',\cdot,\cdot,\gamma>$
+\end_inset
+
+ where the value 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ is a null value and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the penalty for introducing a gap in a column of the alignment.
+\end_layout
+
+\begin_layout Standard
+
+The alignment of 
+\begin_inset Formula $k$
+\end_inset
+
+ maps 
+\begin_inset Formula $M_1,M_2,\ldots,M_k$
+\end_inset
+
+ is then a correspondence 
+\begin_inset Formula $T$
+\end_inset
+
+, maybe empty, among the extended maps 
+\begin_inset Formula $M_1^*,M_2^*,\ldots,M_k^*$
+\end_inset
+
+ such that:
+\end_layout
+
+\begin_layout Enumerate
+
+The extended maps have the same length. 
+\end_layout
+
+\begin_layout Enumerate
+
+If the gaps are removed from each 
+\begin_inset Formula $M_i^*$
+\end_inset
+
+, we recover 
+\begin_inset Formula $M_i$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+At least one element in a column is different from a gap. 
+\end_layout
+
+\begin_layout Enumerate
+
+The elements that are aligned in a column correspond to the same TF. 
+\end_layout
+
+\begin_layout Enumerate
+
+No overlap in the primary sequence is permitted between adjacent sites in the alignment. 
+\end_layout
+
+\begin_layout Standard
+
+Note that the first three conditions define the classical multiple alignment of sequences. Last two conditions, however, introduce two new constrains that are related to the match state and the non-overlapping property, according to the notion of pairwise TF-map alignment provided in 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+The score of a multiple alignment of TF-maps
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+A multiple TF-map alignment --or simply, a multiple map alignment (MMA), in contrast to a multiple sequence alignment (MSA)-- can be also represented as a rectangular array:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fcolorbox{white}{verylightgreen}{ 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}[][][c]{0.95
+\backslash
+linewidth}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+T = 
+\backslash
+left(
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{array}{llll}
+\end_layout
+
+\begin_layout Standard
+
+m_{1,1}^* & m_{1,2}^* & 
+\backslash
+ldots & m_{1,t}^*
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+m_{2,1}^* & m_{2,2}^* & 
+\backslash
+ldots & m_{2,t}^*
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ldots & & & 
+\backslash
+ldots
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+m_{k,1}^* & m_{k,2}^* & 
+\backslash
+ldots & m_{k,t}^*
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{array}
+\backslash
+right),
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+where each column 
+\begin_inset Formula $T(i)= (m_{1,i}^*,m_{2,i}^*,\ldots,m_{k,i}^*)$
+\end_inset
+
+ is the multiple match among the TF-tuples in position 
+\begin_inset Formula $i$
+\end_inset
+
+ from 
+\begin_inset Formula $M_1^*, M_2^* \ldots M_k^*$
+\end_inset
+
+. Given the multiple alignment 
+\begin_inset Formula $T$
+\end_inset
+
+, we compute the score 
+\begin_inset Formula $s(T)$
+\end_inset
+
+ of the MMA as:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fcolorbox{white}{verylightgreen}{ 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}[][][c]{0.95
+\backslash
+linewidth}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+s(T) = 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{array}{ll}
+\end_layout
+
+\begin_layout Standard
+
+  & 
+\backslash
+alpha 
+\backslash
+sum_{i=1}^t{
+\backslash
+sum_{j=1}^k{m_{j,i}^{*s}}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+- & 
+\backslash
+lambda (g)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+- & 
+\backslash
+mu 
+\backslash
+sum_{
+\backslash
+forall i,i'}{f(m_{1,i}^{*p1}-m_{1,i'}^{*p1},m_{2,i}^{*p1} - m_{2,i'}^{*p1},
+\backslash
+ldots,m_{k,i}^{*p1}-m_{k,i'}^{*p1})}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{array}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+label{eq:scorem}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+where 
+\begin_inset Formula $\alpha,\lambda,\mu>0$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+ is the number of columns with only one element different from a gap in the MMA (unaligned elements), and 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function that measures the conservation of distance between the sites of every map in two consecutive columns (
+\begin_inset Formula $i,i'$
+\end_inset
+
+) with more than one aligned element in the MMA. That is, the score of the alignment increases with the score of the aligned elements and the penalty of the gaps (
+\begin_inset Formula $\alpha$
+\end_inset
+
+), and decreases with the number of unaligned elements (
+\begin_inset Formula $\lambda$
+\end_inset
+
+), and with the difference in the distance between adjacent aligned elements (
+\begin_inset Formula $\mu$
+\end_inset
+
+). See the previous chapter and 
+\begin_inset CommandInset citation
+LatexCommand citet
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+ for further details about the TF-map alignment parameters.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% The Algorithms         %%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sectiongreen
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+The algorithms
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+There are many possible alignments between a group of TF-maps. The optimal alignment is the one scoring the maximum among all possible alignments. In a previous work 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, we implemented a dynamic programming algorithm to obtain such an alignment efficiently for the case of two TF-maps. The optimal multiple sequence alignment problem (and therefore also the multiple alignment of maps) is, however, much more difficult, being formally a NP-complete problem 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "wang:1994a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Here, we propose to adapt the popular progressive alignment strategy to the TF-map alignment. The solutions obtained by this method are not guaranteed to be optimal. However, multiple progressive alignments usually have an underlying biological explanation 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "thompson:1994a"
+
+\end_inset
+
+. We have also introduced some changes in the basic pairwise TF-map alignment algorithm developed in 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, in order to deal now with two clusters of MMAs instead of two single TF-maps.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+Progressive MMA algorithm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+multiple TF-map alignments!progmmeta@progressive alignment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Let 
+\begin_inset Formula $(G_1 \ldots G_k)$
+\end_inset
+
+ be the initial list of 
+\begin_inset Formula $k$
+\end_inset
+
+ TF-map groups, where each group contains a single TF-map. Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the similarity matrix where 
+\begin_inset Formula $S(G_i,G_j)$
+\end_inset
+
+ denotes the similarity between the TF-map groups 
+\begin_inset Formula $G_i$
+\end_inset
+
+ and 
+\begin_inset Formula $G_j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+The progressive MMA algorithm shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mmaalg"
+
+\end_inset
+
+ builds up a multiple TF-map alignment in a stepwise manner. In a first step, all pairwise TF-map alignments are performed. The initial multiple alignment is created with the two most similar ones. Both maps are substituted for a new group that contains their alignment. The similarity between this new cluster and the rest of the TF-maps is then estimated, updating tha 
+\begin_inset Formula $S$
+\end_inset
+
+ matrix (see Implementation).
+\end_layout
+
+\begin_layout Standard
+
+In a second step, an iterative procedure selects at each round the pair of clusters that are more similar from the pool of available groups. These two groups are aligned and merged again into a new TF-map cluster, estimating the similarity to the remaining ones. At the end of the process, there is only one group that contains the progressive alignment of the input TF-maps.
+\end_layout
+
+\begin_layout Standard
+
+The cost of the progressive MMA can be expressed in terms of the number of pairwise TF-map alignments that must be computed. Let 
+\begin_inset Formula $k$
+\end_inset
+
+ be the number of maps to be aligned and 
+\begin_inset Formula $n$
+\end_inset
+
+ be the length of each map. The initial round performs 
+\begin_inset Formula $O(k^2)$
+\end_inset
+
+ pairwise alignments. Next, the progressive round performs 
+\begin_inset Formula $O(k)$
+\end_inset
+
+ alignments involving two groups. Let 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ be the cost of each pairwise operation, then the cost of the progressive alignment algorithm is 
+\begin_inset Formula $O(k^2 \cdot P(n))$
+\end_inset
+
+. The expected value of 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ is calculated in the next section.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 4: Progressive Multiple Map Alignment
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+scalebox{1}{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fcolorbox{white}{verylightgreen}{
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}[][][c]{
+\backslash
+linewidth}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{algorithmic}[5]
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+REQUIRE $G$: list of TF-map groups $(G_1 
+\backslash
+ldots G_k)$
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{ Initial Step: pairwise alignment all Vs all }
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE maxSim $
+\backslash
+leftarrow -
+\backslash
+infty $
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+FOR{$i=1$ to $k$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+FOR{$j=i+1$ to $k$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $S(G_i,G_j) 
+\backslash
+leftarrow$ ComputePairwiseSimilarity$(G_i,G_j)$;
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Select the pair with maximum similarity}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE maxSim $
+\backslash
+leftarrow$ max(maxSim,$S(G_i,G_j)$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Create a new group: estimate the similarity to others}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $G_{iSim-jSim} 
+\backslash
+leftarrow$ MergeGroups$(G_{iSim},G_{jSim})$;
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{ Progressive Step: cluster the two most similar groups }
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+WHILE{$|G| > 1$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE maxSim $
+\backslash
+leftarrow -
+\backslash
+infty $
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+FOR{$i=1$ to $|G|$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+FOR{$j=i+1$ to $|G|$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Select the pair with maximum similarity}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE maxSim $
+\backslash
+leftarrow$ max(maxSim,$S(G_i,G_j)$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Create a new group: estimate the similarity to others}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $G_{iSim-jSim} 
+\backslash
+leftarrow$ MergeGroups$(G_{iSim},G_{jSim})$;
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:mmaalg
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Progressive multiple map alignment algorithm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Progressive multiple map alignment algorithm.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsubsectionblue{
+\end_layout
+
+\end_inset
+
+Implementation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+In the progressive MMA algorithm shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mmaalg"
+
+\end_inset
+
+, the variable 
+\emph on
+maxSim
+\emph default
+ saves the maximum score so far computed at each round. The group identifiers of such a score can easily be retrieved using a supplementary pair of variables 
+\emph on
+iSim, jSim
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+
+The pairwise TF-map alignment algorithm called 
+\emph on
+ComputePairwiseSimilarity
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+ has been slightly modified to accomodate the alignment of two TF-maps groups, as explained in the next section. The optimal pairwise alignments between the input TF-maps in the initial round are saved, as they could be required during the iterative procedure.
+\end_layout
+
+\begin_layout Standard
+
+Once a new TF-map group is created from the two most similar ones, their binding sites must be merged (function 
+\emph on
+MergeGroups
+\emph default
+). The order of the TFBSs in the new group must take into account the position of the binding sites in their primary promoter sequences. In the approach here, we do not create a profile of each MMA. Instead, all of the TFBSs of each group are always available for subsequent TF-map alignments.
+\end_layout
+
+\begin_layout Standard
+
+The alignments between this new TF-map group and each one of the rest of the groups are not explicitly computed. The similarity among them is instead estimated with the WPGMA method (Weighted Pair Group Method with Arithmetic Mean) according to the previous similarity between the groups 
+\begin_inset Formula $G_{iSim}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{jSim}$
+\end_inset
+
+ to the others. If an alignment between two groups whose similarity was estimated before is identified as the most similar during the progressive step, the MMA must be explicitly computed before merging both TF-map groups.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 5: DP matrix
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.75
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/mmads
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:mmads
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+MMA algorithm: data structures and matrix
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+MMA algorithm: data structures and similarity matrix.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+The alignment of two clusters of MMAs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+multiple TF-map alignments!clusmmeta@alignment of two clusters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Let 
+\begin_inset Formula $G_x = m_{x,1} m_{x,2} \ldots m_{x,|G_x|}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_y = m_{y,1} m_{y,2} \ldots m_{y,|G_y|}$
+\end_inset
+
+ be the two most similar groups of TF-maps in the current round of the progressive alignment. Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the scoring dynamic programming matrix where 
+\begin_inset Formula $S(i,j) = S(m_{x,i},m_{y,j})$
+\end_inset
+
+ denotes the similarity of the best TF-map alignment of the groups 
+\begin_inset Formula $G_x=m_{x,1} \ldots m_{x,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_y=m_{y,1} \ldots m_{y,j}$
+\end_inset
+
+, according to the scoring function in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scorem"
+
+\end_inset
+
+. The 
+\emph on
+ComputePairwiseSimilarity
+\emph default
+ algorithm explained here is a generalization of that developed in 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+ to align two TF-maps that computes the optimal pairwise TF-map alignment between 
+\begin_inset Formula $G_x$
+\end_inset
+
+ and 
+\begin_inset Formula $G_y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+This algorithm basically searches the the maps of both groups to find matches between one site in one group and one site in the other. Once a new match is identified, the previous matches must be evaluated in order to construct the optimal alignment ending at this one (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mmads"
+
+\end_inset
+
+). Because this class of scoring matrices are highly sparse, we register the coordinates in 
+\begin_inset Formula $S$
+\end_inset
+
+ of the matches computed previously. Thus, to compute the optimal score at the cell 
+\begin_inset Formula $S(i,j)$
+\end_inset
+
+, only the non-empty cells in 
+\begin_inset Formula $S$
+\end_inset
+
+ that are visible for the current match need to be accessed. In addition, we maintain the list sorted by optimal score, so that the cell scoring the maximum value is at the beginning of the list and, in most cases, only a few nodes will need to be accessed before a critical node is reached beyond which the optimal score can not be improved 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+The number of computations 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ in this algorithm is very similar to that obtained in the conventional pairwise TF-map alignment algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+. The exact complexity of this algorithm is difficult to be studied --depending mostly on the size of the input maps and the sparsity of the resulting marix 
+\begin_inset Formula $S$
+\end_inset
+
+. An expected time cost analysis reveals that the cost function can be explained in terms of (a) a first quadratic term derived from the obligatory comparison between all of the TFBSs of both maps to detect the match cells and (b) a second quadratic term necessary to search for each match the best adjacent previous pair in the optimal TF-map alignment. In 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, we studied the contribution of using a list of non-empty cells in 
+\begin_inset Formula $S$
+\end_inset
+
+ that reduces the second component to an expected cost of 
+\begin_inset Formula $O(p \cdot n^2)$
+\end_inset
+
+, where 
+\begin_inset Formula $p$
+\end_inset
+
+ is the percentage of the matrix that is occupied. This value was estimated to be below 5% of occupancy for the pairwise TF-map promoter comparisons.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 6: ComputeSimilarity$(G_i,G_j)$
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+scalebox{1}{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fcolorbox{white}{verylightgreen}{
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}[][][c]{
+\backslash
+linewidth}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{algorithmic}[5]
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+REQUIRE $G_x,G_y$: TF-map groups, $L$: list of $<$abscissa,ordinate$>$, $L = 
+\backslash
+emptyset$ 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Calculating the element $i,j$ in $S$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+FOR{$i=0$ to $|G_x|-1$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+FOR{$j=0$ to $|G_y|-1$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+IF{factor$(m_{x,i})$ = factor$(m_{y,j})$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $S(i,j) 
+\backslash
+leftarrow$ ComputeInitialSimilarity($m_{x,i},m_{y,j}$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $x 
+\backslash
+leftarrow 
+\backslash
+alpha$ (score$(m_i)$ + score$(m_j)$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Searching the best previous match in $L$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $p 
+\backslash
+leftarrow$ first($L$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $i' 
+\backslash
+leftarrow$ abscissa($p$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $j' 
+\backslash
+leftarrow$ ordinate($p$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+WHILE{end($L$) = FALSE and $S(i',j') + x > S(i,j)$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE 
+\backslash
+COMMENT{Compute the $
+\backslash
+mu$ value and check overlap}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $(D_1,D_2,$overlap) $
+\backslash
+leftarrow$ ComputeOverlap($i,i,j,j',G_x,G_y$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+IF{overlap $=$ FALSE}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $y 
+\backslash
+leftarrow 
+\backslash
+lambda$ (ComputeLambda$(i,i,j,j')$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $z 
+\backslash
+leftarrow 
+\backslash
+mu (|D_1 - D_2|)$; 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE maxSim $
+\backslash
+leftarrow S(i',j') + x - y - z$;
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+IF{maxSim $> S(i,j)$}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $S(i,j) 
+\backslash
+leftarrow$ maxSim; 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $p 
+\backslash
+leftarrow$ next($L$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $i' 
+\backslash
+leftarrow$ abscissa($p$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $j' 
+\backslash
+leftarrow$ ordinate($p$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE $n 
+\backslash
+leftarrow$ CreateNewNode($i,j$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+STATE InsertNode($n,L$);
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:clusteralg
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Pairwise alignment of two clusters of TF-maps
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Pairwise alignment of two clusters of TF-maps.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsubsectionblue{
+\end_layout
+
+\end_inset
+
+Implementation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+In the pseudocode in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:clusteralg"
+
+\end_inset
+
+, the groups 
+\begin_inset Formula $G_x$
+\end_inset
+
+ and 
+\begin_inset Formula $G_y$
+\end_inset
+
+ are represented as two arrays of sites sorted by the position in their promoters, where each site corresponds to an input TFBS. The multiple TF-map alignment of a cluster is internally encoded with pointers among the sites that form each match. Gaps here are not explicitly represented.
+\end_layout
+
+\begin_layout Standard
+
+Each site 
+\begin_inset Formula $m_{x,i}$
+\end_inset
+
+ is a structure as described above with the functions 
+\emph on
+factor, pos1, pos2 and score
+\emph default
+ returning the values of the corresponding fields. The variable 
+\emph on
+maxSim
+\emph default
+ stores the optimal score so far computed. The sites in the optimal TF-map alignment can be easily retrieved using a supplementary structure 
+\emph on
+path(i,j)
+\emph default
+ that points to the previous cell in the optimal path leading to cell 
+\begin_inset Formula $S(i,j)$
+\end_inset
+
+. In addition, the function 
+\emph on
+ComputeInitialSimilarity
+\emph default
+ calculates for each match 
+\begin_inset Formula $S(i,j)$
+\end_inset
+
+ the initial score of a hypothetical alignment that includes only the sites 
+\begin_inset Formula $m_{x,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{y,j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Once the match between two sites 
+\begin_inset Formula $m_{x,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{y,j}$
+\end_inset
+
+ has been identified, the best previous match between two other sites 
+\begin_inset Formula $m_{x,i'}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{y,j'}$
+\end_inset
+
+ is used to construct the new alignment (see the matches 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mmads"
+
+\end_inset
+
+). The list 
+\begin_inset Formula $L$
+\end_inset
+
+ is used to locate the non empty positions in 
+\begin_inset Formula $S$
+\end_inset
+
+. Each node of the list 
+\begin_inset Formula $L$
+\end_inset
+
+ is represented as structures 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ with the functions 
+\emph on
+abscissa
+\emph default
+ and 
+\emph on
+ordinate
+\emph default
+ returning the corresponding coordinates in 
+\begin_inset Formula $S$
+\end_inset
+
+ of each previous match.
+\end_layout
+
+\begin_layout Standard
+
+The score of the new match between 
+\begin_inset Formula $m_{x,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{y,j}$
+\end_inset
+
+ is the sum of the scores of the columns in which both elements were aligned in their respective MMAs. Unaligned sites are scored with the gap penalty 
+\begin_inset Formula $\gamma$
+\end_inset
+
+. The function 
+\emph on
+ComputeLambda
+\emph default
+ counts the number of sites in each group that are not included in the alignment, taking into account the size of each group. The function 
+\emph on
+ComputeOverlap
+\emph default
+ calculates the average distances 
+\begin_inset Formula $D1$
+\end_inset
+
+ and 
+\begin_inset Formula $D2$
+\end_inset
+
+ between any pair of consecutive matches in the maps of both groups, verifying the absence of physical overlap in their promoters. The function 
+\begin_inset Formula $|D1-D2|$
+\end_inset
+
+ scores the conservation of distance between the sites of every map in two consecutive columns in the MMA (function 
+\begin_inset Formula $f$
+\end_inset
+
+, see Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scorem"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sectiongreen
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Non-colinear TF-map alignments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+multiple TF-map alignments!noncolmmeta@non-collinear alignments
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+TF-map alignments!noncolmeta@non-collinear alignments
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The existence of regulatory elements that are conserved in different order between related promoter regions is documented, specially in enhancers 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "nix:2005a"
+
+\end_inset
+
+. Even at the sequence level, the identification of these DNA rearrangements is very difficult. We have here introduced some subtle changes in the pairwise TF-map alignment algorithm shown before to deal with non-collinear alignments. The aligned TFBSs in such MMAs are therefore not necessarily located in the same relative order in every map.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 8: NON-COL alns
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/noncol
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:noncol
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Two examples of non-collinear MMAs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Two examples of non-collinear MMAs.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+(Left) A pairwise non-collinear TF-map alignment. (Right) A non-collinear MMA.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+Definition
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Let T be an alignment between two TF-maps 
+\begin_inset Formula $M_1$
+\end_inset
+
+ and 
+\begin_inset Formula $M_2$
+\end_inset
+
+ formally defined as a correspondence 
+\begin_inset Formula $T=\{(m_{1,I_1},m_{2,J_1}), \ldots, (m_{1,I_t},m_{2,J_t}) \}$
+\end_inset
+
+. Let 
+\begin_inset Formula $(m_{1,i},m_{2,j})$
+\end_inset
+
+ and 
+\begin_inset Formula $(m_{1,k},m_{2,l})$
+\end_inset
+
+ two matches in 
+\begin_inset Formula $T$
+\end_inset
+
+ ,not necessarily contigous, with 
+\begin_inset Formula $i<k$
+\end_inset
+
+. Then, we define the collinearity or non-collinearity of 
+\begin_inset Formula $T$
+\end_inset
+
+ in terms of the ordering between 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+, for all the match pairs of 
+\begin_inset Formula $T$
+\end_inset
+
+ as:
+\end_layout
+
+\begin_layout Enumerate
+
+If 
+\begin_inset Formula $j<l$
+\end_inset
+
+ then 
+\begin_inset Formula $T$
+\end_inset
+
+ is a collinear alignment 
+\end_layout
+
+\begin_layout Enumerate
+
+If 
+\begin_inset Formula $j>l$
+\end_inset
+
+ then 
+\begin_inset Formula $T$
+\end_inset
+
+ is a non-collinear alignment (see example shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:noncol"
+
+\end_inset
+
+ (Left). 
+\end_layout
+
+\begin_layout Standard
+
+The generalization of this definition for 
+\begin_inset Formula $k>2$
+\end_inset
+
+ TF-maps is immediate (see the example of a non-collinear MMA for 
+\begin_inset Formula $k=3$
+\end_inset
+
+ TF-maps in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:noncol"
+
+\end_inset
+
+ (Right).
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 9: NON-COL matrix
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/areas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:areas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Diagonal filling of the alignment matrix
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Diagonal filling of the alignment matrix.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+The algorithm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The non-collinear matches shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:noncol"
+
+\end_inset
+
+ can not be detected in the basic pairwise TF-map alignment algorithm. Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be two TF-maps in which two matches could form a non collinear alignment (represented as a circle and a square in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:areas"
+
+\end_inset
+
+). The normal implementation fills in the matrix row by row, from top to bottom (or column by column, from left to right). According to this, when the first match is being processed (red square), the second one (red circle) is not still available (green area). On the contrary, when the second match is processed, the first one is not accessible as the basic algorithm only allows the search for best previous aligned elements in the list of computed values that are in the area delimited by the current match.
+\end_layout
+
+\begin_layout Standard
+
+To overcome such a limitation, we propose to compute the optimal values of the matrix 
+\begin_inset Formula $S$
+\end_inset
+
+ following a different order, to allow the visibility of one of these elements (circle) by the other (square). For instance, the top-bottom diagonal filling of the matrix depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:areas"
+
+\end_inset
+
+ may process in first position the element that was not visible before (circle) for the other element (square) that will computed later in the next diagonal (square). While this strategy still produces the same aligments obtained with the ordinary implementation, non-collinear alignments produced by new combinations of matches can also be formed.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsubsectionblue{
+\end_layout
+
+\end_inset
+
+Adjusting the non-collinearity
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Non-collinear conservation of regulatory elements is documented in very specific cases 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "nix:2005a"
+
+\end_inset
+
+. Most upstream promoter regions, however, are constituted of collinear arrangements of TFBSs. Because of the poor specificity of the collections of PWMs 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "schones:2005a"
+
+\end_inset
+
+, many non-collinear alignments produced with the algorithm described above are simply artifacts.
+\end_layout
+
+\begin_layout Standard
+
+Thus, we have designed a simple mechanism to adjust the frequency of non-collinear aligned sites in the output. As the function 
+\emph on
+ComputeOverlap
+\emph default
+ in the algorithm above needed to be redefined in order to detect non-overlap between non-collinear matches as well, we have introduced an additional parameter 
+\begin_inset Formula $c$
+\end_inset
+
+ to weight those alignments involving non-colinearity.
+\end_layout
+
+\begin_layout Standard
+
+The following example is graphically presented in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:graph"
+
+\end_inset
+
+ (Left). Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be two TF-maps in which a previous match has been identified (represented as a circle). Then, a second match between an element in 
+\begin_inset Formula $A$
+\end_inset
+
+ and another in 
+\begin_inset Formula $B$
+\end_inset
+
+ is being processed (the squares). The dotted lines indicate that such a site in 
+\begin_inset Formula $B$
+\end_inset
+
+ can be located either on the left or on the right of the circle site in the same map. In the first case, a non-collinear alignment is produced; in the second case, a normal collinear alignment is constructed.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%FORMULA
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+The algorithm to align two clusters of TF-maps must be slightly modified to accomodate the non-collinearity parameter 
+\begin_inset Formula $c$
+\end_inset
+
+ (the case in which the non-collinear match occurs in 
+\begin_inset Formula $A$
+\end_inset
+
+ can be similarly defined):
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fcolorbox{white}{verylightgreen}{ 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}[][][c]{0.5
+\backslash
+linewidth}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+z = 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+left
+\backslash
+{
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{array}{ll}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+mbox{if} ~~ (D_2 < 0)& 
+\backslash
+rightarrow 
+\backslash
+mu |D_1 - c 
+\backslash
+cdot D_2|, c 
+\backslash
+geq 1
+\backslash
+
+\backslash
+[2ex]
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+mbox{if} ~~ (D_2 
+\backslash
+geq 0)& 
+\backslash
+rightarrow 
+\backslash
+mu |D_1 - D_2|
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{array}
+\backslash
+right..
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+label{eqnoncol}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+The optimal positional conservation between both matches occurs when 
+\begin_inset Formula $d_1 = d_2$
+\end_inset
+
+. However, the parameter 
+\begin_inset Formula $c$
+\end_inset
+
+ is used into the 
+\begin_inset Formula $\mu$
+\end_inset
+
+ penalty to punish only those matches that do not respect the collinearity of the current alignment (the square site is on the left of the circle site in 
+\begin_inset Formula $B$
+\end_inset
+
+, see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:graph"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+Informally, if 
+\begin_inset Formula $c=1$
+\end_inset
+
+ then both collinear and non-colinear matches are indistinctly combined into the resulting MMA. High values of 
+\begin_inset Formula $c$
+\end_inset
+
+, however, produce a higher amount of collinear matches into the results. In order to establish formally the behaviour of this parameter, we have count the number of non-collinear matches in the TF-map alignment of the human and mouse promoters (
+\begin_inset Formula $500$
+\end_inset
+
+ nucleotides) of the MMP13 gene (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ entries NM_002427 and NM_008607). In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:graph"
+
+\end_inset
+
+, there is a clear correspondence between the amount of inversions in the MMA and the value of 
+\begin_inset Formula $c$
+\end_inset
+
+. No inversions are produced for large values of 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Identification of non-collinear configurations of TFBSs in regulatory regions is poorly known. We recommend, therefore, to use this option very carefully. In addition, we also suggest the use of a small set of matrices to perform the mapping, which can reduce the number of artifacts in the resulting non-collinear MMA.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 11: NON-COL parameter
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.75
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/ncparam
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:graph
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+The non-collinearity parameter
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+The non-collinearity parameter.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Results                %%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sectiongreen
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Biological results
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The optimal MMA of a set of TF-maps is obviously dependant on the values of the 
+\begin_inset Formula $\alpha, \lambda, \mu, \gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ parameters. In addition, the optimal parameter configuration is likely to depend on the particular problem to be addressed (orthologous genes or co-regulated genes in microarray experiments), and the particular protocol to map the TFBSs on the sequences.
+\end_layout
+
+\begin_layout Standard
+
+Results in the previous chapter 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, indicated that TF-maps alignments are able to characterize promoter regions of co-regulated genes in absence of sequence similarity. Thus, TF-map alignments were shown to detect high-order regulatory signals conserved in a collection of related promoters that were undetectable for current sequence alignment methods. It is important to mention that two different TFBSs can be aligned if they correspond to the same TF, irrespectively of their sequence motifs.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 12: 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/testregions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:testregionsM
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Distinguishing promoters from other genomic regions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Distinguishing promoters from other genomic regions.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Here we have conducted a similar systematic training over an extended set of orthologous promoters for obtaining the optima configuration. In order to verify the ability of MMA to identify regulatory elements that are rarely detected in conventional comparisons, we have compared the results to those obtained by global sequence alignment methods. In addition, we have focused on three specific examples to show the abilities of MMA in the characterization of co-regulated gene promoters. In all of the cases, we have only constructed collinear map alignments as non-collinear regulatory rearrangements have not been reported on them.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+Multiple TF-map training
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+multiple TF-map alignments!trainingmmeta@training
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+For the pairwise TF-map alignment, we estimated the optimal parameters in a set of experimentally characterized human and rodent gene promoters 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+. Here we have extended such a dataset by searching the corresponding orthologs in chicken and zebrafish as well. Using the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "pruitt:2005a"
+
+\end_inset
+
+ gene set as mapped into the UCSC genome browser, we have correctly identified the ortholog in both species, if available. We refer to the resulting set of human-mouse-chicken-zebrafish homologous genes as the 
+\shape smallcaps
+HRCZ set
+\shape default
+. This dataset contains 
+\begin_inset Formula $18$
+\end_inset
+
+ human-rodent-chicken-zebrafish orthologs, 
+\begin_inset Formula $7$
+\end_inset
+
+ human-rodent-chicken orthologs, 
+\begin_inset Formula $4$
+\end_inset
+
+ human-rodent-zebrafish orthologs, and 
+\begin_inset Formula $7$
+\end_inset
+
+ human-rodent orthologs.
+\end_layout
+
+\begin_layout Standard
+
+The lack of available collections of experimentally verified TFBSs is an important limitation for the evaluation and the training of phylogenetic footprinting systems. Despite several databases of annotations and promoter sequences have recently appeared 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006a,xuan:2005a"
+
+\end_inset
+
+, there is not a minimum amount of regulatory information conserved among species other than human and mouse to train the MMA on them.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%% TABLE 1
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95line%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+
+\begin_layout Plain Layout
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+scalebox{0.75}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename ../tables/testregionsM.pdf
+	clip
+	BoundingBox 141 715 449 817
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+tab:testregionsM
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Results when distinguishing promoters with MMAs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Results when distinguishing promoters with MMAs.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Thus, we can not repeat the training procedure used in 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+ to evaluate the ability of MMA to detect conserved regulatory elements at larger evolutionary distances --at which the degree of conservation may be negligible. However, we can use another method, also presented in 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+, to show that MMAs are much more informative than primary multiple sequence alignments.
+\end_layout
+
+\begin_layout Standard
+
+We first have mapped the TFBSs occurrences in the promoter sequences using the collection of 50 most informatives matrices in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+db{
+\end_layout
+
+\end_inset
+
+JASPAR
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 1.0 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "sandelin:2004a"
+
+\end_inset
+
+, to which we refer as 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+db{
+\end_layout
+
+\end_inset
+
+JASPAR
+\begin_inset Formula $_{TOP50}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006b"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Then, we have compared the MMAs obtained in the 
+\begin_inset Formula $200$
+\end_inset
+
+ nucleotides of the promoter region of the 36 gene pairs from the 
+\shape smallcaps
+HRCZ set
+\shape default
+, with the MMAs obtained in fragments of 
+\begin_inset Formula $200$
+\end_inset
+
+ nucleotides from intergenic (
+\begin_inset Formula $2,000$
+\end_inset
+
+ nucleotides upstream of the TSS), 5'UTR (downstream of the TSS), coding (downstream of the translation start site and considering only coding DNA), intronic (downstream of the first intron junction), and downstream (downstream of the transcription termination site) sequences (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:testregionsM"
+
+\end_inset
+
+ for a graphical representation of the test). We have computed the average score of the MMA on each one of the genomic regions and have identified, for each orthologous set, the genome regions in which the alignment produces the highest score. We have performed the same exercise using global pairwise sequence alignments (obtained with CLUSTALW, 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "thompson:1994a"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+We have repeated this test using different combinations of parameters. Systematically, the parameters 
+\begin_inset Formula $\alpha, \lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ were allowed to independently take values between 
+\begin_inset Formula $0.0$
+\end_inset
+
+ and 
+\begin_inset Formula $1.0$
+\end_inset
+
+, in incremental steps of 
+\begin_inset Formula $0.1$
+\end_inset
+
+. At the same time, the parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ (gap penalty) was tested between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $-10$
+\end_inset
+
+. The optimal parameter configuration is considered to be that set of parameter values that better discriminate between promoters and the rest of genomic regions.
+\end_layout
+
+\begin_layout Standard
+
+Results appear in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:testregionsM"
+
+\end_inset
+
+. As expected, nucleotide sequence alignments score the highest in the coding regions (in 
+\begin_inset Formula $28$
+\end_inset
+
+ out of 
+\begin_inset Formula $36$
+\end_inset
+
+ cases), followed by the alignments in the 5
+\begin_inset Formula $^\prime$
+\end_inset
+
+ UTR regions (
+\begin_inset Formula $4$
+\end_inset
+
+ out of 
+\begin_inset Formula $36$
+\end_inset
+
+) and in the promoters (
+\begin_inset Formula $4$
+\end_inset
+
+ out of 
+\begin_inset Formula $36$
+\end_inset
+
+). The scores of the sequence alignments show that promoter regions are less conserved than coding regions, and 5'UTRs. Despite this, the optimal MMA configuration in the collinear configuration 
+\begin_inset Formula $(\alpha=1,\lambda=0.1,\mu=0.1,\gamma=-2)$
+\end_inset
+
+ scores the highest in the promoter regions (in 
+\begin_inset Formula $21$
+\end_inset
+
+ out of 
+\begin_inset Formula $36$
+\end_inset
+
+, see Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:testregionsM"
+
+\end_inset
+
+). In addition, the average score of map alignments is notably higher than that of the coding regions. Only in 
+\begin_inset Formula $9$
+\end_inset
+
+ out of 
+\begin_inset Formula $36$
+\end_inset
+
+ cases the TF-map alignments score the highest in coding regions. Interestingly, while intron sequences in the human-mouse-chicken-zebrafish orthologs are much less conserved than 5'UTRs, MMAs score the highest in intronic regions in 
+\begin_inset Formula $3$
+\end_inset
+
+ cases whereas they only score the best in 5'UTRs in 
+\begin_inset Formula $2$
+\end_inset
+
+ cases. This is consistent with the fact that first introns are known to often contain regulatory motifs.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Shuffle test
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Finally, we have also performed a complementary test to measure the specificity of the TF-map alignments. As a negative control, we have shuffled the orthologous associations in the 
+\shape smallcaps
+HRCZ set
+\shape default
+ to construct a pool of unrelated human-mouse-chicken-zebrafish 
+\begin_inset Formula $36$
+\end_inset
+
+ gene entries. Then, the corresponding multiple TF-map alignments of these non-orthologous paired promoters were obtained using the parameters previously optimized. The TF-map alignments of the unrelated promoters of each entry were significantly worse with an average score more than 50% smaller than TF-map alignments that involved 
+\begin_inset Quotes eld
+\end_inset
+
+bona fide
+\begin_inset Quotes erd
+\end_inset
+
+ orthologous promoters. For instance, the average score of the TF-map alignments among orthologous promoters when using the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+db{
+\end_layout
+
+\end_inset
+
+JASPAR
+\begin_inset Formula $_{TOP50}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ collection was 
+\begin_inset Formula $27.81$
+\end_inset
+
+. In contrast, the score of the TF-map alignments between non-related promoters was 
+\begin_inset Formula $12.51$
+\end_inset
+
+. The sites in the alignments involving non-orthologous gene promoters may hypothetically correspond to general regulatory elements present in most core promoters. An alternative, more probable, hypothesis is that they reflect the poor specificity of most PWMs representing TFBSs.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsectionblue{
+\end_layout
+
+\end_inset
+
+Promoter characterization
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+We have selected three examples to show the ability of MMAs to characterize promoter regions in the absence of sequence conservation. In the three cases, we have compared the multiple TF-map aligment against the corresponding multiple sequence alignment produced by CLUSTALW, as in the section above.
+\end_layout
+
+\begin_layout Standard
+
+All of the cases are graphically represented as pictures in which the input TF-maps are displayed on the upper part of the picture and the resulting MMAs are displayed on the lower part of the picture, using the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prog{
+\end_layout
+
+\end_inset
+
+gff2ps
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ program 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "abril:2000a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 13: 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+fbox{
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.9
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/a00
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:A00s
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Multiple promoter characterization
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Multiple promoter characterization.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+(Top) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+db{
+\end_layout
+
+\end_inset
+
+JASPAR
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ predictions and the MMA among the 
+\emph on
+Actin 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-cardiac
+\emph default
+ gene promoters. (Bottom) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+db{
+\end_layout
+
+\end_inset
+
+JASPAR
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ predictions and the MMA among the 
+\emph on
+Myoglobin
+\emph default
+ gene promoters.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+As it is possible to see, the main effect of the MMA is the dramatic reduction in the number of predicted TFBSs that typically result after a PWM-based search (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A00s"
+
+\end_inset
+
+ and Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MMP13"
+
+\end_inset
+
+). For instance, we aligned 
+\begin_inset Formula $157$
+\end_inset
+
+ human sites to 
+\begin_inset Formula $197$
+\end_inset
+
+ mouse sites, 
+\begin_inset Formula $229$
+\end_inset
+
+ chicken sites and 
+\begin_inset Formula $167$
+\end_inset
+
+ zebrafish sites mapped in the respective Actin 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-cardiac gene promoter orthologs (see next section). The resulting multiple TF-map alignment only contained 
+\begin_inset Formula $14$
+\end_inset
+
+ TFBSs, which approximately represents a 13-fold reduction. Graphically, this reduction is noticed in the smaller density of aligned sites in the resulting MMAs picture.
+\end_layout
+
+\begin_layout Standard
+
+In addition to this, most aligned sites in the MMAs are concentrated in the proximal promoter region of each gene (
+\begin_inset Formula $200$
+\end_inset
+
+ nucleotides upstream of the TSS). This gain in specificity is not simply due to the selection of an arbitrary set of non-overlapping TFBSs, as many experimentally annotated TFBSs on these promoters are successfully covered by the MMAs.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsubsectionblue{
+\end_layout
+
+\end_inset
+
+
+\emph on
+Actin 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-cardiac
+\emph default
+ gene
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Actins are highly conserved proteins that are involved in various types of cell motility. The alpha actins are found in muscle tissues and are a major constituent of the contractile apparatus. The 
+\emph on
+Actin 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-cardiac
+\emph default
+ gene has been identified in many kinds of cells including muscle, where it is a major constituent of the thin filament, and platelets.
+\end_layout
+
+\begin_layout Standard
+
+The promoter of the human and mouse 
+\emph on
+Actin 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-cardiac
+\emph default
+ genes (ACTC, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+genbank
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ entries M13483 and M26773) have been extensively characterized by experimental means 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "wasserman:1998a"
+
+\end_inset
+
+. In the ABS database 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006a"
+
+\end_inset
+
+, the entry 
+\begin_inset Formula $A0028$
+\end_inset
+
+ informs about the known orthologous binding sites in the respective human and mouse promoters (
+\begin_inset Formula $500$
+\end_inset
+
+ nucleotides, the position +501 is the TSS). The human ACTC promoter is constituted of three SRF sites 
+\begin_inset Formula $(+301, +352, +392)$
+\end_inset
+
+, a SP1 site 
+\begin_inset Formula $(+418)$
+\end_inset
+
+, a MYOD site 
+\begin_inset Formula $(+445)$
+\end_inset
+
+ and a TATA box 
+\begin_inset Formula $(+469)$
+\end_inset
+
+. Using the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ gene annotations, we have also identified the corresponding orthologous promoters in chicken and zebrafish (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ entries NM_001031229 and NM_214784).
+\end_layout
+
+\begin_layout Standard
+
+We have then aligned the four promoters and compared the resulting MMA with the functional annotations detailed above. In general terms, the multiple TF-map alignment of the four orthologous promoters of ACTC contains many of the functional sites in human and mouse, detecting as well the corresponding orthologs in the other species. The output coverage is, however, smaller than 
+\begin_inset Formula $50$
+\end_inset
+
+% of the promoter nucleotides.
+\end_layout
+
+\begin_layout Standard
+
+The MMA of the ACTC promoters is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A00s"
+
+\end_inset
+
+ (Top). While the region proximal to the TSS is not more dense in predicted TFBSs than other regions, most of the aligned elements cluster near to the TSS. In addition, the alignment agrees well with the functional annotation available in human and mouse, providing novel orthologous sites in chicken and zebrafish:
+\end_layout
+
+\begin_layout Enumerate
+
+The second SRF binding site is correctly identified in human, mouse and also in zebrafish. 
+\end_layout
+
+\begin_layout Enumerate
+
+A RREB-1 site that overlaps the SP-1 active site is identified in the MMA. RREB-1 and SP-1 are both members of the zinc finger protein families 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "vlieghe:2006a"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+A SQUA site that overlaps the third SRF active site is identified in the MMA. SQUA and SRF are both members of the MADS family 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "vlieghe:2006a"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+A novel forth SRF binding site is located immediately upstream of the experimental first one at the four species. 
+\end_layout
+
+\begin_layout Enumerate
+
+The TATA box is correctly detected in human, mouse and zebrafish as well. 
+\end_layout
+
+\begin_layout Standard
+
+No significant conservation among the sequences was, however, detected in the CLUSTALW multiple alignment of the four ACTC promoters (data not shown).
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsubsectionblue{
+\end_layout
+
+\end_inset
+
+
+\emph on
+Myoglobin
+\emph default
+ gene
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The 
+\emph on
+Myoglobin
+\emph default
+ gene is a member of the globin superfamily and is expressed in skeletal and cardiac muscles. The encoded protein is a haemoprotein contributing to intracellular oxygen storage and transcellular facilitated diffusion of oxygen.
+\end_layout
+
+\begin_layout Standard
+
+The promoter of the 
+\emph on
+Myoglobin
+\emph default
+ gene in human (MB, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+genbank
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ entry X00371) and in mouse (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ entry NM_013593) have been experimentally characterized 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "bassel:1992a,wasserman:1998a"
+
+\end_inset
+
+. In the ABS database 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "blanco:2006a"
+
+\end_inset
+
+, the entry 
+\begin_inset Formula $A0037$
+\end_inset
+
+ informs about the known orthologous binding sites in the respective human and mouse promoters (
+\begin_inset Formula $500$
+\end_inset
+
+ nucleotides, the position +501 is the TSS). The human MB promoter is constituted of a CCAC box 
+\begin_inset Formula $(+272)$
+\end_inset
+
+, a MEF-2 site 
+\begin_inset Formula $(+335)$
+\end_inset
+
+ with two surrounding E-boxes 
+\begin_inset Formula $(+326, +348)$
+\end_inset
+
+ and a TATA box 
+\begin_inset Formula $(+469)$
+\end_inset
+
+. Using the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{}
+\end_layout
+
+\end_inset
+
+ gene annotations, we have also identified the corresponding orthologous promoters in chicken and zebrafish (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+refseq
+\end_layout
+
+\end_inset
+
+ entries NM_203377 and NM_200586).
+\end_layout
+
+\begin_layout Standard
+
+We have then aligned the four promoters and compared the resulting MMA with the functional annotations detailed above. The multiple TF-map alignment of the four orthologous promoters of MB contains several of the functional sites in human and mouse, detecting some of the orthologs in the other two species. The output coverage is again very small.
+\end_layout
+
+\begin_layout Standard
+
+The MMA of the MB promoters is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A00s"
+
+\end_inset
+
+ (Bottom). Most of the aligned elements are present near to the TSS, while this spatial trend is not observable at the predictions at each promoter. The alignment also contains several of the functional human and mouse sites, providing their counterparts in chicken and zebrafish:
+\end_layout
+
+\begin_layout Enumerate
+
+A RREB-1 site that overlaps the functional CCAC box is identified in the MMA. In fact, the RREB-1 matrix consensus in JASPAR represents an A/C rich area that contains the CCAC motif 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "vlieghe:2006a"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+The TATA box is correctly detected in the four species. 
+\end_layout
+
+\begin_layout Standard
+
+The CLUSTALW multiple alignment of the four MP promoters did not reveal any significant conservation (data not shown).
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsubsectionblue{
+\end_layout
+
+\end_inset
+
+
+\emph on
+Collagenase-3
+\emph default
+ gene (MMP13)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The two previous examples have been extracted from the 
+\shape smallcaps
+HRCZ set
+\shape default
+. We have now focused on another gene with a more complete set of identified orthologous promoters to test the ability of the MMAs to elucidate high-level conservation even at more phylogenetically distant sequences.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 14: 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+fbox{
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.825
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/MMP13
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:MMP13
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+MMA of the MMP13 promoter in 9 species
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+MMA of the MMP13 promoter in 9 species.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+(Top) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+db{
+\end_layout
+
+\end_inset
+
+JASPAR
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ predictions and the resulting multiple TF-map alignment. (Bottom) The CLUSTALW multiple sequence alignment of the 9 promoters.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The 
+\emph on
+Collagenase-3
+\emph default
+ (MMP13) gene is a member of the matrix metalloproteinase family. MMP13 plays a major role in normal tissue remodeling processes, being abnormally expressed in breast carcinomas and in cartilage from arthritic patients 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "pendas:1997a"
+
+\end_inset
+
+. Many experimental studies have confirmed the presence of several functional binding sites for known TFs in human and mice 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "pendas:1997a,benbow:1997a,jimenez:1999a,sun:2000a,hess:2001a,benderdour:2002a,wu:2002a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Here, we have analized the proximal promoter regions of MMP13 in human, chimp, mouse, rat, cow, dog, chicken, zebrafish and 
+\emph on
+Xenopus
+\emph default
+ (Ort
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+'{i}
+\end_layout
+
+\end_inset
+
+n 
+\emph on
+et al.
+\emph default
+, personal communication). As the 5'UTR of this gene is very small in most cases, we have considered the region 
+\begin_inset Formula $500$
+\end_inset
+
+ bps immediately upstream the ATG (Translation Start Codon) as the proximal promoter.
+\end_layout
+
+\begin_layout Standard
+
+We performed the multiple TF-map alignment of the nine MMP13 promoters with the optimal configuration calculated in the previous section for four species, increasing the 
+\begin_inset Formula $\mu$
+\end_inset
+
+ parameter to 
+\begin_inset Formula $0.75$
+\end_inset
+
+ to highlight only those regulatory elements that can be aligned in similar positions in most promoters. We also performed the multiple sequence alignment of the nine promoters with the program CLUSTALW. The MMA and the CLUSTALW alignments are both shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MMP13"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+The comparison between the the resulting MMA shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MMP13"
+
+\end_inset
+
+ (Top) and experimental annotations on MMP13 gene promoter reveals interesting results. Up to four TFBSs that have been experimentally reported to be functional in human and mouse are remarkably included in such a MMA:
+\end_layout
+
+\begin_layout Enumerate
+
+The AML-1 binding site included in the resulting MMA (position 330 in human promoter; alternative names: CBFA-1, OSE-2, OSF-2) 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "pendas:1997a,jimenez:1999a,hess:2001a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+The FREAC-4 binding site (position 370 in human promoter; alternative names: FREAC, p53) 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "sun:2000a"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+The SPI-1 binding site (position 391 in human promoter; alternative names: AP-1, ETS, PEA-3) 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "pendas:1997a,benbow:1997a,wu:2002a"
+
+\end_inset
+
+. The SPI-1 transcription factors are distant related members of the Ets family 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "ray:1995a"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+The TCF11-MafG binding site (position 420 in human promoter, alternative names: AP-1) 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "pendas:1997a,benbow:1997a,wu:2002a"
+
+\end_inset
+
+. The human transcription factor TCF11 is known to bind to a subclass of AP1-sites 
+\begin_inset CommandInset citation
+LatexCommand citep
+after ""
+before ""
+key "johnsen:1998a"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+We have not only detected the human and mouse experimental binding sites but we have also identified with the MMA the putative novel site of each TF in most orthologs of the other species, including the most distant ones. The first aligned TF in the MMA (FREAC-3), which has not been experimentally detected so far, presents a similar positional conservation in all of the orthologs. In addition, the resulting phylogenetic tree constructed from the progressive multiple TF-map alignment (shown in red, left) correlates well with the real phylogeny of these nine species.
+\end_layout
+
+\begin_layout Standard
+
+Accurate inspection of the the global sequence alignment by CLUSTALW in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MMP13"
+
+\end_inset
+
+ (Bottom) only reveals some weak conservation blocks that could partially contain any of the functional TFBSs detected by the multiple TF-map alignment. We also tested several configurations of CLUSTALW (adjusting the gap open and gap extension penalties). However, we did not found any parameter combination that was able to clearly detect all of the four functional sites.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Figure 15: 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+fboxsep}{0pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+fbox{
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+incgraph{
+\end_layout
+
+\end_inset
+
+width=0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+ps/mememma
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+mycaption{
+\end_layout
+
+\end_inset
+
+fig:mememma
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% label
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Using MEME as a mapping function
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% lof
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Using MEME as a mapping function.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% caption header
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+(Top) The MEME motifs and the resulting MMA in the Actin 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-cardiac orthologous promoters. (Bottom) The MEME motifs and the resulting MMA in the Myoglobin orthologous promoters.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%% References for this chapter
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%% ENCERRAR ENTRE LLAVES PARA EVITAR PROBLEMAS
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+bibliographystyle{plainnat}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "sections/bibliography"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1704 @@
+
+\chapter{\textcolor{blue}{Preliminares}}
+
+\label{AB1}
+
+%recuperar numeracion arabica%\global\long\def\thechapter{\arabic{chapter}}
+
+
+
+\lettrine[lines=4,loversize=-0.1,lraise=0.1,lhang=.2]{E}{}{n el área de diseños de experimentos existen, principalmente, dos
+enfoques competitivos: uno basado en el análisis combinatorio más
+ajustado para modelos estadísticos de análisis de varianza y el otro
+enfoque basado en métodos analíticos que envuelve el análisis convexo,
+el cual se aplica, por ejemplo, a superficies de respuesta. Una concisa
+introducción a este último enfoque es dado en la breve monografía
+por Silvey (1980).\\
+}
+
+Mientras para modelos en la presencia de efectos fijos se han encontrado
+diseños óptimos para una gran variedad de casos (Schwabe, 2003) si
+los efectos de bloques se asumen que provienen de procesos aleatorios,
+aparecen dificultades adicionales. Un primer simple ejemplo de polinomios
+de regresión en la presencia de efectos de factores aleatorios discretos
+ha sido considerado en los pioneros artículos de Cheng (1995) y Atkins
+y Cheng (1999). Goos (2000) extendió este resultado a varias estructuras
+de bloque y obtuvo soluciones numéricas. A continuación presentaremos
+los conceptos básicos de la teoría de diseños de experimentos.\\
+
+
+
+\section{La ecuación de regresión}
+
+La siguiente ecuación es básica en la teoría de regresión:\\
+ 
+\begin{equation}
+\mathrm{Y}_{j}=\eta(\mathrm{x}_{j},\boldsymbol{\theta})+\epsilon_{j},\ j=1,...,N,\label{n=00003D1}
+\end{equation}
+\\
+ donde $\mathrm{Y}_{1},...,\mathrm{Y}_{N}$ son resultados experimentales,
+$\eta(\mathrm{x},\boldsymbol{\theta})$ es una función dada con vector
+de parámetros desconocidos $\boldsymbol{\theta}=(\theta_{1},...,\theta_{m})^{\top}$,
+$\epsilon_{1},...,\epsilon_{N}$ corresponden al error de observación
+y $\mathrm{x}_{1},...,\mathrm{x}_{N}$ son condiciones experimentales,
+que pertenecen a un conjunto compacto $\mathcal{X}$ usualmente llamado
+la región de diseño.\\
+
+
+Los casos para representar los resultados de los experimentos reales
+en la forma (1.1) se ha demostrado en muchos ejemplos, ver Rao (1973),
+Federow (1972), y Pukelsheim (1993).\\
+
+
+Recordemos algunos supuestos básicos del modelo clásico de regresión. 
+\begin{itemize}
+\item[(a)] Insesgamiento: $\mathrm{E}({\epsilon_{j}})=0$; $(j=1,...,N)$. Esto
+significa que $\mathrm{E}({\mathrm{Y}_{j}})=\eta(\mathrm{x}_{j},\boldsymbol{\theta})$
+(es decir, el modelo está libre de un error sistemático). 
+\item[(b)] Incorrelación: $\mathrm{E}({\epsilon_{i}\epsilon_{j}})=0$; $(i\neq j)$. 
+\item[(c)] Homogeneidad de varianza: $\mathrm{E}({\epsilon_{j}^{2}})\equiv\sigma^{2}>0$;
+$(j=1,...,N).$ 
+\item[(d)] La linealidad de parametrización: $\eta(\mathrm{x},\boldsymbol{\theta})=\boldsymbol{f}(\mathrm{x})^{\top}\boldsymbol{\theta}$,
+donde $\boldsymbol{f}(\mathrm{x})=(f_{1}(\mathrm{x}),...,f_{m}(\mathrm{x}))^{\top}$,
+$f_{i}(\mathrm{x})$, $i=1,...,m$, son funciones básicas y conocidas. 
+\end{itemize}
+Como es habitual en la teoría estadística, estos supuestos proporcionan
+resultados observables a obtener y corresponden en cierta medida a
+las características de experimentos reales.\\
+
+
+El propósito principal de un experimento es estimar un vector de parámetros
+desconocidos, o probar una hipótesis sobre los valores de los parámetros.
+Aquí, la exactitud de conclusiones estadísticas depende tanto del
+método de la inferencia estadística y en la elección de las condiciones
+experimentales.\\
+
+
+Si $(a)$ - $(b)$ se asumen, entonces la técnica de mínimos cuadrados,
+proporciona valoración del vector $\boldsymbol{\theta}$ de parámetros
+bajo cualesquiera condiciones experimentales fijas.\\
+
+
+
+\section{Estimación de mínimos cuadrados}
+
+La paternidad de este método se reparte entre Legendre que lo publicó
+en 1805 y Gauss que lo utilizó en 1795 y lo publicó en 1809.\\
+
+
+El método de mínimos cuadrados $(MC)$ es utilizado para estimar los
+parámetros en el modelo de regresión lineal.\\
+
+
+Por ejemplo, en el modelo de regresión lineal múltiple\\
+ 
+\begin{equation}
+\begin{aligned}\mathrm{Y}_{j} & =\beta_{0}+\beta_{1}\mathrm{x}_{j1}+\cdots+\beta_{k}\mathrm{x}_{jk}+\epsilon_{j}\label{n=1}\\
+\\
+ & =\beta_{0}+\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}+\epsilon_{j}\ ,j=1,...,N.
+\end{aligned}
+\end{equation}
+\\
+ Suponga que se tiene $N>k$ observaciones. Se asume que $\mathrm{E}({\epsilon_{j}})=0$
+y $Var(\epsilon_{j})=\sigma^{2}$ y que los errores son independientes.
+El método de mínimos cuadrados minimiza la suma de cuadrados del error
+dada por\\
+ 
+\begin{equation}
+\begin{aligned}SSE & =\sum_{J=1}^{N}\epsilon_{j}^{2}\\
+\\
+ & =\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)^{2}
+\end{aligned}
+\end{equation}
+\\
+ con respecto a cada uno de los parámetros del modelo $\beta_{0},\beta_{1},...,\beta_{k}$.\\
+
+
+La derivada con respecto a $\beta_{0}$\\
+ 
+\begin{equation}
+\begin{aligned}\frac{\partial SSE}{\partial\beta_{0}} & =\frac{\partial}{\partial\beta_{0}}\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)^{2}\\
+\\
+ & =-2\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)
+\end{aligned}
+\end{equation}
+\\
+
+
+La derivada con respecto a $\beta_{j}\ (j=1,2,...,k)$ es 
+\begin{equation}
+\begin{aligned}\frac{\partial SSE}{\partial\beta_{j}} & =\frac{\partial}{\partial\beta_{j}}\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)^{2}\\
+\\
+ & =-2\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)\mathrm{x}_{ji}
+\end{aligned}
+\end{equation}
+\\
+
+
+igualando a cero las derivadas, se tiene\\
+
+
+\[
+\frac{\partial SSE}{\partial\beta_{0}}=-2\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)=0
+\]
+\\
+ 
+\[
+\frac{\partial SSE}{\partial\beta_{j}}=-2\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)\mathrm{x}_{ji}=0
+\]
+\\
+\\
+
+
+Simplificando para $\beta_{0}$ se tiene\\
+ 
+\begin{equation}
+\begin{aligned}\sum_{j=1}^{N}\mathrm{Y}_{j}-\sum_{j=1}^{N}\beta_{0}-\sum_{j=1}^{N}\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji} & =0\\
+\\
+\sum_{j=1}^{N}\beta_{0}+\sum_{j=1}^{N}\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji} & =\sum_{j=1}^{N}\mathrm{Y}_{j}\\
+\\
+N\beta_{0}+\sum_{j=1}^{N}\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji} & =\sum_{j=1}^{N}\mathrm{Y}_{j}\\
+\\
+N\beta_{0}+\sum_{j=1}^{N}\left(\beta_{1}\mathrm{x}_{j1}+\beta_{2}\mathrm{x}_{j2}+\cdots+\beta_{k}\mathrm{x}_{jk}\right) & =\sum_{j=1}^{N}\mathrm{Y}_{j}\\
+\\
+N\beta_{0}+\beta_{1}\sum_{j=1}^{N}\mathrm{x}_{j1}+\beta_{2}\sum_{j=1}^{N}\mathrm{x}_{j2}+\cdots+\beta_{k}\sum_{j=1}^{N}\mathrm{x}_{jk} & =\sum_{j=1}^{N}\mathrm{Y}_{j}
+\end{aligned}
+\end{equation}
+\\
+\\
+
+
+Simplificando para $\beta_{j}$ se tiene\\
+ 
+\begin{equation}
+\begin{aligned}\sum_{J=1}^{N}\left(\mathrm{Y}_{j}-\beta_{0}-\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)\mathrm{x}_{ji} & =0\\
+\\
+\left(\sum_{J=1}^{N}\mathrm{Y}_{j}-\sum_{J=1}^{N}\beta_{0}-\sum_{J=1}^{N}\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)\mathrm{x}_{ji} & =0\\
+\\
+\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{ji}-\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{ji}-\left(\sum_{J=1}^{N}\sum_{i=1}^{k}\beta_{i}\mathrm{x}_{ji}\right)\mathrm{x}_{ji} & =0\\
+\\
+\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{ji}-\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{ji}-\sum_{J=1}^{N}\left(\beta_{1}\mathrm{x}_{j1}+\cdots+\beta_{k}\mathrm{x}_{jk}\right)\mathrm{x}_{ji} & =0\\
+\\
+\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{ji}-\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{ji}-\left(\sum_{J=1}^{N}\beta_{1}\mathrm{x}_{j1}+\cdots+\beta_{k}\sum_{J=1}^{N}\mathrm{x}_{jk}\right)\mathrm{x}_{ji} & =0\\
+\\
+\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{ji}+\left(\sum_{J=1}^{N}\beta_{1}\mathrm{x}_{j1}+\cdots+\beta_{k}\sum_{J=1}^{N}\mathrm{x}_{jk}\right)\mathrm{x}_{ji} & =\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{ji}
+\end{aligned}
+\end{equation}
+\\
+\\
+
+
+Luego las ecuaciones normales son: 
+\begin{equation}
+\begin{aligned}N\beta_{0}+\beta_{1}\sum_{j=1}^{N}\mathrm{x}_{j1}+\cdots+\beta_{k}\sum_{j=1}^{N}\mathrm{x}_{jk} & =\sum_{j=1}^{N}\mathrm{Y}_{j}\\
+\\
+\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{j1}+\beta_{1}\sum_{J=1}^{N}\mathrm{x}_{j1}^{2}+\cdots+\beta_{k}\sum_{J=1}^{N}\mathrm{x}_{jk}\mathrm{x}_{j1} & =\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{j1}\\
+\\
+\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{j2}+\beta_{1}\sum_{J=1}^{N}\mathrm{x}_{j1}\mathrm{x}_{j2}+\cdots+\beta_{k}\sum_{J=1}^{N}\mathrm{x}_{jk}\mathrm{x}_{j2} & =\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{j2}\\
+ & \vdots\\
+\beta_{0}\sum_{J=1}^{N}\mathrm{x}_{jk}+\beta_{1}\sum_{J=1}^{N}\mathrm{x}_{j1}\mathrm{x}_{jk}+\cdots+\beta_{k}\sum_{J=1}^{N}\mathrm{x}_{jk}^{2} & =\sum_{J=1}^{N}\mathrm{Y}_{j}\mathrm{x}_{jk}
+\end{aligned}
+\end{equation}
+\\
+
+
+Observe que hay $p=k+1$ ecuaciones. Para obtener la solución es conveniente
+utilizar notación matricial. En esta notación el modelo se expresa
+como\\
+
+
+\[
+\mathrm{Y}=\mathrm{X}\boldsymbol{\beta}+\epsilon
+\]
+\\
+ donde\\
+ $\mathrm{Y}$ es el vector de observaciones\\
+ $\mathrm{X}$ es una matriz $n$ $\times$ $p$ de niveles de la
+variable\\
+ $\boldsymbol{\beta}$ es un vector $p$ $\times$$1$ de coeficientes
+de regresión\\
+ $\epsilon$ es el vector aleatorio error de orden $p$ x $1$\\
+ \\
+
+
+La suma de cuadrados del error es dada por\\
+ 
+\[
+SSE=\sum_{J=1}^{N}\epsilon_{j}^{2}=\epsilon'\epsilon=(\mathrm{Y}-\mathrm{X}\boldsymbol{\beta})'(\mathrm{Y}-\mathrm{X}\boldsymbol{\beta})
+\]
+\\
+
+
+Luego se obtiene que las ecuaciones normales son\\
+ 
+\[
+\mathrm{X}'\mathrm{X}\boldsymbol{\widehat{\beta}}=\mathrm{X}'\mathrm{Y}
+\]
+\\
+
+
+Para solucionar las ecuaciones normales se requiere que exista la
+inversa de la matriz $\mathrm{X}'\mathrm{X}$. Esta existe siempre
+que las variables regresoras sean linealmente independientes. Así,
+la solución de mínimos cuadrados de vector paramétrico $\boldsymbol{\beta}$
+es\\
+ 
+\[
+\boldsymbol{\widehat{\beta}}=(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{Y}
+\]
+\\
+
+
+{Ejemplo 1} Myers y Montgomery (1985) describen un experimento que
+trata con motores de turbina de gas. El voltaje de salida de los motores
+se midió en diversas combinaciones de velocidad de la cuchilla y extensión
+del sensor de medición de tensión. Los datos del experimento se dan
+en el Cuadro 1.1. \\
+ 
+\begin{table}[htbp]
+\centering %
+\begin{tabular}{|c|c|c|c|}
+\hline 
+\textbf{$\mathrm{Corrida}$ } & \textbf{$\mathrm{Voltaje}$ } & \textbf{$\mathrm{Velocidad\ de\ la\ cuchilla\ (pulg/seg)}$ } & \textbf{$\mathrm{Extension\ (pulg)}$ }\tabularnewline
+\hline 
+1  & 1.23  & 5300  & 0.000\tabularnewline
+\hline 
+2  & 3.13  & 8300  & 0.000\tabularnewline
+\hline 
+3  & 1.22  & 5300  & 0.012\tabularnewline
+\hline 
+4  & 1.92  & 8300  & 0.012\tabularnewline
+\hline 
+5  & 2.02  & 6800  & 0.000\tabularnewline
+\hline 
+6  & 1.51  & 6800  & 0.012\tabularnewline
+\hline 
+7  & 1.32  & 5300  & 0.006\tabularnewline
+\hline 
+8  & 2.62  & 8300  & 0.006\tabularnewline
+\hline 
+9  & 1.65  & 6800  & 0.006\tabularnewline
+\hline 
+10  & 1.62  & 6800  & 0.006\tabularnewline
+\hline 
+11  & 1.59  & 6800  & 0.006\tabularnewline
+\hline 
+\end{tabular}
+
+\caption{Experimento turbina de gas descrito por Myers y Montgomery (1995).}\label{tabJupiter} 
+\end{table}
+
+
+
+
+El propósito del experimento fue estimar un modelo cuadrático completo
+con el voltaje de salida como la variable dependiente y la velocidad
+de la cuchilla y extensión del sensor de medición de tensión como
+las variables explicativas.\\
+
+
+Variables codificadas \\
+
+
+Es conveniente para la mayoría de aplicaciones describir el experimento
+en términos de variables codificadas, porque esto facilita la comparación
+de los diseños de diferentes experimentos. Por lo tanto, se reajustarán
+las variables cuantitativas. Es característico de una variable $u$
+cuantitativa o continua que varía entre un valor mínimo y máximo,
+$u_{min}$ y $u_{max}$. Por lo general, los niveles de los factores
+se reajustarán a estar entre $-1$ y $+1$. Los valores codificados
+pueden ser calculados por\\
+ 
+\[
+z=\frac{u-u_{0}}{\Delta}
+\]
+\\
+ donde $u_{0}$ es el punto medio del intervalo $[u_{min},u_{max}]$
+y $\Delta$ es la mitad de la diferencia entre $u_{max}$ y $u_{min}$.
+Para la interpretación de los resultados experimentales, sin embargo,
+es deseable para volver a los niveles de los factores originales.
+Para el experimento de turbina de gas, los niveles codificados se
+pueden obtener de la siguiente manera:\\
+
+
+\[
+\mathrm{x}_{1}=\frac{Velocidaddelacuchilla-6800}{1500}
+\]
+\\
+ y \\
+ 
+\[
+\mathrm{x}_{2}=\frac{Extension-0.006}{0.006}
+\]
+\\
+
+
+donde $\mathrm{x}_{1}$ y $\mathrm{x}_{2}$ representan los niveles
+codificados de los factores de velocidad de la cuchilla y extensión
+del sensor de medición de tensión, respectivamente. Los niveles codificados
+se muestran en el Cuadro 1.2. Vamos a utilizar esta forma de analizar
+los datos. Del Cuadro 1.2, es fácil ver que las corridas $9$, $10$
+y $11$ se llevan a cabo en el nivel medio de los factores experimentales.
+\\
+
+
+\begin{table}[htbp]
+\centering %
+\begin{tabular}{|c|c|c|c|}
+\hline 
+\textbf{$\mathrm{Corrida}$ } & \textbf{$\mathrm{Voltaje}$ } & \textbf{$\mathrm{Velocidad\ de\ la\ cuchilla\ (pulg/seg)}$ } & \textbf{$\mathrm{Extension\ (pulg)}$ }\tabularnewline
+\hline 
+1  & 1.23  & -1  & -1\tabularnewline
+\hline 
+2  & 3.13  & +1  & -1\tabularnewline
+\hline 
+3  & 1.22  & -1  & +1\tabularnewline
+\hline 
+4  & 1.92  & +1  & +1\tabularnewline
+\hline 
+5  & 2.02  & 0  & -1\tabularnewline
+\hline 
+6  & 1.51  & 0  & +1\tabularnewline
+\hline 
+7  & 1.32  & -1  & 0\tabularnewline
+\hline 
+8  & 2.62  & +1  & 0\tabularnewline
+\hline 
+9  & 1.65  & 0  & 0\tabularnewline
+\hline 
+10  & 1.62  & 0  & 0\tabularnewline
+\hline 
+11  & 1.59  & 0  & 0\tabularnewline
+\hline 
+\end{tabular}\caption{Forma codificada del experimento de turbinas de gas.}\label{tabJupiter} 
+\end{table}
+
+
+Análisis \\
+
+
+El propósito del experimento fue estimar un modelo cuadrático completo
+en las dos variables. Como resultado, la expansión polinómica \\
+ 
+\[
+\boldsymbol{f}^{\top}(\mathrm{x})=\left[\begin{array}{rrrrrr}
+1 & \mathrm{x}_{1} & \mathrm{x}_{2} & \mathrm{x}_{1}\mathrm{x}_{2} & \mathrm{x}_{1}^{2} & \mathrm{x}_{2}^{2}\end{array}\right]
+\]
+
+
+y
+
+\[
+\boldsymbol{\beta}^{\top}=\left[\begin{array}{rrrrrr}
+\beta_{0} & \beta_{1} & \beta_{2} & \beta_{12} & \beta_{11} & \beta_{22}\end{array}\right],
+\]
+\\
+ de manera que $p=6$ y el modelo estadístico se pueden escribir como
+\\
+ 
+\[
+\mathrm{Y}=\beta_{0}+\beta_{1}\mathrm{x}_{1}+\beta_{2}\mathrm{x}_{2}+\beta_{12}\mathrm{x}_{1}\mathrm{x}_{2}+\beta_{11}\mathrm{x}_{1}^{2}+\beta_{22}\mathrm{x}_{2}^{2}+\epsilon.
+\]
+\\
+
+
+La matriz de diseño de todo el experimento viene dada por
+
+\[
+X=\left(\begin{array}{rrrrrr}
+1 & -1 & -1 & +1 & +1 & +1\\
+1 & +1 & -1 & -1 & +1 & +1\\
+1 & -1 & +1 & -1 & +1 & +1\\
+1 & +1 & +1 & +1 & +1 & +1\\
+1 & 0 & -1 & 0 & 0 & +1\\
+1 & 0 & +1 & 0 & 0 & +1\\
+1 & -1 & 0 & 0 & +1 & 0\\
+1 & +1 & 0 & 0 & +1 & 0\\
+1 & 0 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0 & 0
+\end{array}\right)
+\]
+\\
+
+
+la matriz $\mathrm{X}^{\top}\mathrm{X}$ es\\
+ 
+\[
+\left(\begin{array}{rrrrrr}
+11 & 0 & 0 & 0 & 6 & 6\\
+0 & 6 & 0 & 0 & 0 & 0\\
+0 & 0 & 6 & 0 & 0 & 0\\
+0 & 0 & 0 & 4 & 0 & 0\\
+6 & 0 & 0 & 0 & 6 & 4\\
+6 & 0 & 0 & 0 & 4 & 6
+\end{array}\right)
+\]
+\\
+
+
+y entonces $(\mathrm{X}^{\top}\mathrm{X})^{-1}$ es\\
+
+
+\[
+\left(\begin{array}{rrrrrr}
+0.2632 & 0 & 0 & 0 & -0.1579 & -0.1579\\
+0 & 0.1667 & 0 & 0 & 0 & 0\\
+0 & 0 & 0.1667 & 0 & 0 & 0\\
+0 & 0 & 0 & 0.25 & 0 & 0\\
+-0.1579 & 0 & 0 & 0 & 0.3947 & -0.1053\\
+-0.1579 & 0 & 0 & 0 & -0.1053 & 0.3947
+\end{array}\right)
+\]
+\\
+\\
+
+
+El vector $\mathrm{Y}$ es\\
+ 
+\[
+Y=\left(\begin{array}{rrr}
+1.23\\
+3.13\\
+1.22\\
+1.92\\
+2.02\\
+1.51\\
+1.32\\
+2.62\\
+1.65\\
+1.62\\
+1.59
+\end{array}\right)\ 
+\]
+\\
+
+
+y el vector $\mathrm{X}^{\top}\mathrm{Y}$ es\\
+
+
+el estimador de mínimos cuadrados de $\boldsymbol{\beta}$ es \\
+
+
+\[
+\boldsymbol{\widehat{\beta}}=(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{Y}
+\]
+\
+ o \
+ 
+\begin{equation}
+\begin{aligned}\boldsymbol{\widehat{\beta}} & =\left(\begin{array}{rrr}
+\widehat{\beta}_{0}\\
+\widehat{\beta}_{1}\\
+\widehat{\beta}_{2}\\
+\widehat{\beta}_{12}\\
+\widehat{\beta}_{11}\\
+\widehat{\beta}_{22}
+\end{array}\right)\label{n=1}\\
+\\
+ & =\left(\begin{array}{rrrrrr}
+0.2632 & 0 & 0 & 0 & -0.1579 & -0.1579\\
+0 & 0.1667 & 0 & 0 & 0 & 0\\
+0 & 0 & 0.1667 & 0 & 0 & 0\\
+0 & 0 & 0 & 0.25 & 0 & 0\\
+-0.1579 & 0 & 0 & 0 & 0.3947 & -0.1053\\
+-0.1579 & 0 & 0 & 0 & -0.1053 & 0.3947
+\end{array}\right)\left(\begin{array}{rrr}
+19.83\\
+3.9\\
+-1.73\\
+-1.2\\
+11.44\\
+11.03
+\end{array}\right)\\
+\\
+ & =\left(\begin{array}{rrr}
+1.6705\\
+0.6500\\
+-0.2883\\
+-0.3000\\
+0.2237\\
+0.0187
+\end{array}\right)\\
+\\
+\end{aligned}
+\end{equation}
+
+
+luego el modelo ajustado por mínimos cuadrados es\\
+ 
+\begin{equation}
+\begin{aligned}\widehat{\mathrm{Y}} & =1.6706+0.6500\mathrm{x}_{1}-0.2883\mathrm{x}_{2}-0.3000\mathrm{x}_{1}\mathrm{x}_{2}+0.2237\mathrm{x}_{1}^{2}+0.0187\mathrm{x}_{2}^{2}\end{aligned}
+\end{equation}
+\\
+
+
+
+\section{Propiedades de los estimadores de mínimos cuadrados}
+\begin{itemize}
+\item[(1)] $\boldsymbol{\widehat{\beta}}$ es un estimador insesgado de $\boldsymbol{\beta}$.
+Ésto es, $\mathrm{E}(\boldsymbol{\widehat{\beta}})=\boldsymbol{\beta}$.\\
+
+
+
+Demostración:\\
+ 
+\begin{equation}
+\begin{aligned}\mathrm{E}({\boldsymbol{\widehat{\beta}}}) & =\mathrm{E}[(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{Y}]\\
+ & =(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{E}(\mathrm{Y})
+\end{aligned}
+\end{equation}
+
+
+
+y como $\mathrm{E}(\mathrm{Y})=\mathrm{X}\boldsymbol{\widehat{\beta}}$,
+entonces\\
+ 
+\begin{equation}
+\begin{aligned}\mathrm{E}({\boldsymbol{\widehat{\beta}}}) & =(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{X}\boldsymbol{\beta}\\
+ & =\boldsymbol{\beta}
+\end{aligned}
+\end{equation}
+
+
+\item[(2)] La matriz de varianzas y covarianzas del vector $\boldsymbol{\widehat{\beta}}$
+es $Cov(\boldsymbol{\widehat{\beta}})=Var(\boldsymbol{\widehat{\beta}})=\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}$
+
+
+Demostración:\\
+ $Var(\boldsymbol{\widehat{\beta}})=Var((\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{Y})$\\
+ Sea $\mathrm{A}=(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}$
+y como $\mathrm{A}$ es una matriz y $\mathrm{Y}$ un vector columna
+y por la pripiedad de varianzas $Var(\mathrm{A}\mathrm{Y})=\mathrm{A}Var(\mathrm{Y})\mathrm{A}^{\top}$,
+se tiene que\\
+ 
+\begin{equation}
+\begin{aligned}Var(\boldsymbol{\widehat{\beta}}) & =(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}Var(\mathrm{Y})((\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top})^{\top}\\
+ & =(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\sigma^{2}((\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top})^{\top}\\
+ & =(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\sigma^{2}(\mathrm{X}^{\top})^{\top}((\mathrm{X}^{\top}\mathrm{X})^{-1})^{\top}\\
+ & =(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\sigma^{2}\mathrm{X}(\mathrm{X}^{\top}\mathrm{X})^{-1}\\
+ & =\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}(\mathrm{X}^{\top}\mathrm{X})(\mathrm{X}^{\top}\mathrm{X})^{-1}\\
+ & =\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{I}\\
+ & =\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}
+\end{aligned}
+\end{equation}
+
+
+\end{itemize}
+{Ejemplo 2} Para los datos del ejemplo 1, se tiene que la estimación
+de la matriz de varianzas-covarianzas del vector $\boldsymbol{\widehat{\beta}}$
+es\\
+ 
+\begin{equation}
+\begin{aligned}Var(\boldsymbol{\widehat{\beta}}) & =\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}\\
+\\
+ & =0.0083\left(\begin{array}{rrrrrr}
+0.2632 & 0 & 0 & 0 & -0.1579 & -0.1579\\
+0 & 0.1667 & 0 & 0 & 0 & 0\\
+0 & 0 & 0.1667 & 0 & 0 & 0\\
+0 & 0 & 0 & 0.25 & 0 & 0\\
+-0.1579 & 0 & 0 & 0 & 0.3947 & -0.1053\\
+-0.1579 & 0 & 0 & 0 & -0.1053 & 0.3947
+\end{array}\right)\\
+\\
+ & =\left(\begin{array}{rrrrrr}
+0.00218456 & 0 & 0 & 0 & -0.00131057 & -0.00131057\\
+0 & 0.00138361 & 0 & 0 & 0 & 0\\
+0 & 0 & 0.00138361 & 0 & 0 & 0\\
+0 & 0 & 0 & 0.002075 & 0 & 0\\
+-0.00131057 & 0 & 0 & 0 & 0.00327601 & -0.00087399\\
+-0.00131057 & 0 & 0 & 0 & -0.00087399 & 0.00327601
+\end{array}\right)
+\end{aligned}
+\end{equation}
+\\
+
+
+Los errores estándar de cada parámetro es dado en la tabla: \\
+ 
+\[
+\begin{tabular}{||c||c||}
+\hline  {\bf Parámetro }  &  {\bf Error estándar }\\
+\hline\hline \ensuremath{\beta_{0}}  &  \ensuremath{{\displaystyle \sqrt{0.00218456}=0.04673928}} \\
+\hline\hline \ensuremath{\beta_{1}} , \ \ensuremath{\beta_{2}}  &  \ensuremath{{\displaystyle \sqrt{0.00138361}=0.03719691}} \\
+\hline\hline \ensuremath{\beta_{12}}  &  \ensuremath{{\displaystyle \sqrt{0.002075}=0.04555217}} \\
+\hline\hline \ensuremath{\beta_{11}} , \ensuremath{\beta_{22}}  &  \ensuremath{{\displaystyle \sqrt{0.00327601}=0.05723644}} 
+\\\hline \end{tabular}
+\]
+\\
+
+
+
+\section{Teorema de Gauss - Markov}
+
+Si no se asume normalidad el estimador mínimo cuadrático $\boldsymbol{\widehat{\beta}}$
+es el mejor estimador dentro de los estimadores lineales insesgados
+de $\boldsymbol{\beta}$, en el sentido que es el de la varianza más
+pequeña.\\
+
+
+Demostración:\\
+
+
+Conocemos que $\boldsymbol{\widehat{\beta}}=(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{Y}$,
+sea $\mathrm{A}=(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}$,
+entonces $\boldsymbol{\widehat{\beta}}=\mathrm{A}\mathrm{Y}$.\\
+ Demostremos que $\boldsymbol{\beta}=\mathrm{C}\mathrm{Y}$ no es
+mejor estimador insesgado que $\boldsymbol{\widehat{\beta}}$. Sabemos
+que $\mathrm{E}[\mathrm{C}\mathrm{Y}]=\mathrm{C}\mathrm{E}[\mathrm{Y}]=\mathrm{C}\mathrm{X}\boldsymbol{\beta}$
+por ser $\boldsymbol{\beta}$ insesgado se cumple que $\mathrm{E}[\boldsymbol{\beta}]=\boldsymbol{\beta}$
+$\Longrightarrow$ $\mathrm{C}\mathrm{X}\boldsymbol{\beta}=\boldsymbol{\beta}$
+$\Longrightarrow$ $\mathrm{C}\mathrm{X}\boldsymbol{\beta}-\boldsymbol{\beta}=\overrightarrow{0}$
+$\Longrightarrow$ $(\mathrm{C}\mathrm{X}-\mathrm{I})\boldsymbol{\beta}=\overrightarrow{0}$,
+como $\boldsymbol{\beta}=0$, entonces $\Longrightarrow$ $\mathrm{C}\mathrm{X}-\mathrm{I}=\overrightarrow{0}$
+$\Longrightarrow$ $\mathrm{C}\mathrm{X}=\mathrm{I}$.\\
+ Ahora como $\mathrm{C}$ es una matriz y $\mathrm{Y}$ un vector
+columna y por la propiedad $Var(\mathrm{A}\mathrm{Y})=\mathrm{A}Var(\mathrm{Y})\mathrm{A}^{\top}$,
+tenemos que $Var(\mathrm{C}\mathrm{Y})=\mathrm{C}Var(\mathrm{Y})\mathrm{C}^{\top}=\mathrm{C}\sigma^{2}\mathrm{C}^{\top}=\sigma^{2}\mathrm{C}\mathrm{C}^{\top}$.\\
+ Luego como $Var(\boldsymbol{\widehat{\beta}})=\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}$
+y $\mathrm{C}\mathrm{X}=\mathrm{I}$ y $(\mathrm{C}\mathrm{X})\top=\mathrm{X}^{\top}\mathrm{C}^{\top}=\mathrm{I}$,
+podemos escribir $Var(\boldsymbol{\widehat{\beta}})=\mathrm{C}\mathrm{X}\sigma^{2}(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{C}^{\top}=\sigma^{2}\mathrm{C}\mathrm{X}(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{C}^{\top}$\\
+
+
+por lo tanto\\
+ 
+\begin{equation}
+\begin{aligned}Var(\boldsymbol{\beta})-Var(\boldsymbol{\widehat{\beta}}) & =\sigma^{2}\mathrm{C}\mathrm{C}^{\top}-\sigma^{2}\mathrm{C}\mathrm{X}(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top}\mathrm{C}^{\top}\\
+ & =\sigma^{2}\mathrm{C}(\mathrm{I}-\mathrm{X}(\mathrm{X}^{\top}\mathrm{X})^{-1}\mathrm{X}^{\top})\mathrm{C}^{\top}\\
+ & =\sigma^{2}\mathrm{C}\mathrm{H}\mathrm{C}^{\top}
+\end{aligned}
+\end{equation}
+\\
+
+
+$\mathrm{H}$ es simétrica $(\mathrm{H}^{\top}=\mathrm{H})$ e idempotente
+$(\mathrm{H}^{2}=\mathrm{H})$, $\mathrm{H}$ es definidida positiva
+(Una matriz $\mathrm{A}$ se dice que es semidefinida positiva si
+$\mathrm{Y}^{\top}\mathrm{A}\mathrm{Y}\geq0$ para todo vector $\mathrm{Y}\neq0$.
+Diremos que es definida positiva si $\mathrm{Y}^{\top}\mathrm{A}\mathrm{Y}>0$
+para todo vector $\mathrm{Y}\neq0$), por tanto $\mathrm{C}\mathrm{H}\mathrm{C}^{\top}>0$.\\
+
+
+Entonces $Var(\boldsymbol{\beta})-Var(\boldsymbol{\widehat{\beta}})>0$
+$\Longrightarrow$ $Var(\boldsymbol{\beta})>Var(\boldsymbol{\widehat{\beta}})$.
+Luego $\boldsymbol{\widehat{\beta}}$ es el mejor estimador insesgado
+de mínima varianza.\\
+
+
+
+\section{Diseños experimentales y matrices de información}
+
+El conjunto $\{\mathrm{x}_{1},...,\mathrm{x}_{N}\}$ de elementos
+de $\mathcal{X}$ (aunque algunos de los elementos pueden coincidir
+unos con otros) se llama un diseño exacto (o discreto) de tamaño $N$.\\
+
+
+Tengamos sólo $n<N$ puntos distintos. Supongamos que $\mathrm{x}_{i}$
+ocurre $r_{i}$ veces entre los puntos $\{\mathrm{x}_{1},...,\mathrm{x}_{N}\}$
+para $i=1,...,n$ así 
+\[
+N=\sum_{i=1}^{n}r_{i}.
+\]
+.\\
+
+
+Asociamos $w_{i}=r_{i}/N$ con cada uno de los puntos $\mathrm{x}_{i}$,
+$i=1,...,n$. Asi \\
+ 
+\begin{equation}
+\xi=\left(\begin{array}{lcr}
+x_{1} & ... & x_{n}\\
+w_{1} & ... & w_{n}
+\end{array}\right)\label{n=00003D2}
+\end{equation}
+\\
+ será llamada diseño exacto (discreto) o diseño $n$-puntos de tamaño
+$N$.\\
+
+
+La matriz 
+\begin{equation}
+M(\xi)=\sum_{i=1}^{n}f(\mathrm{x}_{i})f^{\top}(\mathrm{x}_{i})w_{i}\label{n=00003D3}
+\end{equation}
+\\
+ se llama la matriz de información de diseño $\xi$.\\
+
+
+Por el teorema de Gauss-Markov, tenemos 
+\[
+Cov(\boldsymbol{\theta})=\frac{\sigma^{2}}{N}M^{-1}(\xi)
+\]
+para la matriz varianza de la estimación de mínimos cuadrados.\\
+
+
+El diseño $\xi$ es una medida de probabilidad discreta, definido
+por (1.2), que incluye los puntos del conjunto $\mathcal{X}$ y los
+coeficientes de peso.\\
+
+
+En muchas situaciones prácticas, es imposible de realizar estos diseños
+y tales diseños se deben considerar como aproximación de algunos diseños
+discretos.\\
+
+
+Vamos a escribir un diseño, concentrado en un número finito de puntos,
+en la forma (1.2), donde los coeficientes $w_{i}=\xi(\mathrm{x}_{i})$
+son números positivos arbitrarios tales que $\sum w_{i}=1$. La matriz
+
+\begin{equation}
+M(\xi)=\sum_{i=1}^{n}f(\mathrm{x}_{i})f(\mathrm{x}_{i})^{\top}\xi(\mathrm{x}_{i})\label{n=00003D3}
+\end{equation}
+\\
+ se le llama la matriz de información del diseño aproximado.\\
+
+
+Sea $\Xi$ el conjunto de todos los diseños aproximados y $\mathcal{M}$
+el conjunto de matrices de información que les corresponden: 
+\[
+\mathcal{M}=\{M;M=M(\xi)\quad\text{para algunos \ensuremath{\xi\in\Xi}}\}
+\]
+\\
+ Sea $\Xi_{n}$ el conjunto de diseños aproximados, concentrado en
+$n$ puntos (con pesos distintos de cero).\\
+
+
+Las propiedades básicas de matrices de información pueden enunciarse
+como un teorema.\\
+\\
+
+\begin{thm}
+Propiedades de las matrices de información: \end{thm}
+\begin{itemize}
+\item[(i)] Cualquier matriz de información es definida no negativa (en particular
+es simétrica).\\
+
+
+
+Demostración:\\
+ La demostración fácilmente se concluye de la definición de matriz
+no negativa y del hecho de que para todo vector $z\in\mathbb{R}^{m}$
+se cumple\\
+ 
+\[
+z^{\top}M(\xi)z=\sum_{i=1}^{n}z^{\top}f(\mathrm{x}_{i})f(\mathrm{x}_{i})^{\top}z\xi(\mathrm{x}_{i})=\sum_{i=1}^{n}\|z^{\top}f(\mathrm{x}_{i})\|^{2}\xi(\mathrm{x}_{i})\geq0
+\]
+\\
+ 
+
+\item[(ii)] Si $n<m$, siendo $m$ el número de parámetros, entonces $detM(\xi)=0$.\\
+
+
+
+Demostración:\\
+ Supongamos que $\xi$ tiene en su soporte $k<m$ puntos: $\mathrm{x}_{1},...,\mathrm{x}_{k}$.
+En el desarrollo del determinante aparecerán siempre al menos dos
+columnas iguales y por tanto el determinante ha de ser cero.\\
+
+
+\item[(iii)] El conjunto $\mathcal{M}$ es convexo.\\
+
+
+
+Demostración:\\
+ Es necesario comprobar que para cualquier $\lambda\in[0,1]$ y para
+cualquier par de diseños $\xi_{1}$ y $\xi_{2}$, la matriz\
+ 
+\[
+M=(1-\lambda)M(\xi_{1})+\lambda M(\xi_{2})
+\]
+\
+ pertenece al conjunto $\mathcal{M}$.\\
+
+
+
+Definimos el diseño $\xi$ según la fórmula\\
+ 
+\[
+\xi=(1-\lambda)\xi_{1}+\lambda\xi_{2}
+\]
+\\
+ mostraremos que $M=M(\xi)\in\mathcal{M}$; en efecto,\\
+ 
+\begin{equation}
+\begin{aligned}M & =(1-\lambda)M(\xi_{1})+\lambda M(\xi_{2})\\
+ & =(1-\lambda)\sum_{i=1}^{n}f(\mathrm{x}_{i})f(\mathrm{x}_{i})^{\top}\xi_{1}(\mathrm{x}_{i})+\lambda\sum_{i=1}^{n}f(\mathrm{x}_{i})f(\mathrm{x}_{i})^{\top}\xi_{2}(\mathrm{x}_{i})\\
+ & =\sum_{i=1}^{n}f(\mathrm{x}_{i})f(\mathrm{x}_{i})^{\top}[(1-\lambda)\xi_{1}(\mathrm{x}_{i})+\lambda\xi_{2}(\mathrm{x}_{i})]\\
+ & =M(\xi)
+\end{aligned}
+\end{equation}
+Con ello queda demostrado.\\
+ 
+
+\end{itemize}
+
+
+
+\section{Criterios de optimalidad}
+
+Llamemos al diseño $\xi$ no singular si el $detM(\xi)\neq0$. Vamos
+a considerar sólo el caso de la estimación de todo el conjunto de
+parámetros. Aquí, sólo los diseños no singulares son de interés. El
+teorema de Gauss-Markov es válido para ello.\\
+
+
+Típicamente, no existe un diseño $\hat{\xi}$ tal que la matriz 
+\[
+M^{-1}(\hat{\xi})-M^{-1}(\xi),
+\]
+es no negativa, donde $\xi$ es un diseño arbitrario. Por lo tanto,
+algunas funciones de matrices de información, que tienen sentido estadístico,
+se utilizan como los criterios de optimalidad.\\
+
+
+Consideremos algunos criterios de optimalidad de nuestro interés.\\
+
+
+
+\subsection{$D-criterio$}
+
+El criterio de diseño más usado en las aplicaciones es el de $D$-optimalidad,
+en el que la varianza generalizada de las estimaciones de los parámetros,
+o su logaritmo se reduce al mínimo.\\
+
+
+El diseño $\xi=arg\ \underset{\xi}{max}\ |M(\xi)|=arg\ \underset{\xi}{min}\ |(M(\xi))^{-1}|$\ se
+llama diseño $D$-óptimo.\\
+
+
+El funciomal 
+\[
+\Psi[M(\xi)]=-Log|M(\xi)|
+\]
+se llama criterio $D$-óptimo; donde el funcional $\Psi$ definido
+en el espacio de elementos de la matriz de información de $M\in\mathcal{M}$,
+se le denomina criterio de optimización, ver Kiefer(1974). \\
+
+
+$D$-optimalidad, criterio del determinante, equivale a minimizar
+el volumen del elipsoide de variación de los estimadores lineales
+e insesgados de los parámetros desconocidos.\\
+
+
+
+\subsection{$G-criterio$}
+
+Para diseños continuos la varianza normalizada de la respuesta predicha
+es 
+\[
+d(\mathrm{x},\xi)=f^{T}(\mathrm{x})M^{-1}(\xi)f(\mathrm{x})
+\]
+
+
+El criterio $G$-óptimo es de la forma 
+\[
+\underset{\mathrm{x}\in\mathcal{X}}{max}\ d(\mathrm{x},\xi)\rightarrow\underset{\xi}{inf}.
+\]
+Tenga en cuenta que para el diseño discreto normado $\xi$, 
+\[
+d(\mathrm{x},\xi)=\dfrac{\sigma^{2}}{N}Cov(\boldsymbol{f}(\mathrm{x})^{\top}\boldsymbol{\theta});
+\]
+es decir $d(\mathrm{x},\xi)$ es igual (a la constante de precisión)
+a la varianza de un valor, predicha por el modelo en el punto $\mathrm{x}$.\\
+
+
+
+\subsection{$D_{s}-criterio$}
+
+Son apropiados cuando el interés es estimar un subconjunto de $s$
+parámetros de todo el $p-vector$ $\boldsymbol{\beta}$. Por lo tanto
+sin perdida de generalidad, los términos del modelo se pueden dividir
+en dos grupos\\
+ 
+\[
+E(Y)=f^{T}(\mathrm{x})\boldsymbol{\beta}=f_{1}^{\top}(\mathrm{x})\boldsymbol{\beta}_{1}+f_{2}^{\top}\boldsymbol{\beta}_{2}
+\]
+\\
+ donde $\boldsymbol{\beta}_{1}\in\mathbb{R}^{s}$ y $\boldsymbol{\beta}_{2}\in\mathbb{R}^{p-s}$.
+Los $\boldsymbol{\beta}_{1}$ son los parámetros de interés y los
+$p-s$ parámetros $\boldsymbol{\beta}_{2}$ suelen ser tratados como
+parámetros molestia.\\
+
+
+Un ejemplo es cuando $\boldsymbol{\beta}_{1}$ corresponde a los factores
+experimentales y $\boldsymbol{\beta}_{2}$ corresponde a los parámetros
+de las variables de bloqueo (Ver ejemplos, capítulo 15 en Optimum
+Experimental Designs, with SAS de A.C. Atkinson, A.N. Donev y R.D.
+Tobias). Un segundo ejemplo es cuando los experimentos están diseñados
+para comprobar la bondad de ajuste de un modelo.\\
+
+
+Para obtener expresiones para el criterio de diseño y función de varianza
+relacionadas, dividimos la matriz de información como\\
+ 
+\[
+M(\xi)=\left(\begin{array}{lr}
+M_{11}(\xi) & M_{12}(\xi)\\
+M_{12}^{T}(\xi) & M_{22}(\xi)
+\end{array}\right)
+\]
+\\
+
+
+La matriz de covarianza para la estimación de mínimos cuadrados de
+$\beta_{1}$ es $M^{11}(\xi)$, la submatriz superior izquierda $s\times s$
+de $M^{-1}(\xi)$. Se puede verificar, a partir de los resultados
+de la inversa de una matriz particionada (por ejemplo, Fedorov 1972,
+p. 24), que\
+\[
+M^{11}(\xi)=\left\{ M_{11}(\xi)-M_{12}(\xi)M_{22}^{-1}(\xi)M_{12}^{\top}(\xi)\right\} ^{-1}
+\]
+\\
+ En consecuencia, el diseño $D_{s}$-óptimo para $\beta_{1}$ maximiza
+el determinante\\
+ 
+\[
+|M_{11}(\xi)-M_{12}(\xi)M_{22}^{-1}(\xi)M_{12}^{\top}(\xi)|=\frac{|M(\xi)|}{|M_{22}(\xi)|}.
+\]
+\\
+ Por otro lado, en la práctica se pueden utilizar teoremas que proporcionan
+herramientas para la construcción y el control de la optimización
+de un diseño. Si la atención se limita al parámetro $\boldsymbol{\beta}$,
+se considera el conocido teorema general de equivalencia (cf. Kiefer
+y Wolfowitz(1990); cf. Silvey (1980); cf. Pulkelsheim(2006)).\\
+
+
+
+\subsection{Teorema de equivalencia}
+
+El siguiente resultado de Kiefer y Wolfowitz (1960) es de gran importancia
+en la teoría del diseño experimental óptimo.
+\begin{thm}
+(Kiefer-Wolfowitz. Teorema de equivalencia) Para el modelo (1.1),
+existe un diseño $D-$óptimo bajo los supuestos clásicos de regresión
+y las siguientes condiciones son equvalentes: \end{thm}
+\begin{itemize}
+\item[(i)] $\xi^{*}$ es un diseño $D$-óptimo. 
+\item[(ii)] $\xi^{*}$ es un diseño $G$-óptimo. 
+\item[(iii)] $\underset{\mathrm{x}\in\mathcal{X}}{max}d(x,\xi^{*})=m.$ 
+\end{itemize}
+Por otra parte, todos los $D$-óptimos diseños tienen la misma matriz
+de información, y la función de predicción de la varianza $d(x,\xi^{*})$
+alcanza su máximo en los puntos de cualquier diseño $D$-óptimo con
+soporte finito.\\
+
+
+Vale la pena subrayar que el teorema es cierto para los diseños que
+sean $D$-óptimo en la clase de diseño aproximado.\\
+
+
+Este teorema no sólo establece la equivalencia entre $D$ y $G$-criterios,
+sino que también da la importante condición necesaria y suficiente
+de $D$-optimalidad: Diseño $\xi^{*}$ es $D$-óptimo si y sólo si
+$\underset{\mathrm{x}\in\mathcal{X}}{max}d(x,\xi^{*})=m.$\\
+
+
+la demostración del teorema se puede encontrar en Kiefer y Wolfowitz
+$(1960)$. Muchos análogos del teorema de Kiefer-Wolfowitz se pueden
+encontrar en Kiefer (1974), y aparece en forma más general en Whittle
+(1973).\\
+
+
+{Ejemplo 3} Sea $\eta(\mathrm{x}_{j},\boldsymbol{\theta})=\theta_{1}+\theta_{2}\mathrm{x}+\theta_{3}\mathrm{x}^{2}+\theta_{4}\mathrm{x}^{3}$;
+un modelo polinomial con $\mathrm{x}\in[-1,1]$.\\
+
+
+En el caso $D$-óptimo, se verificará a continuación que el diseño\\
+ 
+\[
+\xi^{*}=\begin{pmatrix}-1 & -\sqrt{5}/5 & \sqrt{5}/5 & 1\\
+1/4 & 1/4 & 1/4 & 1/4
+\end{pmatrix}
+\]
+\\
+ es un diseño $D$-óptimo.\\
+
+
+En efecto, bastará con mostrar que el diseño $\xi^{*}$ verifica las
+condiciones del criterio de $D$-óptimilidad. Primero note que su
+matriz de momento es\\
+
+
+\begin{equation}
+\begin{aligned}M(\xi^{*}) & =\sum_{\mathrm{x}\in\{-1,-\sqrt{5}/5,\sqrt{5}/5,1\}}[1,\mathrm{x},\mathrm{x}^{2},\mathrm{x}^{3}]^{\top}[1\ \mathrm{x}\ \mathrm{x}^{2}\ \mathrm{x}^{3}](1/4)\\
+\\
+ & =\begin{pmatrix}1 & 0 & 3/5 & 0\\
+0 & 3/5 & 0 & 13/25\\
+3/5 & 0 & 13/25 & 0\\
+0 & 13/25 & 0 & 63/125
+\end{pmatrix}
+\end{aligned}
+\end{equation}
+\\
+ Ahora\\
+ 
+\[
+M^{-1}(\xi^{*})=\begin{pmatrix}13/4 & 0 & -15/4 & 0\\
+0 & 63/4 & 0 & -65/4\\
+-15/4 & 0 & 25/4 & 0\\
+0 & 65/4 & 0 & 75/4
+\end{pmatrix}
+\]
+\\
+ Luego\\
+ 
+\begin{equation}
+\begin{aligned}d(\mathrm{x},\xi^{*}) & =f^{\top}(\mathrm{x})M^{-1}(\xi^{*})f(\mathrm{x})\\
+\\
+ & =\frac{75}{4}\mathrm{x}^{6}-\dfrac{105}{4}\mathrm{x}^{4}+\frac{33}{4}\mathrm{x}^{2}+\frac{13}{4}
+\end{aligned}
+\end{equation}
+\\
+
+
+Por último\\
+
+
+máx$d(\mathrm{x},\xi^{*})=4$ y dicha función tiene sus puntos críticos
+en los valores del diseño.\\
+
+
+\begin{center}
+\includegraphics[width=10cm]{figures/GRAFICA1.jpg}\\
+ Figura 1.1 \ Ejemplo 3 
+\par\end{center}
+
+Por lo tanto $\xi^{*}$ es $D$-óptimo. 
+
+
+\section{Diseños de Bloqueos Completos Aleatorizados}
+
+En cualquier experimento la variabilidad que surge de un factor perturbador
+puede afectar los resultados. 
+
+
+\subsubsection*{Factor Perturbador.}
+
+Puede definirse como un factor del diseño que probablemente tenga
+un efecto sobre la respuesta pero en el que no existe interés específico.
+
+En ocasiones un factor perturbador es desconocido y no controlable
+(se desconoce la existencia y puede tomar niveles variables mientras
+se realiza el experimento).
+
+
+\subsubsection*{La Aleatorización.}
+
+Es una técnica de diseño que se utiliza para protegerse contra factores
+perturbadores.
+
+en otros casos el factor perturbador es conocido pero no controlable.
+Si por lo menos puede observarse el valor que asume el factor perturbador
+en cada corrida del experimento, es posible hacer la compensación
+correspondiente en el análisis estadístico mediante el uso del análisis
+de covarianza.
+
+Cuando la fuente de variabilidad perturbadora es conocida y controlable,
+puede usarse una técnica de diseño llamada formación de bloques para
+eliminar de manera sistemática su efecto sobre las comparaciones estadísticas
+entre los tratamientos.
+
+La formación de bloques es una técnica de diseño en extremo importante
+que se utiliza ampliamente en la experimentación industrial.
+
+El error experimental reflejará tanto el error aleatorio como la variabilidad
+entre los ejemplares de prueba.
+
+El objetivo sería hacer el error experimental tan pequeño como fuera
+posible (eliminar del error experimental la variabilidad entre los
+ejemplares de prueba).
+
+Un diseño para lograr lo anterior es el diseño de bloques completos
+aleatorizados (RCBD, Randomized Complete Block Design). La palabra
+``Completos'' indica que cada bloque (ejemplar de prueba) contiene
+todos los tratamientos.
+\begin{itemize}
+\item Ejemplos de factor perturbador: Materia prima, personas, tiempo, etc.
+\end{itemize}
+La unidad experimental es el total de corridas en un experimento.
+
+
+\subsection*{Análisis Estadístico Del Diseño de Bloques Completos Aleatorizados}
+
+Supongase que se tienen $a$ tratamientos que van a compararse y $b$
+bloques.
+
+Hay una observación por tratamiento en cada bloque, y el orden en
+que se corren los tratamientos dentro de cada bloque se determinan
+al azar.
+
+$\begin{array}{cccc}
+\mbox{Bloque\mbox{ 1}} & \mbox{Bloque 2} & \mbox{} & \mbox{Bloque b}\\
+y_{11} & y_{12} & y_{1j} & y_{1b}\\
+y_{21} & y_{22} & y_{2j} & y_{2b}\\
+y_{i1} & y_{i2} & y_{ij} & y_{ib}\\
+\vdots & \vdots & \vdots & \vdots\\
+y_{a1} & y_{a2} & y_{aj} & y_{ab}
+\end{array}$
+
+El diseño estadístico de RCBD puede escribirse de varias maneras.
+El tradicional es el modelo de los efectos:
+
+$y_{ij}=\mu+\tau_{i}+\beta_{j}+\epsilon_{ij}\begin{cases}
+i & =1,2,\ldots,a\\
+j & =1,2,\ldots,b
+\end{cases}$
+
+$Y_{ki}=a_{ki}+f(X_{ki})^{\tau}\beta$ con $i=1,2,\ldots,b$ y $k=1,2,\ldots,a$
+
+$f(X_{ki})=[f_{1}(X_{ki}),\ldots,f_{a}(X_{ki})]$
+
+donde $\mu$ es la media global, $\tau_{i}$ es el efecto del tratamiento
+$i-\acute{e}simo$, $\beta_{j}$ es el efecto del bloque $j-\acute{e}simo$,
+y $\epsilon_{ij}$ es el término del error $NID(O,\sigma^{2})$ usual.
+
+Se considerará inicialmente que los tratamientos y los bloques son
+factores fijos.
+
+El modelo de los efectos para el RCBD es un modelo especificado, los
+efectos de los tratamientos y los bloques se consideran por lo general
+como desviaciones de la media global por lo que:
+
+${\displaystyle {\textstyle {\textstyle {\displaystyle \sum_{i=1}^{a}{\displaystyle \tau_{i}=0}}}}}$
+y ${\displaystyle \sum_{j=1}^{b}}{\displaystyle \beta_{j}=0}$
+
+También es posible usar un modelo de las medias para el RCBD:
+
+$y_{ij}=\mu_{ij}+\epsilon_{ij}\begin{cases}
+i & =1,2,\ldots,a\\
+j & =1,2,\ldots,b
+\end{cases}$
+
+Donde $\mu_{ij}=\mu+\tau_{i}+\beta_{j}$
+
+En un experimento en el que se use RCBD, el interés se encuentra en
+probar la igualdad de las medias de los tratamiento. Por lo tanto,
+las hipótesis de interés son:
+
+$H_{0}:\mu_{1}=\mu_{2}=\ldots=\mu_{a}$
+
+$H_{1}:\mbox{ Al menos una \ensuremath{\mu_{i}\neq\mu_{j}}}$
+
+Puesto que la media del tratamiento $i-\acute{e}simo$ es $\mu_{i}=\frac{1}{b}{\displaystyle \sum_{j=1}^{b}(\mu+\tau_{i}+\beta_{j})=\mu+\tau_{i}}$
+
+Otra forma de escribir las hipótesis en términos de los efectos de
+los tratamientos es:
+
+$H_{0}:\tau_{1}=\tau_{2}=\ldots=\tau_{a}=0$
+
+$H_{1}:\mbox{ \ensuremath{\tau_{i}\neq0}Para al menos una \ensuremath{i}}$
+
+Sea $y_{i.}$ el total de observaciones hechas bajo el tratamiento
+$i$.
+
+$y_{.j}$ el total de observaciones del bloque $.j$
+
+$y_{..}$el gran total de las observaciones.
+
+$N=ab$ el número total de observaciones. expresado matemáticamente.
+
+$y_{i.}={\displaystyle \sum_{j=1}^{b}y_{ij}}$ con $i=1,2,\ldots,a$
+
+$y_{.j}={\displaystyle \sum_{i=1}^{a}y_{ij}}$ con $j=1,2,\ldots,b$
+
+$y_{..}={\displaystyle \sum_{i=1}^{a}{\displaystyle \sum_{j=1}^{b}y_{ij}={\displaystyle \sum_{i=1}^{a}y_{i.}={\displaystyle \sum_{j=1}^{b}y_{.j}}}}}$
+
+De manera similar, $\bar{y_{i}}$es el promedio de las observaciones
+hechas bajo el tratamiento $i$
+
+$y$ es el promedio de las observaciones del bloque $j$.
+
+$\bar{y}_{..}$es el gran promedio total de las observaciones.
+
+es decir $\bar{y}_{i.}=\frac{y_{i.}}{b}$; $\bar{y}=\frac{y_{.j}}{a}$;
+$\frac{\bar{y}_{..}}{N}$
+
+La suma de cuadrados total corregida puede expresarse como:
+
+$\begin{array}{ccc}
+{\displaystyle \sum_{i=1}^{a}}{\displaystyle \sum_{j=1}^{b}(y_{ij}-\bar{y}_{..})^{2}} & = & \sum_{i=1}^{a}{\displaystyle \sum_{j=1}^{b}[(\bar{y}_{i.}-\bar{y}_{..})+}\bar{y}_{.j}-\bar{y}_{..})+(\bar{y}_{ij}-\bar{y}_{i.}-\bar{y}_{.j}+\bar{y}_{..})]^{2}\\
+ & = & b{\displaystyle \sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}+a\sum_{j=1}^{b}(\bar{y}_{.j}-\bar{y}_{..})^{2}+\sum_{i=1}^{a}{\displaystyle \sum_{j=1}^{b}(\bar{y}_{ij}-\bar{y}_{.j}-\bar{y}_{i.}+\bar{y}_{..})^{2}}}
+\end{array}${*}
+
+Al expresar simbólicamente las sumas de cuadrados, se tiene: $SS_{T}=SS_{Tratamientos}+SS_{Bloques}+SS_{E}$
+{*}'
+
+Puesto que hay $N$ observaciones, $a$ tratamientos y $b$ bloques,
+$SS_{T}$ tiene $N-1$ grados de libertad, $SS_{Tratamientos}$ tiene
+$a-1$ grados de libertad y $SS_{Bloques}$tiene $b-1$ grados de
+libertad.
+
+Como $SS_{E}=SS_{T}-(SS_{Tratamientos}+SS_{Bloques})$ y $N=ab$ entonces
+$SS_{E}$ tiene $ab-1-(a-1)-(b-1)=(a-1)(b-1)$ grados de libertad.
+
+Como la suma de los grados de libertad del lado derecho es igual al
+total del lado izquierdo de {*}', por lo tanto, al establecer los
+supuestos de normalidad usuales para los errores, puede usarse el
+Teorema de Cochran para demostrar que $\frac{SS_{Tratamientos}}{\sigma^{2}}$;
+$\frac{SS_{Bloques}}{\sigma^{2}}$y $\frac{SS_{E}}{\sigma^{2}}$ son
+variables aleatorias $ji-cuadradas$ con distribuciones independientes.
+
+Cada suma de cuadrados dividida por sus grados de libertad es un cuadrado
+medio.
+
+Puede demostrarse que el valor esperado de los cuadrados medios, si
+los tratamientos y los bloques son fijos, es:
+
+$E(MS_{Tratamientos})=\sigma^{2}+\frac{b{\displaystyle \sum_{i=1}^{a}\tau_{i}^{2}}}{a-1}$
+
+$E(MS_{Bloques})=\sigma^{2}+\frac{a{\displaystyle \sum_{j=1}^{b}}\beta_{j}^{2}}{b-1}$
+
+$E(MS_{E})=\sigma^{2}$
+
+Por lo tanto, para probar la igualdad de las medias de los tratamientos,
+se usaría el estadístico de prueba:
+
+$F_{0}=\frac{MS_{Tratamientos}}{MS_{E}}$
+
+Que se distribuye como $F_{a-1,(a-1)(b-1)}$si la hipótesis nula es
+verdadera.
+
+La región crítica es la cola superior de la distribución $F$, y $H_{0}$se
+rechaza si $F_{0}>F_{a,a-1,(a-1)(b-1)}$
+
+También podría haber interés en comparar las medidas de los bloques
+porque, en caso de que la diferencia entre estas medias no sea considerables,
+quizá no sea necesaria la formación de bloques en experimentos futuros.
+
+Por los cuadrados medios esperados, aparentemente la hipótesis $H_{0}:\beta_{j}=0$
+puede probarse comparando el estadístico $F_{0}=\frac{MS_{Bloques}}{MS_{E}}$
+con $F_{a,b-1,(a-1)(b-1)}$
+\begin{description}
+\item [{Recuerde:}] la aleatorización sólo se ha aplicado a los tratamientos
+dentro de los bloques, es decir, los bloques representan una restricción
+sobre la aleatorización.
+\end{description}
+¿Qué efecto tiene lo anterior sobre el estadístico $F_{0}=\frac{MS_{Bloques}}{MS_{E}}$?
+
+\label{Box, Hunter =000026 Hunter} señalan que la prueba $F$del
+análisis de varianza común puede justificarse exclusivamente con base
+a la aleatorización, si el uso supuesto de normalidad (debido a la
+restricción sobre la aleatorización). Pero si los errores son $NID(O,\sigma^{2})$,
+puede usarse $F_{0}=\frac{MS_{Bloques}}{MS_{E}}$ para comparar las
+medias de los bloques.
+
+\label{Anderson =000026 McLean} argumentan que la restricción sobre
+la aleatorización impide que este estadístico sea una prueba significativa
+para comparar las medias de los bloques y que este cociente $F$ es
+en realidad una prueba de la igualdad de las medias de los bloques
+más la restricción sobre la aleatorización ( a la que le llaman error
+de la restricción).
+
+Entonces, ¿Qué se hace en la práctica?
+
+Debido a que con frecuencia el supuesto de normalidad es cuestionable,
+considerar $F_{0}=\frac{MS_{Bloques}}{MS_{E}}$ como una prueba $F$
+exacta para la igualdad de las medias de los bloques no es una buena
+práctica general.
+
+Por lo anterior esta prueba $F$ no se incluye en la tabla del análisis
+de varianza.
+
+Sin embargo, como un procedimiento aproximado para investigar el efecto
+de la variable formación de bloques, examinar el cociente $\frac{MS_{Bloques}}{MS_{E}}$
+es razonable. Si este cociente es muy grande implica que el factor
+formación de bloques tiene un efecto considerable y que la reducción
+del ruido obtenida, por la formación de bloques probablemente fue
+útil para mejorar la precisión de la comparación de las medias de
+los tratamientos.
+
+El procedimiento suele resumirse en un esquema de análisis de varianza,
+como el que se muestra en la tabla {*}{*} (los cálculos se realizarán
+con un paquete de software de estadística).
+
+Sin embargo es posible obtener formulas de cálculo manual para la
+suma de cuadrados para los elementos de la ecuación {*} expresándolos
+en términos de los totales de los tratamientos y los bloques. éstas
+son:
+
+$SS_{T}={\displaystyle \sum_{i=1}^{a}}{\displaystyle \sum_{j=1}^{b}y_{ij}^{2}-\frac{y_{..}^{2}}{N}}$
+
+$SS_{Tratamientos}=\frac{1}{b}{\displaystyle \sum_{i=1}^{a}}y_{i.}^{2}{\displaystyle -\frac{y_{..}^{2}}{N}}-$
+
+$SS_{Bloques}=\frac{1}{a}{\displaystyle \sum_{j=1}^{b}y_{.j}^{2}-\frac{y_{..}^{2}}{N}}$
+
+y $SS_{E}=SS_{T}-SS_{Tratamientos}-SS_{Bloques}$
+
+\begin{table}
+\protect\caption{Análisis de Varianza de un Diseño de Bloques Completos Aleatorizados.
+{*}{*}}
+
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Suma de Cuadrados & Grados de Libertad & Cuadrado Medio & $F_{0}$\tabularnewline
+\hline 
+\hline 
+Tratamientos & $SS_{Tratamientos}$ & $a-1$ & $\frac{SS_{Tratamientos}}{a-1}$ & $\frac{MS_{Tratamientos}}{MS_{E}}$\tabularnewline
+\hline 
+Bloques & $SS_{Bloques}$ & $b-1$ & $\frac{SS_{Bloques}}{b-1}$ & \tabularnewline
+\hline 
+Error & $SS_{E}$ & $(a-1)(b-1)$ & $\frac{SS_{E}}{(a-1)(b-1)}$ & \tabularnewline
+\hline 
+Total & $SS_{T}$ & $N-1$ &  & \tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+
+\section{Experimentos Con Factores Aleatorios}
+
+
+\subsubsection*{Factores Fijos.}
+
+Quiere decir que los niveles de los factores usados por el experimentador
+son los niveles de interés específicos. 
+\begin{itemize}
+\item Ejemplo: si se investigan $3$ tipos de materiales, las conclusiones
+son válidas solo para esos tipos específicos de materiales.
+\end{itemize}
+Una variante de lo anterior ocurre cuando el factor o factores son
+cuantitativos.
+
+Cuando se trabaja con un efecto fijo, se dice que el espacio inferencial
+del experimento es el conjunto específico de los niveles de los factores
+investigados.
+
+En algunas situaciones experimentales, los niveles de los factores
+se eligen al azar de una población más grande de niveles posibles,
+no sólo de los que se usaron en el diseño experimental. En esta situación
+se dice que se trata de un factor aleatorio.
+
+Se empieza con una situación simple, un experimento con un solo factor
+en el que el factor es aleatorio y se usa esto para introducir el
+modelo de efectos aleatorios para el análisis de varianza y los componentes
+de varianza. Los factores aleatorios ocurren normalmente en experimentos
+factoriales, así como en otros de tipos de experimentos.
+
+
+\subsubsection*{Modelo Con Efectos Aleatorios.}
+
+Es común que un experimentador esté interesado en un factor que tiene
+un gran número de posibles niveles. Cuando el experimentador selecciona
+aleatoriamente $a$ de estos niveles de la población de los niveles
+del factor, entonces se dice que el factor es aleatorio.
+
+Puesto que los niveles del factor utilizados en el experimento se
+eligen al azar, se hacer inferencias acerca de la población completa
+de los niveles del factor.
+
+Se supone que la población de los niveles del factor es de tamaño
+infinito o bien lo suficientemente grande para considerarla infinita.
+No es frecuente encontrar situaciones en la que la población de los
+niveles del factor sea lo suficientemente pequeña para encontrar el
+enfoque de una población finita.
+
+El modelo estadístico lineal es:
+
+$y_{ij}=\mu+\tau_{i}+\epsilon_{ij}\begin{cases}
+i & =1,2,\ldots,a\\
+j & =1,2,\ldots,n
+\end{cases}${*}
+
+Donde $\tau_{i}$ y $\epsilon_{ij}$ son variables aleatorias. si
+$\tau_{i}$ tiene varianza $\sigma_{\tau}^{2}$ y es independiente
+de $\epsilon_{ij}$ la varianza de cualquier observación es: 
+
+$E(y_{ij})=\mu$ y $v(y_{ij})=\sigma_{\tau}^{2}+\sigma^{2}$
+
+A las varianzas $\sigma_{\tau}^{2}$ y $\sigma^{2}$ se les llama
+los componentes de varianza y al modelo de la ecuación {*} se le llama
+modelo de los efectos aleatorios o de los componentes de la varianza.
+
+Para probar hipótesis en este modelo se requiere que las $\left\{ \epsilon_{ij}\right\} $sean
+$NID(O,\sigma^{2})$, que las $\left\{ \tau_{i}\right\} $ sean $NID(O,\sigma_{\tau}^{2})$
+y que $\tau_{i}$ y $\epsilon_{ij}$ sean independientes.
+
+La suma de cuadrados identidad $SS_{T}=SS_{Tratamientos}+SS_{E}$
+sigue siendo valida.
+
+Es decir, se hace la partición de la variabilidad total en las observaciones
+en un componente que mide la variación entre los tratamientos ($SS_{Tratamientos}$)
+en un componente dentro de los tratamientos ($SS_{E}$).
+
+Probar hipótesis acerca de los efectos de tratamientos individuales
+no tiene sentido, por lo que en su lugar se prueban hipótesis acerca
+del componente de la varianza $\sigma_{\tau}^{2}$.
+
+$H_{0}:\sigma_{\tau}^{2}=0$
+
+$H_{1}:\sigma_{\tau}^{2}>0$
+
+entonces si $\sigma_{\tau}^{2}=0$, todos los tratamientos son idénticos,
+pero si $\sigma_{\tau}^{2}>0$, existe variabilidad entre los tratamientos. 
+
+Como anteriormente
+
+$\frac{SS_{E}}{\sigma^{2}}$ se distribuye como $ji-cuadrado$ con
+$N-a$ grados de libertad y, bajo la hipótesis nula $(\sigma_{\tau}^{2}=0)$
+
+$\frac{SS_{Tratamientos}}{\sigma^{2}}$ se distribuye como $ji-cuadrada$
+con $a-1$ grados de libertad
+
+Ambas variables aleatorias son independientes, por lo tanto bajo $\sigma_{\tau}^{2}=0$,
+el cociente
+
+$F_{0}=\frac{\frac{SS_{Tratamientos}}{a-1}}{\frac{SS_{E}}{N-a}}=\frac{MS_{Tratamientos}}{MS_{E}}$
+
+Se distribuye como $F$ con $a-1$ y $N-a$ grados de libertad.
+
+Ahora 
+
+$\begin{array}{ccc}
+E(MS_{Tratamientos}) & = & \frac{1}{a-1}E(SS_{Tratamientos})\\
+E(MS_{Tratamientos}) & = & \frac{1}{a-1}E({\displaystyle \sum_{i=1}^{a}(\frac{y_{i.}^{2}}{n}-\frac{y_{..}^{2}}{N})}
+\end{array}$
+
+$\begin{array}{ccc}
+E(MS_{Tratamientos}) & = & \frac{1}{a-1}E[\frac{1}{n}{\displaystyle \sum_{i=1}^{a}({\displaystyle \sum_{j=1}^{a}(\mu+\tau_{i}+\epsilon_{ij})^{2}-}}\frac{1}{N}({\displaystyle \sum_{i=1}^{a}{\displaystyle \sum_{j=1}^{n}(\mu+\tau_{i}+\epsilon_{ij})^{2}]}}\end{array}$
+
+Cuando se eleva al cuadrado y se toma la función esperanza de las
+cantidades entre corchetes, se observa que $\tau_{i}^{2}$ es reemplazada
+por $\sigma_{\tau}^{2}$ $E(\tau_{i})=0$. Además $\epsilon_{i.}^{2},\epsilon_{..}^{2}$
+y ${\displaystyle \sum_{i=1}^{a}{\displaystyle \sum_{j=1}^{n}\tau_{i}^{2}}}$
+son reemplazadas por $n\sigma^{2},an\sigma^{2}$ y $an^{2}\sigma^{2}$,
+respectivamente y todos los productos cruzados que incluyen a $\tau_{i}$
+y $\epsilon_{ij}$ tienen valor esperado cero. Esto lleva a:
+
+$E(MS_{Tratamientos})=\frac{1}{a-1}[N\mu^{2}+N\sigma_{\tau}^{2}+a\sigma^{2}-n\mu^{2}-n\sigma_{\tau}^{2}-\sigma^{2}$
+ó $E(MS_{Tratamientos})=\sigma^{2}+n\sigma_{\tau}^{2}$
+
+De manera similar, puede demostrarse que
+
+$E(MS_{E})=\sigma^{2}$
+
+Por los cuadrados medios esperados, se observa que bajo $H_{0}$tanto
+el numerado como el denominador del estadístico de prueba ($F_{0}=\frac{MS_{Tratamientos}}{MS_{E}}$)
+son estimadores insesgados de $\sigma$$^{2}.$
+
+Mientras que bajo $H_{1}$el valor esperado del numerado es mayor
+que el del denominador. Por lo tanto $H_{0}$deberá rechazarse para
+los valores de $F_{0}$que sean muy grandes.
+
+$H_{0}$ se rechaza si $F_{0}>F_{a,a-1,N-a}$
+
+El procedimiento de cálculo y el análisis de la tabla de varianza
+del modelo de efectos aleatorios son idénticos a los que se utilizaron
+en el caso de efectos fijos. Sin embargo las conclusiones son muy
+diferentes, ya que se aplican a la población completa de los tratamientos.
+
+Por lo general habrá interés en estimar los componentes de la varianza
+($\sigma^{2}$ y $\sigma_{\tau}^{2}$) del modelo.
+
+Al procedimiento que se usa para estimar $\sigma^{2}$ y $\sigma_{\tau}^{2}$,
+se le llama método del análisis de varianza, ya que hace uso de las
+lineas de la tabla del análisis de varianza.
+
+El procedimiento consiste en igualar los cuadrados medios esperados
+con sus valores observados en la tabla del análisis de varianza y
+despejar los componentes de la varianza.
+
+Al igualar los cuadrados medios observados con los esperados en el
+modelo de efectos aleatorios con un solo factor, se obtiene
+
+$MS_{Tratamientos}=\sigma^{2}+n\sigma_{\tau}^{2}$ y $MS_{E}=\sigma^{2}$
+
+Por lo tanto, los estimadores de los componentes de la varianza son 
+
+$\hat{\sigma}^{2}=MS_{E}$ y $\hat{\sigma}_{\tau}^{2}=\frac{MS_{Tratamientos}-MS_{E}}{n}$
+
+Para tamaños de las muestras desiguales, se reemplaza $n$ en {*}
+con
+
+$n_{0}=\frac{1}{a-1}[{\displaystyle \sum_{i=1}^{a}n_{i}-\frac{{\displaystyle \sum_{i=1}^{a}n_{i}^{2}}}{{\displaystyle \sum_{i=1}^{a}n_{i}}}]}=\frac{N-\frac{{\displaystyle \sum_{i=1}^{a}n_{i}^{2}}}{N}}{a-1}$
+
+En el método del análisis de varianza para estimar los componentes
+de la varianza no se requiere el supuesto de normalidad.
+
+El método produce estimadores $\sigma^{2}$y $\sigma_{\tau}^{2}$,
+que son los mejores estimadores cuadráticos insesgados (estos estimadores
+tienen mínima varianza).
+
+Ocasionalmente, el método del análisis de varianza produce una estimación
+negativa de uno de los componentes de la varianza. Evidentemente,
+los componentes de la varianza son por definición no negativos, por
+lo que la estimación negativa de un componente de la varianza se considera
+con un cierta preocupación.
+
+Un curso de acción es aceptar la estimación negativa y usarla como
+evidencia de que el verdadero valor del componente de la varianza
+es cero (aunque esto adolece dificultades teóricas). usar cero en
+lugar de la estimación negativa puede alterar las propiedades estadísticas
+de otras estimaciones.
+
+Otra alternativa es volver a estimar el componente de la varianza
+utilizando un método que produzca siempre estimaciones no negativas.
+
+y otra alternativa es considerar la estimación negativa como evidencia
+de que el modelo lineal supuesto es incorrecto y examinar de nuevo
+el problema.
+
+
+\section{Modelo Mixto Con Dos Factores}
+
+Se considera ahora la situación en que uno de los factores $A$ este
+fijo y el otro, $B$, es aleatorio. Se le llama análisis de varianza
+del modelo mixto. El modelo estadístico lineal es:
+
+$y_{ijk}=\mu+\tau_{i}+\beta_{j}+(\tau\beta)_{ij}+\epsilon_{ijk}\begin{cases}
+i & =1,2,\ldots,a\\
+j & =1,2,\ldots,b\\
+k & =1,2,\ldots,n
+\end{cases}$
+
+Donde
+
+$\tau_{i}$ es un efecto fijo.
+
+$\beta_{j}$ es un efecto aleatorio.
+
+$(\tau\beta)_{ij}$ es un efecto aleatorio (se supone).
+
+$\epsilon_{ijk}$ es un error aleatorio.
+
+Se supone que las $\left\{ \tau_{i}\right\} $son efectos fijos tales
+que ${\displaystyle \sum_{i=1}^{a}}\tau_{i}=0$ y que $\beta_{j}$
+es una variable aleatoria $NID(O,\sigma_{\beta}^{2})$.
+
+El efecto de la interacción $(\tau\beta)_{ij}$, es una variable aleatoria
+normal con media $0$ y varianza $(\frac{a-1}{a})\sigma_{\tau\beta}^{2}$
+
+La operación suma del componente de la interacción en el rando del
+factor fijo es igual a cero ${\displaystyle \sum_{i=1}^{a}}(\tau\beta)_{ij}=(\tau\beta)_{.j}=0$
+con $j=1,2,\ldots,b$
+
+Esta restricción implica que algunos elementos de la interacción en
+diferentes niveles del factor fijo no son independientes, puede demostrarse
+que:
+
+$Cov[(\tau\beta)_{ij},(\tau\beta)_{i'j}]=-\frac{1}{a}\sigma_{\tau\beta}^{2}$
+para $i\neq i'$
+
+la $Cov$ entre $(\tau\beta)_{ij}$ y $(\tau\beta)_{ij'}$para $j\neq j'$
+es cero, y el error aleatorio $\epsilon_{ijk}$ es $NID(O,\sigma^{2})$
+
+Puesto que la suma de los efectos de la interacción en los niveles
+del factor fijo es igual a cero, a esta versión del modelo mixto se
+le llama modelo restringido.
+
+En este modelo la varianza de $(\tau\beta)_{ij}$ se define como $(\frac{a-1}{a})\sigma_{\tau\beta}^{2}$
+en vez de como $\sigma_{\tau\beta}^{2}$ para simplificar los cuadrados
+medios esperados. El supuesto $(\tau\beta)_{.j}=0$ también tiene
+un efecto sobre los cuadrados medios esperados, los cuales se pueden
+demostrar que son:
+
+$E(MS_{A})=\sigma^{2}+n\sigma_{\tau\beta}^{2}+\frac{bn{\displaystyle \sum_{i=1}^{a}\tau_{i}^{2}}}{a-1}$
+
+$E(MS_{B})=\sigma^{2}+an\sigma_{\beta}^{2}$
+
+$E(MS_{AB})=\sigma^{2}+an\sigma_{\tau\beta}^{2}$
+
+y $E(MS_{E})=\sigma^{2}$
+
+Por lo tanto, el estadístico de prueba aprobado para probar que las
+media de los efectos del factor fijo son iguales, o $H_{0}:\tau_{i}=0$
+es $F_{0}=\frac{MS_{A}}{MS_{AB}}$ que tiene la distribución de referencia
+$F_{a-1,(a-1)(b-1)}$
+
+Para probar $H_{0}:\sigma_{\beta}^{2},$ es el estadístico de prueba
+es $F_{0}=\frac{MS_{B}}{MS_{E}}$
+
+Con la distribución de referencia $F_{b-1,ab(n-1)}$
+
+Por último, para probar la hipótesis de la interferencia $H_{0}:\sigma_{\tau\beta}^{2}=0$
+
+$F_{0}=\frac{MS_{AB}}{MS_{E}}$
+
+Que tiene la distribución de frecuencia $F_{(a-1)(b-1),ab(n-1)}$
+
+En el modelo mixto es posible estimar los efectos del factor fijo
+como: $\hat{\mu}=\bar{y}$ y $\hat{\tau_{i}}=\bar{y}_{i..}-\bar{y}_{...}$
+para $i=1,2,\ldots,a$
+
+Los componentes de la varianza $\sigma_{\beta}^{2}$, $\sigma_{\tau\beta}^{2}$
+y $\sigma^{2}$ pueden estimarse aplicando el método del análisis
+de varianza. de {*} quedan:
+
+$\sigma^{2}=\frac{MS_{B}-MS_{E}}{an}$
+
+$\sigma_{\tau\beta}^{2}=\frac{MS_{AB}MS_{E}}{n}$
+
+y $\sigma^{2}=MS_{E}$
+
+Este enfoque general puede emplearse para estimar los componentes
+de la varianza en cualquier modelo mixto.
+
+
+\section{Diseño Factorial de Dos Factores Aleatorios}
+
+Suponga que se tienen dos factores, $A$ y $B$, y que ambos tienen
+un gran número de niveles de interés. Se escogen al azar $a$ niveles
+del factor $A$ y $b$ niveles del factor $B$. si el experimento
+se hace con $n$ réplicas las observaciones pueden representarse con
+el modelo lineal:
+
+$y_{ijk}=\mu+\tau_{i}+\beta_{j}+(\tau\beta)_{ij}+\epsilon_{ijk}\begin{cases}
+i & =1,2,\ldots,a\\
+j & =1,2,\ldots,b\\
+k & =1,2,\ldots,n
+\end{cases}$
+
+Donde todos los parámetros del modelo, $\tau_{i}$,$\beta_{j}$,$(\tau\beta)_{ij}$
+y$\epsilon_{ijk}$, son variables aleatorias independientes.
+
+También se supondrá que las variables aleatorias $\tau_{i}$,$\beta_{j}$,$(\tau\beta)_{ij}$
+y$\epsilon_{ijk}$ siguen una distribución normal con media cero y
+varianzas $v(\tau_{i})=\sigma$, $v(\beta_{j})=\sigma_{\beta}^{2}$,
+$v[(\tau\beta)_{ij}]=\sigma_{\tau\beta}^{2}$ y $v(\epsilon_{ijk})=\sigma^{2}$
+Por lo tanto.
+
+$v(y_{ijk})=\sigma_{\tau}^{2}+\sigma_{\beta}^{2}+\sigma_{\tau\beta}^{2}+\sigma^{2}$
+y $\sigma_{\tau}^{2}$, $\sigma_{\beta}^{2}$, $\sigma_{\tau\beta}^{2}$
+y $\sigma^{2}$son los componentes de la varianza.
+
+Las hipótesis que quieren probarse son $H_{0}:\sigma_{\tau}^{2}=0$
+y $H_{0}:\sigma_{\beta}^{2}=0$
+
+Los cálculos numéricos del análisis de varianza ($SS_{A}$, $SS_{B}$,
+$SS_{T}$, $SS_{E}$) se calculan como en el caso de efectos fijos.
+Para formar los estadísticos de prueba, deben examinarse los cuadrados
+medios esperados, puede demostrarse que:
+
+$E(MS_{A})=\sigma^{2}+n\sigma_{\tau\beta}^{2}+bn\sigma_{\tau}^{2}$
+
+$E(MS_{B})=\sigma^{2}+n\sigma_{\tau\beta}^{2}+an\sigma_{\beta}^{2}$
+
+$E(MS_{AB})=\sigma^{2}+n\sigma_{\tau\beta}^{2}$
+
+y $E(MS_{E})=\sigma^{2}$
+
+Por los cuadrados medios esperados se observa que el estadístico apropiado
+para probar la hipótesis de que no hay interacción, $H_{0}:\sigma_{\tau\beta}^{2}=0$
+es $F_{0}=\frac{MS_{AB}}{MS_{E}}$
+
+Ya que bajo $H_{0}$ tanto el numerador como el denominador de $F_{0}$tienen
+valor esperado $\sigma^{2}$, y solo si $H_{0}$es falsa $E(MS_{AB})$
+es mayor que $E(MS_{E})$. El cociente $F_{0}$ se distribuye como
+$F_{(a-1),ab(n-1)}$ de manera similar para probar $H_{0}:\sigma_{\tau}^{2}=0$
+se usaría $F_{0}=\frac{MS_{A}}{MS_{Ab}}$
+
+Que se distribuye como $F_{a-1,(a-1)(b-1)}$ y para probar $H_{0}:\sigma_{\beta}^{2}=0$
+el estadístico es $F_{0}=\frac{MS_{B}}{MS_{AB}}$
+
+Que se distribuye como $F_{b-1,(a-1)(b-1)}$
+
+Los componentes de la varianza pueden estimarse con el método del
+análisis de varianza
+
+$\hat{\sigma}^{2}=MS_{E}$
+
+$\hat{\sigma}_{\tau\beta}^{2}=\frac{MS_{AB}-MS_{E}}{n}$
+
+$\hat{\sigma}_{\beta}^{2}=\frac{MS_{E}-MS_{AB}}{an}$
+
+$\hat{\sigma}_{\tau}^{2}=\frac{MS_{A}-MS_{AB}}{bn}$

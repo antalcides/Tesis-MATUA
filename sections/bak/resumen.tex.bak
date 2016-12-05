@@ -1,0 +1,29 @@
+
+\addcontentsline{toc}{chapter}{RESUMEN}
+
+\chapter*{RESUMEN}
+
+\vspace{1.0cm}
+
+
+\hspace{0.5cm}
+En este trabajo estudiamos una nueva clase de polinomios tipo Apostol generalizados $\mathcal{Q}_n^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$ con $(\alpha, u, v\in \CC$ y $b, c \in \RR^{+})$ los cuales están definidos en un entorno adecuado de $t=0$ por la siguiente función generatriz:
+\begin{equation}
+\displaystyle\left(\frac{(2^ut^v)^{m}}{\lambda b^t+\sum\limits_{l=0}^{m-1}\frac{(t\log b)^l}{l!}}\right)^{\alpha}c^{xt} =\displaystyle\sum\limits_{n=0}^{\infty}
+\mathcal{Q}_n^{[m-1,\alpha]}(x,b,c;\lambda;u,v)\frac{t^n}{n!}; \quad |t\log b|<|log(-\lambda)|,
+\end{equation}
+estos polinomios generan a las nuevas clases de todos los polinomios conocidos de Apostol, así:\\
+\begin{align}
+& \mathcal{B}_n^{[m-1,\alpha]}(x;b,c;\lambda)=(-1)^{\alpha}\mathcal{Q}_n^{[m-1,\alpha]}(x;b,c;-\lambda;0,1),\\
+& \mathcal{E}_n^{[m-1,\alpha]}(x;b,c;\lambda)=\mathcal{Q}_n^{[m-1,\alpha]}(x;b,c;\lambda;1,0),\\
+& \mathcal{G}_n^{[m-1,\alpha]}(x;b,c;\lambda)=\mathcal{Q}_n^{[m-1,\alpha]}(x;b,c;\lambda;1,1).
+\end{align}
+
+Establecemos algunas propiedades básicas para estos polinomios, incluyendo relación de recurrencia y la ecuación diferencial que estos polinomios satisfacen. Finalmente se determinan fórmulas de conexión entre los polinomios y los polinomios de Genocchi, los polinomios de Jacobi, los polinomios de Hermite, los polinomios de Laguerre, los polinomios de Charlier, los polinomios de Bessel, los polinomios de Bernoulli generalizados $B_n^{[m-1]}(x)$ y los números de Stirling de segunda clase, lo cual extiende algunos resultados conocidos. Finalmente introducimos una nueva clase de polinomios tipo Apostol generalizados basados en los polinomios de Hermite de dos variables ${_{H}}\mathcal{Q}_n^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$ y mencionamos propiedades básicas.
+
+
+\vspace{2cm}
+
+\noindent \textbf{Palabras Claves:} polinomios tipo Apostol generalizados; relación de recurrencia; ecuación diferencial; polinomios de Apostol-Bernoulli; polinomios de Genocchi; polinomios de Jacobi; polinomios de Hermite; polinomios de Laguerre; polinomios de Charlier; polinomios de Bessel; polinomios de Bernoulli generalizados; números de Stirling de segunda clase.
+
+

@@ -1,0 +1,308 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,es,en,utf8,utf8x,latin1,letter,dvipsnames]{msc-matua}
+\usepackage[latin9]{inputenc}
+\usepackage{color}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\batchmode
+\makeatletter
+\def\input@path{{style/}{sections/}}
+\makeatother
+\renewcommand*{\LettrineTextFont}{\normalfont}
+\renewcommand{\LettrineFontHook}{\color{ptctitle}}
+\newcommand{\Hrule}{\rule{\linewidth}{1mm}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\CC}{\mathbb{C}}
+%\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\pp}{\mathbb{\overline{P}}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\XX}{\mathbb{X}}
+
+\newcommand{\II}{\mathbb{I}}
+
+\newcommand{\der}{\mathcal{D}}
+\newcommand{\kk}{\mathcal{K}}
+\newcommand{\mm}[1]{{\mathcal{M}\/}(#1)}
+\newcommand{\nequiv}{{\equiv \hspace*{-3.7mm}/}}
+\newcommand{\capa}[1]{\mbox{{\em Cap\/}}(#1)}
+\newcommand{\gra}[1]{\mbox{{\em grad\/}}(#1)}
+\newcommand{\sop}[1]{\mbox{{\em supp\/}}(#1)}
+\newcommand{\esup}[1]{{\mbox{\rm ess\,sup\/}}#1}
+\newcommand{\lqqd}{\hfill $\blacksquare$}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\ca}[1]{{\em card\/}(#1)}
+\newcommand{\dis}[1]{{\em dist\/}(#1)}
+\newcommand{\imm}[1]{{\em Im\/}#1}
+\newcommand{\ree}[1]{{\em Re\/}#1}
+\newcommand{\conv}[1]{{\em conv\/}(#1)}
+\newcommand{\uni}{\; \; \overrightarrow{\longrightarrow}\; \;}
+\newcommand{\unin}{\overrightarrow{\longrightarrow}}
+\newenvironment{ob}{\begin{obs}{\rm} \end{obs}}
+
+\def\bbuildrel#1_#2^#3{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\bbbuildrel#1_#2{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}}}
+\def\limsup{\mathop{\overline{\rm lim}}}
+\def\liminf{\mathop{\underline{\rm lim}}}
+
+\newenvironment{prueba}[1][Demostraci\'on]{\noindent\textbf{#1.} }{\ $\hfill\blacksquare$\linebreak}
+
+\def\bbuildrel#1_#2^#3{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\bbbuildrel#1_#2{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}}}
+\def\limsup{\mathop{\overline{\rm lim}}}
+\def\liminf{\mathop{\underline{\rm lim}}}
+\numberwithin{section}{chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%&  --enable-write18
+\batchmode
+\def\input@path{{style/}{sections/}{pdf/}}
+%\usepackage[frame,center,letter,pdflatex,cam]{crop}
+\graphicspath{{ps/}{logo/}{figures/}{sections/Figures/}}
+\usepackage{yfonts}
+%\usepackage{auto-pst-pdf}
+%\renewcommand{\LettrineTextFont}{\scshape}
+%%%%% nueva definicion  de entornos theorem %%%%%%%%%%%%%%%%
+\definecolor{ptcbackground}{RGB}{212,237,252}
+%\definecolor{ptctitle}{RGB}{0,177,235}
+\definecolor{ptctitle}{cmyk}{1,0.25,0,0.08}
+%%%%%%%%%%%%%%%%%%%%
+
+\makeatother
+
+\begin{document}
+
+\chapter*{\textcolor{blue}{Introducción}}
+
+\addstarredchapter{Introducción}
+
+%
+%\iflettrine
+
+
+\lettrine[lines=4,loversize=-0.1,lraise=0.1,lhang=.2]{E}{}{\foreignlanguage{spanish}{l estudio de los polinomios tipo Apostol
+comenzó en 1951 y fue gracias a T. M. Apostol\cite{hzf} quien propuso
+un nuevo conjunto de polinomios $\mathfrak{B}_{n}(x;\lambda)$, $\lambda\in\CC$
+que resultan ser una generalización de los números de Bernoulli. Estos
+nuevos polinomios están relacionados con la función Zeta de Lerch
+$\phi(x,a,s)$ y son llamados polinomios Apostol-Bernoulli.}}
+
+%
+\medskip{}
+
+
+En 1985 el matemático francés Todorov \cite{Tod} estudia una generalización
+de los polinomios $B_{n}^{(\alpha)}$ donde $\alpha$ es un parámetro
+real o complejo. Tres años después, Todorov en colaboración con Srivastava
+\cite{sri} prueba una fórmula explícita para los polinomios de Bernoulli
+generalizados $B_{n}^{(\alpha)}(x)$, $\alpha\in\CC$: 
+\begin{align}
+ & B_{n}^{(\alpha)}=\sum\limits _{k=0}^{n}\binom{n}{k}\frac{k!}{(2k)!}\sum\limits _{j=0}^{k}(-1)^{j}\binom{k}{j}j^{2k}(x+j)^{n-k}\nonumber \\
+ & \times F[k-n,k-\alpha;2k+1;j/(x+j)]
+\end{align}
+
+
+\medskip{}
+
+
+De las ideas del Apostol y Todorov, muchos matemáticos comenzaron
+la tarea de extender estas ideas a otros polinomios con estructuras
+análogas a polinomios de Bernoulli como los polinomios de Euler y
+polinomios de Genocchi. A continuación se muestran la obras más destacadas
+en este campo:
+
+\medskip{}
+
+
+En 2005 Luo y Srivastava \cite{gen} establecieron definiciones análogas
+a las de Apostol para los números y los también llamados polinomios
+Apostol-Bernoulli de orden superior $\mathfrak{B}_{n}^{(\alpha)}(x;\lambda)$
+. En el mismo año descubrieron una relación entre polinomios de Apostol-Euler
+generalizados y los polinomios Apostol-Bernoulli generalizados (see
+\cite{gen}).
+
+\medskip{}
+
+
+Luo en 2006 \cite{REF6} proporciona definiciones análogas a las de
+Apostol para los también llamados números $E_{n}^{(\alpha)}(\lambda)$
+y polinomios Apostol-Euler de orden superior $E_{n}^{(\alpha)}(x;\lambda)$.
+
+\medskip{}
+
+
+En 2007 W.Wang, T. Wang y Jia \cite{Wang} publican algunos resultados
+sobre los polinomios de Apostol-Bernoulli generizados y los polinomios
+Apostol-Euler generalizados, específicamente establecen relaciones
+entre los dos polinomios y hacen un estudio en sumas de productos
+de estos polinomios.
+
+\medskip{}
+
+
+En 2010 Kurt \cite{REF7}, introduce una generalización de los polinomios
+de Bernoulli $B_{n}^{[m-1,\alpha]}(x)$. En este trabajo se dan algunas
+relaciones de recurrencia de los nuevos polinomios y números de Bernoulli
+generalizados. Además, se muestra una relación entre polinomios los
+polinomios 2D-Bernoulli y los polinomios de Hermite Kamp \ `{e}
+de Feriet.
+
+\medskip{}
+
+
+En 2011 Tremblay, Gaboury, y Fugère \cite{Tremblay1}, dan una generalización
+de la definición de Kurt $\mathfrak{B}_{n}^{[m-1,\alpha]}(x;\lambda)$,
+estudian algunas propiedades y establecen un analogo al teorema de
+la adición de Srivastava-Pintér. El mismo año los autores \cite{Tremblay3}
+estudian una nueva clase de polinomios Apostol-Bernoulli generalizados
+$\mathfrak{B}_{n}^{[m-1,\alpha]}(x,b,c;\lambda)$. En 2012, estos
+autores \cite{Tremblay2} introducen e investigan dos nuevas clases
+de polinomios Apostol-Euler generalizados $\mathfrak{E}_{n}^{[m-1,\alpha]}(x,b,c;\lambda)$
+y polinomios Apostol-Genocchi generalizados $\mathfrak{G}_{n}^{[m-1,\alpha]}(x,b,c;\lambda)$,
+obtienen propiedades para las nuevas clases de polinomios Apostol-Euler
+generalizados y Apostol-Genocchi generalizados, además dan una extensión
+y un análogo del teorema de la adición de Srivastava-Pintér.
+
+\medskip{}
+
+
+En 2013 Cheng, Cai y Luo \cite{Ming} contruyen una extension para
+los polinomios de Apostol-Euler generalizados y los polinomios de
+Apostol-Bernoulli generalizados (notados por $E_{n,\lambda}^{[m-1,\alpha]}(x)$
+y $B_{n,\lambda}^{[m-1,\alpha]}(x)$ respectivamente), específicamente
+estudian las propiedades de dicha extension sólo para los polinomios
+Apostol-Euler generalizados y derivan relaciones de estos con los
+números de Stirling de segunda especie, polinomios de Jacobi, polinomios
+de Laguerre, polinomios de Hermite and los polinomios de Bernoulli
+generalizados.
+
+\vspace{0.25cm}
+
+
+En el mismo año Luo, en colaboración con Lu \cite{atp1} introduce
+los polinomios tipo Apostol generalizados $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+con $(\alpha\in\NN_{0},\lambda,u,v\in\CC)$ y estudia sus propiedades.
+Estos polinomios generan todos los polinomios Apostol conocidos, así:\\
+ 
+\begin{align}
+ & \mathcal{B}_{n}^{(\alpha)}(x;\lambda)=(-1)^{\alpha}\mathcal{F}_{n}^{(\alpha)}(x;-\lambda;0,1),\\
+ & \mathcal{E}_{n}^{(\alpha)}(x;\lambda)=\mathcal{F}_{n}^{(\alpha)}(x;\lambda;1,0),\\
+ & \mathcal{G}_{n}^{(\alpha)}(x;\lambda)=\mathcal{F}_{n}^{(\alpha)}(x;\lambda;1,1).
+\end{align}
+
+
+\vspace{0.25cm}
+
+
+Entre los resultados más recientes podemos citar los de Lu, Luo y
+Xiang \cite{atp2} siguiendo sus trabajos sobre los polinomios tipo
+Apostol generalizados, estudian algunos resultados para aquellos de
+estos polinomios que están asociados con el álgebra umbral. En este
+caso introducen una unificación de los polinomios tipo apostol notado
+por $\mathcal{Y}_{n,\beta}^{(\alpha)}(x;k;a,b)$, la cuál está relacionada
+con $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$ de la siguiente manera:
+ \begin{align}  & \mathcal{Y}_{n,\beta}^{(\alpha)}(x;k;a,b)=\displaystyle -\frac{1}{a^b}\mathcal{F}_n^{(1)}\left(x;-\left(\frac{\beta}{a}\right)^b;1-k,k\right)  \intertext{y}  & \mathcal{Y}_{n,\beta}^{(\alpha)}(x;k;a,b)=\displaystyle (-1)^{\alpha}\frac{1}{a^{b\alpha}}\mathcal{F}_n^{(\alpha)}\left(x;-\left(\frac{\beta}{a}\right)^b;1-k,k\right).  \end{align}
+
+\vspace{0.25cm}
+
+
+Aunque los estudios correspondientes a los polinomios de tipo Apostol
+generalizados son los más recientes, en los últimos meses ha atraído
+una considerable atención, en especial los que están relacionados
+con el álgebra umbral y el estudio de sus propiedades.
+
+\vspace{0.25cm}
+
+
+?`Es posible generalizar $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$?
+?`Qué relación guarda $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+con otras familias de polinomios y números? Por lo que sabemos hasta
+la fecha, para resolver completamente estos problemas, es decir, dados
+los polinomios $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$ lograr
+obtener una expresión más general y establecer fórmulas de conexión
+con otras familias de polinomios y números se necesitan una gran variedad
+de herramientas entre ellas las ideas de \cite{Ming} y \cite{atp1}.
+
+\vspace{0.25cm}
+
+
+En este trabajo se introducirá una nueva clase de polinomios tipo
+Apostol generalizados denotada por $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$,
+la cual es extensión natural de $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$.
+Así como también, se estudiarán sus propiedades básicas, la fórmula
+de recurrencia, la ecuación diferencial que satistacen, se establecerán
+fórmulas de conexión de $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+con los polinomios ortogonales clásicos, con los polinomios de Genocchi,
+Charlier, Bessel, Bernoulli generalizados y los números de Stirling
+de segunda clase. Finalmente se introducirá una nueva clase de polinomios
+tipo Apostol generalizados basados en los polinomios de Hermite de
+dos variables. La importancia de $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+radica en que dichos polinomios generan a todos polinomios de Apostol
+conocidos, sus generalizaciones y las correspondientes extensiones
+de dichas generalizaciones. Teniendo en cuenta lo anterior y observando
+las últimas investigaciones vemos que muchos otros aspectos, como
+un estudio detallado de las propiedades de $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+y su relación con otros polinomios y números, están pendientes de
+realización. Además, al ser $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+una generalización de $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+se garantiza que el estudio de esta nueva clase de polinomios tipo
+Apostol generalizados es más general que el estudio hasta ahora conocido.
+
+\vspace{0.25cm}
+
+
+El trabajo en su totalidad, está constituido por cuatro capítulos
+que describiremos a continuación.
+
+El capítulo I es de carácter introductorio. Contiene conceptos y resultados
+generales acerca de la teoría de sistemas ortogonales de funciones
+que se utilizarán a lo largo del trabajo. Haremos énfasis en los sistemas
+de polinomios ortogonales, en particular en los sistemas clásicos
+y los polinomios de Charlier y Bessel. También presentamos resultados
+relacionados con los polinomios de Bernoulli, Euler, Genocchi y las
+distintas generalizaciones que se desarrollaron hasta llegar a los
+polinomios de Apostol. Además se introducirán los números de Stirling
+de primera y segunda clase que más adelante necesitaremos para abordar
+el problema de investigación.
+
+En el capítulo II, hacemos un resumen de las distintas generalizaciones
+de los polinomios de Apostol-Bernoulli, polinomios de Apostol-Euler,
+polinomios de Apostol-Genocchi hasta llegar a los polinomios tipo
+Apostol generalizados, al igual que explicamos algunos de los resultados
+más importantes de estos polinomios que serán de gran utilidad en
+el siguiente cap\'{i}tulo.
+
+En el capítulo III, la seccion 3.1 es dedicada al establecer las propiedades
+básicas de la nueva clase de polinomios tipo Apostol generalizados
+$\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$. En la sección
+3.2 estudiamos la fórmula de recurrencia y ecuación diferencial para
+$\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$. La sección 3.3
+por aplicación de algunos métodos de la sección anterior está dedicada
+a presentar fórmulas de conexión entre los polinomios $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+y los polinomios de Genocchi, los polinomios de Jacobi, los polinomios
+de Hermite, los polinomios de Laguerre, los polinomios de Charlier,
+los polinomios de Bessel, los polinomios de Bernoulli generalizados
+$B_{n}^{[m-1]}(x)$ y los números de Stirling de segunda especie.
+En la sección 3.4 introducimos una nueva clase de polinomios tipo
+Apostol generalizados basados en los polinomios de Hermite de dos
+variables al igual que indicamos algunas propiedades básicas.
+
+Por último, en el capítulo IV exponemos las conclusiones y planteamos
+varios problemas que pueden conducir a futuras investigaciones. La
+tesis la completamos con una bibliografía relativa a los temas tratados
+en el trabajo y basada en artículos recientes y textos clásicos de
+indudable interés. 
+\end{document}
