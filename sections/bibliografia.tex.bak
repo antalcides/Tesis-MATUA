@@ -1,0 +1,60 @@
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{REFERENCIAS BIBLIOGR\'AFICAS}
+\vspace{1.0cm}
+	\bibitem {AAC}
+	{Atkins and Cheng.} {(1998).} {Optimal regression designs in the presenceof random block effects.}
+	{JSPI 77, 321-335}.
+	
+	\bibitem{C}   
+	{Cheng.}
+	{Optimal regression designs under random blocks-efects models.} {(1995).} {Statistica Sinica 5, 485-497}.
+	
+	\bibitem{DAH}    
+	{Debusho and Haines.} {(2007).} {V- and D-optimal population designs for the simple linear regression model with a random intercept term.}
+	{Joumal of Statistical Planning and inference 138, 1116-1130}.
+	
+	\bibitem{EBSAS} 
+	{Entholzner, M., Benda, N., Schwabe, R.} {(2005).} {A note on designs for estimating population parameters.}
+	{Biometrical Letters 42, 25-41}.
+	
+	
+	\bibitem{F}
+	{Fedorov, V.V.} {(1972)} {Theory of Optimal Experiments.}
+	{Academic Press, New York}.
+	
+	\bibitem{F}    
+	{Fedorov, V.V.} {(1997).} {Model-Oriented Design of Experiments.}
+	{Springer, New York}.
+	
+	\bibitem{GP}     
+	{Goos, Peter.} {(2002)} {The Optimal Design of Blocked and Split-Plot.}
+	{Springer, New York}.
+	
+	\bibitem{GAS}
+	{GraBhoff, U and Schwabe, R.} {(2003).} {On the analysis of paired observations.}
+	{Statistics and Probability Letters 65, 7-12}. 
+	
+	\bibitem {N}
+	{Norell, L.} {(2006).} {Optimal designs for maximun likelihood estimators in the one-way random model. U.U.D.M.}
+	{Report 2006:24. Department of Mathematics, Uppsala University}.
+	
+	\bibitem {SAS}
+	{Schmelter, T. and Schwabe, R.} {(2008).} {On optimal designsin random intercept models.}
+	{Tetra Mountains Mathematical Publications. 39, 145-53}.
+	
+	\bibitem {S}
+	{Schwabe, R.} {(1996).} {Optimum Designs for Multi-Factor Models.}
+	{Springer, New York}.
+	
+	\bibitem {S}
+	{Silvey, S.D.} {(1980).} {Optimal Designs.}
+	{Chapman \& Hall, London}.
+	
+	\bibitem {VCAB}
+	{Van Breukelen, G.J.P., Candel, M.J.J.M. and Berger, M.P.F.} {(2008).}
+	{Relative efficiency of enequal cluster sizes for variance component estimation in cluster randomized and multicentre trials.}
+	{Statiscal Methods in Medical Research, 17, 439-58}.
+	
+	
+\end{thebibliography}

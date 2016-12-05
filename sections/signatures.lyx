@@ -1,0 +1,458 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass msc-matua
+\begin_preamble
+%&  --enable-write18
+\batchmode
+\def\input@path{{style/}{sections/}{pdf/}}
+%\usepackage[frame,center,letter,pdflatex,cam]{crop}
+\graphicspath{{ps/}{logo/}{figures/}{sections/Figures/}}
+\usepackage{yfonts}
+%\usepackage{auto-pst-pdf}
+%\renewcommand{\LettrineTextFont}{\scshape}
+%%%%% nueva definicion  de entornos theorem %%%%%%%%%%%%%%%%
+\definecolor{ptcbackground}{RGB}{212,237,252}
+%\definecolor{ptctitle}{RGB}{0,177,235}
+\definecolor{ptctitle}{cmyk}{1,0.25,0,0.08}
+%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options es,en,utf8,utf8x,latin1,letter,dvipsnames
+\use_default_options false
+\master ../tesis-final.lyx
+\begin_removed_modules
+theorems-matua
+\end_removed_modules
+\begin_modules
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\thyauthor}{\mbox{Diseños Óptimos En La Presencia De Efectos De Bloques Aleatorios}}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename logo/logo_ua2.png
+	lyxscale 15
+	scale 15
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+avantgarboldHuge
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+mytitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+avantgarboldLarge
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thyauthor
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[3cm]
+\end_layout
+
+\end_inset
+
+ 
+\family sans
+\size small
+ Trabo Especial de Grado Presentado a la Universidad del Atlántico por 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Eddie Edinson Rodriguez Bossio
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size small
+Trabajo de grado presentado para optar al grado de
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size small
+Magister en Ciencias Matemática
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size small
+Este trabajo de investigación ha sido realizada bajo la dirección de
+\begin_inset Newline newline
+\end_inset
+
+ 
+\series bold
+Dr.
+ rer.
+ nat.
+ Jesús Alonso Cabrera 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thyadvisor
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Formula $^{\dagger}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[2ex]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size small
+\begin_inset Formula $\dagger$
+\end_inset
+
+ Departamento de Matemática,
+\begin_inset Newline newline
+\end_inset
+
+ Universidad del Norte (UN) 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 0.25cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hrule
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+avantgar
+\end_layout
+
+\end_inset
+
+ Barranquilla, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thydate
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

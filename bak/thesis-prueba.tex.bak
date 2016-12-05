@@ -1,0 +1,300 @@
+%&  --enable-write18
+\batchmode
+\makeatletter
+\def\input@path{{style/}{sections/}{pdf/}}
+\makeatother
+\documentclass[es,en,utf8,utf8x,latin1,letter,dvipsnames ]{msc-matua}
+%\usepackage[frame,center,letter,pdflatex,cam]{crop}
+\graphicspath{{ps/}{logo/}{figures/}{sections/Figures/}}
+%\usepackage{auto-pst-pdf}
+%\renewcommand{\LettrineTextFont}{\scshape}
+\renewcommand*{\LettrineTextFont}{\normalfont}
+\renewcommand{\LettrineFontHook}{\color{ptctitle}}
+\newcommand{\Hrule}{\rule{\linewidth}{1mm}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newtheorem{teo}{\sc Teorema}[chapter]
+\newtheorem{ejemplo}{\sc Ejemplo}[section]
+\newtheorem{sol}{\sc Solución}[section]
+\newtheorem{lemma}{\sc Lema}[chapter]
+\newtheorem{obs}{\sc Observaci\'on}[section]
+\newtheorem{axioma}{\sc Axioma}[chapter]
+\newtheorem{coro}{\sc Corolario}[chapter]
+\newtheorem{definition}{\sc Definición}[chapter]
+\newtheorem{prop}{\sc Proposicion}[section]
+%\newtheorem{nota}{\sc Nota}
+
+%------------------------------------------------
+% Números reales, enteros, complejos, etc.
+% Real, integer, complex numbers, etc.
+%------------------------------------------------
+\newcommand{\CC}{\mathbb{C}}
+%\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\pp}{\mathbb{\overline{P}}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\XX}{\mathbb{X}}
+
+\newcommand{\II}{\mathbb{I}}
+
+\newcommand{\der}{\mathcal{D}}
+\newcommand{\kk}{\mathcal{K}}
+\newcommand{\mm}[1]{{\mathcal{M}\/}(#1)}
+\newcommand{\nequiv}{{\equiv \hspace*{-3.7mm}/}}
+\newcommand{\capa}[1]{\mbox{{\em Cap\/}}(#1)}
+\newcommand{\gra}[1]{\mbox{{\em grad\/}}(#1)}
+\newcommand{\sop}[1]{\mbox{{\em supp\/}}(#1)}
+\newcommand{\esup}[1]{{\mbox{\rm ess\,sup\/}}#1}
+\newcommand{\lqqd}{\hfill $\blacksquare$}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\ca}[1]{{\em card\/}(#1)}
+\newcommand{\dis}[1]{{\em dist\/}(#1)}
+\newcommand{\imm}[1]{{\em Im\/}#1}
+\newcommand{\ree}[1]{{\em Re\/}#1}
+\newcommand{\conv}[1]{{\em conv\/}(#1)}
+\newcommand{\uni}{\; \; \overrightarrow{\longrightarrow}\; \;}
+\newcommand{\unin}{\overrightarrow{\longrightarrow}}
+\newenvironment{ob}{\begin{obs}{\rm} \end{obs}}
+
+\def\bbuildrel#1_#2^#3{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\bbbuildrel#1_#2{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}}}
+\def\limsup{\mathop{\overline{\rm lim}}}
+\def\liminf{\mathop{\underline{\rm lim}}}
+
+\newenvironment{prueba}[1][Demostraci\'on]{\noindent\textbf{#1.} }{\ $\hfill\blacksquare$\linebreak}
+
+\def\bbuildrel#1_#2^#3{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\bbbuildrel#1_#2{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}}}
+\def\limsup{\mathop{\overline{\rm lim}}}
+\def\liminf{\mathop{\underline{\rm lim}}}
+\definecolor{ptcbackground}{RGB}{212,237,252}
+%\definecolor{ptctitle}{RGB}{0,177,235}
+\definecolor{ptctitle}{cmyk}{1,0.25,0,0.08}
+
+
+\begin{document}
+
+%%% FRONTMATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+% NOTE (1 of 3): Explicit numbering style definition to ensure
+% mkindex/hyperref to link pages ok (and avoiding duplicate labels...)
+\pagenumbering{alph}
+
+
+
+%%% COVER PAGE
+    \thispagestyle{empty}%
+\makebgpage{sections/bookcover}{2.6}%
+%\newpage%
+\ \thispagestyle{empty}%\clearemptydoublepage
+\newpage%
+
+
+
+
+% NOTE (2 of 3): Explicit numbering style definition to ensure
+% mkindex/hyperref to link pages ok (and avoiding duplicate labels...)
+\pagenumbering{roman}
+
+%%% Title page and related pages
+
+    \include{title}        % Thesis title
+    \maketitle                      % Print thesis title
+
+%{   % This version printing information
+%    \thispagestyle{empty}
+%    \input{sections/printedat}      % 'Printed at' information
+%    \clearemptydoublepage
+%}   % End printing information
+
+    \include{signatures}   % Tutor's signature (yours too!)
+
+    \clearemptydoublepage
+    \include{jurado}
+    \clearemptydoublepage
+    \include{tomy}         % Dedicatory
+    \clearemptydoublepage
+
+%%% Table Of Contents: DO NOT MOVE MINITOC FROM HERE
+    \dominitoc[c]
+    \nomtcrule
+
+    \include{intro}      % Preface
+    \clearemptydoublepage
+{
+   % Set 'parskip' for a more compact index layout
+    \setlength{\parskip}{0.4ex plus0.2ex minus0.2ex}
+
+    \tableofcontents               % Table Of Content (TOC)
+    \addstarredchapter{Contenido}
+    \clearemptydoublepage
+
+    \listoftables                  % List of Tables (LOT)
+    \addstarredchapter{Lista de Tablas}
+    \clearemptydoublepage
+
+    \listoffigures                 % List of Figures (LOF)
+    \addstarredchapter{Lista de Figuras}
+    \clearemptydoublepage
+} % End TOCs
+
+%%% Acknows, comments and abstracts
+
+       \include{agradecimientos}  % Say thanks here!
+        \clearemptydoublepage
+        \include{theabstracts}      % Sum it all up!
+        \clearemptydoublepage
+  \thispagestyle{empty}\clearemptydoublepage % leaving an empty sheet between front and main
+
+  \thispagestyle{empty}\clearemptydoublepage
+
+%%% MAINMATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+% NOTE (3 of 3): Explicit numbering style definition to ensure
+% mkindex/hyperref to link pages ok (and avoiding duplicate labels...)
+\pagenumbering{arabic}
+
+%BIBLIO in blue
+\renewcommand{\bibname}{\textcolor{blue}{Bibliography}}
+
+%%% BLOCK 1
+\partblue[Preliminares]{\textbf{P}reliminares}
+
+    \include{apostolB1}    % Thesis Project Management
+    \clearemptydoublepage
+
+%    \include{genomics}        % Introduction about biology and bioinformatics
+%    \clearemptydoublepage
+
+ %%%BLOCK 2
+\partorange[Estado del  Arte]{\textbf{E}stado del Arte}
+%
+%%    \include{algorithms}  % Classical sequence alignment bibliography
+%%    \clearemptydoublepage
+%
+%    \include{genefinding} % Gene-finding and promoter characterization
+%    \clearemptydoublepage
+%
+%%%% BLOCK 3
+\partgreen[]{\textbf{M}eta}
+%
+\include{apostolB2}
+\clearemptydoublepage
+ \include{apostolB3}
+ \clearemptydoublepage
+ \include{apostolB4}
+ \clearemptydoublepage
+
+   \include{bibliografia}
+  \clearemptydoublepage
+   \include{meta}  % TF-map alignment
+   \clearemptydoublepage
+%
+    \include{mmeta} % Multiple TF-map alignment
+    \clearemptydoublepage
+%
+   \include{conclusions}     % Your contribution in short points
+    \clearemptydoublepage
+%
+%    %% Still do not understand quite well why this is not placed properly
+%    %% between sections and appendices. The hack here is pretty simple
+%    %% and seems to work, just place those commands before the last section
+%    %% include.
+%    %\addtocontents{toc}{\protect\clearpage}%
+%    %\addtocontents{toc}{\protect\ \protect\vskip 5ex}%
+%    %\addtocontents{toc}{\protect\noindent%\hspace*{\protect\fill}%
+%    %                    {APPENDICES}}%
+%    %\addtocontents{toc}{\protect\vskip 3ex}%
+%    %%% the following trick seems to fix the above reported behaviour
+%    %\thispagestyle{empty}
+%    %\clearemptydoublepage
+%	%\chapter*{\textcolor{blue}{APPENDICES}}
+%
+%%%% BLOCK 4
+\partred{\textbf{A}ppendices}
+    \thispagestyle{empty}
+   \clearemptydoublepage
+%
+%%%% APENDICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\appendix % Start appendices here %
+\setcounter{chapter}{0}
+%
+%    \include{cv}              % Your curriculum vitae
+%    \clearemptydoublepage
+%
+%    \include{software}        % Software and databases webs
+%    \clearemptydoublepage
+%
+%   % \include{publications}    % List of articles, books and posters
+%    \clearemptydoublepage
+%
+%    %\include{fpublications}   % Full articles and chapter books
+%    \clearemptydoublepage
+%
+%    \include{posters}         % Full posters
+%    \clearemptydoublepage
+%
+%    \include{miscellanea}     % Technical stuff about LaTeX
+%    \clearemptydoublepage              % Make others' life easier by sharing!!!
+%
+%%%% BACKMATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\backmatter
+%
+%%%% Web Site definitions
+    \phantomsection % fixes the link anchor
+    \renewcommand{\glossaryname}{WebSite References}%
+    \renewcommand{\glossarypreamble}%
+                 {\label{sec:webrefs}%
+                  \addappendix{\glossaryname}%
+                 }% glossarypreamble
+    \renewcommand{\glossarypostamble}{}%
+    \renewcommand{\gloitem}[1]{\item[\avantgarbold{}#1]\mbox{}\par}
+    \printweblink                          % Print URLs Index
+    \clearemptydoublepage
+
+%%%% Subject Index
+    \renewcommand{\indexname}{Index}%
+    \phantomsection % fixes the link anchor
+    \addappendix{\indexname}%
+    \printindex  % Print Subject Index
+    \clearemptydoublepage
+
+%%%% CLOSING NICETIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    \phantomsection % fixes the link anchor
+%    \include{sections/notes}               % Courtesy blank pages
+%
+%    \include{series}              % Thesis series in the lab
+%
+%%% BACK COVER
+\newpage%
+\pagestyle{empty}\hspace{1ex}\\%
+\newpage%
+\thispagestyle{empty}%
+\makebgpage{sections/bookback}{1.5}%
+
+
+\end{document}
+
+%%% Congratulations, you made it!!! Look for a postdoc now!!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        1         2         3         4         5         6         7         8
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EOF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

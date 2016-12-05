@@ -1,0 +1,831 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass msc-matua
+\begin_preamble
+%&  --enable-write18
+\batchmode
+\def\input@path{{style/}{sections/}{pdf/}}
+%\usepackage[frame,center,letter,pdflatex,cam]{crop}
+\graphicspath{{ps/}{logo/}{figures/}{sections/Figures/}}
+\usepackage{yfonts}
+%\usepackage{auto-pst-pdf}
+%\renewcommand{\LettrineTextFont}{\scshape}
+%%%%% nueva definicion  de entornos theorem %%%%%%%%%%%%%%%%
+\definecolor{ptcbackground}{RGB}{212,237,252}
+%\definecolor{ptctitle}{RGB}{0,177,235}
+\definecolor{ptctitle}{cmyk}{1,0.25,0,0.08}
+%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options es,en,utf8,utf8x,latin1,letter,dvipsnames
+\use_default_options false
+\master ../tesis-final.lyx
+\begin_removed_modules
+theorems-matua
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Capítulo*
+Introducción
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+addstarredchapter
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Introducción
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+lettrine
+\end_layout
+
+\end_inset
+
+[lines=4,loversize=-0.1,lraise=0.1,lhang=.2]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+E
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+l estudio de los polinomios tipo Apostol comenzó en 1951 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+y fue gracias a T.
+ M.
+ Apostol
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hzf"
+
+\end_inset
+
+ quien propuso un nuevo conjunto de polinomios 
+\begin_inset Formula $\mathfrak{B}_{n}(x;\lambda)$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in\CC$
+\end_inset
+
+ que resultan ser una generalización de los números de Bernoulli.
+ Estos nuevos polinomios están relacionados con la función Zeta de Lerch
+ 
+\begin_inset Formula $\phi(x,a,s)$
+\end_inset
+
+ y son llamados polinomios Apostol-Bernoulli.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 1985 el matemático francés Todorov 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tod"
+
+\end_inset
+
+ estudia una generalización de los polinomios 
+\begin_inset Formula $B_{n}^{(\alpha)}$
+\end_inset
+
+ donde 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es un parámetro real o complejo.
+ Tres años después, Todorov en colaboración con Srivastava 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sri"
+
+\end_inset
+
+ prueba una fórmula explícita para los polinomios de Bernoulli generalizados
+ 
+\begin_inset Formula $B_{n}^{(\alpha)}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\in\CC$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{align}
+ & B_{n}^{(\alpha)}=\sum\limits _{k=0}^{n}\binom{n}{k}\frac{k!}{(2k)!}\sum\limits _{j=0}^{k}(-1)^{j}\binom{k}{j}j^{2k}(x+j)^{n-k}\nonumber \\
+ & \times F[k-n,k-\alpha;2k+1;j/(x+j)]
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De las ideas del Apostol y Todorov, muchos matemáticos comenzaron la tarea
+ de extender estas ideas a otros polinomios con estructuras análogas a polinomio
+s de Bernoulli como los polinomios de Euler y polinomios de Genocchi.
+ A continuación se muestran la obras más destacadas en este campo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 2005 Luo y Srivastava 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gen"
+
+\end_inset
+
+ establecieron definiciones análogas a las de Apostol para los números y
+ los también llamados polinomios Apostol-Bernoulli de orden superior 
+\begin_inset Formula $\mathfrak{B}_{n}^{(\alpha)}(x;\lambda)$
+\end_inset
+
+ .
+ En el mismo año descubrieron una relación entre polinomios de Apostol-Euler
+ generalizados y los polinomios Apostol-Bernoulli generalizados (see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gen"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luo en 2006 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "REF6"
+
+\end_inset
+
+ proporciona definiciones análogas a las de Apostol para los también llamados
+ números 
+\begin_inset Formula $E_{n}^{(\alpha)}(\lambda)$
+\end_inset
+
+ y polinomios Apostol-Euler de orden superior 
+\begin_inset Formula $E_{n}^{(\alpha)}(x;\lambda)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 2007 W.Wang, T.
+ Wang y Jia 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wang"
+
+\end_inset
+
+ publican algunos resultados sobre los polinomios de Apostol-Bernoulli generizad
+os y los polinomios Apostol-Euler generalizados, específicamente establecen
+ relaciones entre los dos polinomios y hacen un estudio en sumas de productos
+ de estos polinomios.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 2010 Kurt 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "REF7"
+
+\end_inset
+
+, introduce una generalización de los polinomios de Bernoulli 
+\begin_inset Formula $B_{n}^{[m-1,\alpha]}(x)$
+\end_inset
+
+.
+ En este trabajo se dan algunas relaciones de recurrencia de los nuevos
+ polinomios y números de Bernoulli generalizados.
+ Además, se muestra una relación entre polinomios los polinomios 2D-Bernoulli
+ y los polinomios de Hermite Kamp 
+\begin_inset space \space{}
+\end_inset
+
+`
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+e
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de Feriet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 2011 Tremblay, Gaboury, y Fugère 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tremblay1"
+
+\end_inset
+
+, dan una generalización de la definición de Kurt 
+\begin_inset Formula $\mathfrak{B}_{n}^{[m-1,\alpha]}(x;\lambda)$
+\end_inset
+
+, estudian algunas propiedades y establecen un analogo al teorema de la
+ adición de Srivastava-Pintér.
+ El mismo año los autores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tremblay3"
+
+\end_inset
+
+ estudian una nueva clase de polinomios Apostol-Bernoulli generalizados
+ 
+\begin_inset Formula $\mathfrak{B}_{n}^{[m-1,\alpha]}(x,b,c;\lambda)$
+\end_inset
+
+.
+ En 2012, estos autores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tremblay2"
+
+\end_inset
+
+ introducen e investigan dos nuevas clases de polinomios Apostol-Euler generaliz
+ados 
+\begin_inset Formula $\mathfrak{E}_{n}^{[m-1,\alpha]}(x,b,c;\lambda)$
+\end_inset
+
+ y polinomios Apostol-Genocchi generalizados 
+\begin_inset Formula $\mathfrak{G}_{n}^{[m-1,\alpha]}(x,b,c;\lambda)$
+\end_inset
+
+, obtienen propiedades para las nuevas clases de polinomios Apostol-Euler
+ generalizados y Apostol-Genocchi generalizados, además dan una extensión
+ y un análogo del teorema de la adición de Srivastava-Pintér.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 2013 Cheng, Cai y Luo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ming"
+
+\end_inset
+
+ contruyen una extension para los polinomios de Apostol-Euler generalizados
+ y los polinomios de Apostol-Bernoulli generalizados (notados por 
+\begin_inset Formula $E_{n,\lambda}^{[m-1,\alpha]}(x)$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{n,\lambda}^{[m-1,\alpha]}(x)$
+\end_inset
+
+ respectivamente), específicamente estudian las propiedades de dicha extension
+ sólo para los polinomios Apostol-Euler generalizados y derivan relaciones
+ de estos con los números de Stirling de segunda especie, polinomios de
+ Jacobi, polinomios de Laguerre, polinomios de Hermite and los polinomios
+ de Bernoulli generalizados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el mismo año Luo, en colaboración con Lu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "atp1"
+
+\end_inset
+
+ introduce los polinomios tipo Apostol generalizados 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+ con 
+\begin_inset Formula $(\alpha\in\NN_{0},\lambda,u,v\in\CC)$
+\end_inset
+
+ y estudia sus propiedades.
+ Estos polinomios generan todos los polinomios Apostol conocidos, así:
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align}
+ & \mathcal{B}_{n}^{(\alpha)}(x;\lambda)=(-1)^{\alpha}\mathcal{F}_{n}^{(\alpha)}(x;-\lambda;0,1),\\
+ & \mathcal{E}_{n}^{(\alpha)}(x;\lambda)=\mathcal{F}_{n}^{(\alpha)}(x;\lambda;1,0),\\
+ & \mathcal{G}_{n}^{(\alpha)}(x;\lambda)=\mathcal{F}_{n}^{(\alpha)}(x;\lambda;1,1).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entre los resultados más recientes podemos citar los de Lu, Luo y Xiang
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "atp2"
+
+\end_inset
+
+ siguiendo sus trabajos sobre los polinomios tipo Apostol generalizados,
+ estudian algunos resultados para aquellos de estos polinomios que están
+ asociados con el álgebra umbral.
+ En este caso introducen una unificación de los polinomios tipo apostol
+ notado por 
+\begin_inset Formula $\mathcal{Y}_{n,\beta}^{(\alpha)}(x;k;a,b)$
+\end_inset
+
+, la cuál está relacionada con 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+ de la siguiente manera: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+begin{align}  & 
+\backslash
+mathcal{Y}_{n,
+\backslash
+beta}^{(
+\backslash
+alpha)}(x;k;a,b)=
+\backslash
+displaystyle -
+\backslash
+frac{1}{a^b}
+\backslash
+mathcal{F}_n^{(1)}
+\backslash
+left(x;-
+\backslash
+left(
+\backslash
+frac{
+\backslash
+beta}{a}
+\backslash
+right)^b;1-k,k
+\backslash
+right)  
+\backslash
+intertext{y}  & 
+\backslash
+mathcal{Y}_{n,
+\backslash
+beta}^{(
+\backslash
+alpha)}(x;k;a,b)=
+\backslash
+displaystyle (-1)^{
+\backslash
+alpha}
+\backslash
+frac{1}{a^{b
+\backslash
+alpha}}
+\backslash
+mathcal{F}_n^{(
+\backslash
+alpha)}
+\backslash
+left(x;-
+\backslash
+left(
+\backslash
+frac{
+\backslash
+beta}{a}
+\backslash
+right)^b;1-k,k
+\backslash
+right).
+  
+\backslash
+end{align}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aunque los estudios correspondientes a los polinomios de tipo Apostol generaliza
+dos son los más recientes, en los últimos meses ha atraído una considerable
+ atención, en especial los que están relacionados con el álgebra umbral
+ y el estudio de sus propiedades.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+?`Es posible generalizar 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+? ?`Qué relación guarda 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+ con otras familias de polinomios y números? Por lo que sabemos hasta la
+ fecha, para resolver completamente estos problemas, es decir, dados los
+ polinomios 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+ lograr obtener una expresión más general y establecer fórmulas de conexión
+ con otras familias de polinomios y números se necesitan una gran variedad
+ de herramientas entre ellas las ideas de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ming"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "atp1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este trabajo se introducirá una nueva clase de polinomios tipo Apostol
+ generalizados denotada por 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+, la cual es extensión natural de 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+.
+ Así como también, se estudiarán sus propiedades básicas, la fórmula de
+ recurrencia, la ecuación diferencial que satistacen, se establecerán fórmulas
+ de conexión de 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+ con los polinomios ortogonales clásicos, con los polinomios de Genocchi,
+ Charlier, Bessel, Bernoulli generalizados y los números de Stirling de
+ segunda clase.
+ Finalmente se introducirá una nueva clase de polinomios tipo Apostol generaliza
+dos basados en los polinomios de Hermite de dos variables.
+ La importancia de 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+ radica en que dichos polinomios generan a todos polinomios de Apostol conocidos
+, sus generalizaciones y las correspondientes extensiones de dichas generalizaci
+ones.
+ Teniendo en cuenta lo anterior y observando las últimas investigaciones
+ vemos que muchos otros aspectos, como un estudio detallado de las propiedades
+ de 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+ y su relación con otros polinomios y números, están pendientes de realización.
+ Además, al ser 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+ una generalización de 
+\begin_inset Formula $\mathcal{F}_{n}^{(\alpha)}(x;\lambda;u,v)$
+\end_inset
+
+ se garantiza que el estudio de esta nueva clase de polinomios tipo Apostol
+ generalizados es más general que el estudio hasta ahora conocido.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El trabajo en su totalidad, está constituido por cuatro capítulos que describire
+mos a continuación.
+\end_layout
+
+\begin_layout Standard
+El capítulo I es de carácter introductorio.
+ Contiene conceptos y resultados generales acerca de la teoría de sistemas
+ ortogonales de funciones que se utilizarán a lo largo del trabajo.
+ Haremos énfasis en los sistemas de polinomios ortogonales, en particular
+ en los sistemas clásicos y los polinomios de Charlier y Bessel.
+ También presentamos resultados relacionados con los polinomios de Bernoulli,
+ Euler, Genocchi y las distintas generalizaciones que se desarrollaron hasta
+ llegar a los polinomios de Apostol.
+ Además se introducirán los números de Stirling de primera y segunda clase
+ que más adelante necesitaremos para abordar el problema de investigación.
+\end_layout
+
+\begin_layout Standard
+En el capítulo II, hacemos un resumen de las distintas generalizaciones
+ de los polinomios de Apostol-Bernoulli, polinomios de Apostol-Euler, polinomios
+ de Apostol-Genocchi hasta llegar a los polinomios tipo Apostol generalizados,
+ al igual que explicamos algunos de los resultados más importantes de estos
+ polinomios que serán de gran utilidad en el siguiente capítulo.
+\end_layout
+
+\begin_layout Standard
+En el capítulo III, la seccion 3.1 es dedicada al establecer las propiedades
+ básicas de la nueva clase de polinomios tipo Apostol generalizados 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+.
+ En la sección 3.2 estudiamos la fórmula de recurrencia y ecuación diferencial
+ para 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+.
+ La sección 3.3 por aplicación de algunos métodos de la sección anterior
+ está dedicada a presentar fórmulas de conexión entre los polinomios 
+\begin_inset Formula $\mathcal{Q}_{n}^{[m-1,\alpha]}(x,b,c;\lambda;u,v)$
+\end_inset
+
+ y los polinomios de Genocchi, los polinomios de Jacobi, los polinomios
+ de Hermite, los polinomios de Laguerre, los polinomios de Charlier, los
+ polinomios de Bessel, los polinomios de Bernoulli generalizados 
+\begin_inset Formula $B_{n}^{[m-1]}(x)$
+\end_inset
+
+ y los números de Stirling de segunda especie.
+ En la sección 3.4 introducimos una nueva clase de polinomios tipo Apostol
+ generalizados basados en los polinomios de Hermite de dos variables al
+ igual que indicamos algunas propiedades básicas.
+\end_layout
+
+\begin_layout Standard
+Por último, en el capítulo IV exponemos las conclusiones y planteamos varios
+ problemas que pueden conducir a futuras investigaciones.
+ La tesis la completamos con una bibliografía relativa a los temas tratados
+ en el trabajo y basada en artículos recientes y textos clásicos de indudable
+ interés.
+ 
+\end_layout
+
+\end_body
+\end_document

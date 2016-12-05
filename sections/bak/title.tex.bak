@@ -1,0 +1,19 @@
+% Setting here the following variables:
+%    \mytitle, \thytitle, \thyadvisor, \thyauthor, and \thydate
+% This saves to update those values each time they appear in the document...
+
+\thispagestyle{empty}
+
+%%% UA logo
+
+%%% Title
+
+\title{\avantgarboldHuge\mytitle{SOBRE UNA NUEVA CLASE DE POLINOMIOS TIPO APOSTOL GENERALIZADOS Y ALGUNAS PROPIEDADES}}%\vspace{7.5cm}
+%%% Author
+\vspace*{2cm}
+\author{%
+  {\avantgarboldLarge\thyauthor}\\[3cm]%
+  {\avantgarlarge Trabajo de Maestr\'ia }%
+}%author
+%%% Date
+\date{{\avantgar Barranquilla, \thydate}}

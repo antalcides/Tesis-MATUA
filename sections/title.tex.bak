@@ -1,0 +1,9 @@
+\thispagestyle{empty}
+
+\avantgarboldLarge\title{\avantgarboldLarge\mytitle{\textsf{\Huge{}Diseños
+óptimos en la presencia de efectos de bloques aleatorios}}}
+
+\author{{\avantgarboldLarge\thyauthor}\\[1cm]{\avantgarlarge
+Trabajo de Maestría }}
+
+\date{{\avantgar Barranquilla, \thydate}}

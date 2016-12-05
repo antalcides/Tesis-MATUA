@@ -1,0 +1,794 @@
+\chapter{Introducci\'on}
+\label{AB1}
+
+%recuperar numeracion arabica%
+\def\thechapter{\arabic{chapter}}
+
+El objetivo de este cap\'{\i}tulo es recoger conceptos y resultados generales acerca de la teor\'{\i}a de sistemas ortogonales de funciones y de los conocidos números y polinomios de Bernoulli, Euler, Genocchi y los números de Stirling que se utilizar\'an a lo largo del trabajo. Haremos \'enfasis  en los sistemas de polinomios ortogonales y en particular en los sistemas cl\'asicos, en este grupo se incluyen los polinomios de Jacobi (con los casos especiales de Legendre, Chebyshev y Gegenbauer), Laguerre y Hermite. Adicional incluiremos algunas definiciones y propiedades de los polinomios ortogonales de Charlier y Bessel. Tambi\'en presentaremos algunos conceptos b\'asicos sobre función generatriz, series de Taylor, polinomios de Bernoulli, Euler y Genocchi con sus generalizaciones más importantes, por último polinomios de Appell y los números de Stirling de primera y segunda clase. Una descripci\'on m\'as detallada de algunos de los contenidos de este cap\'{\i}tulo pueden consultarse en \cite{Ch, Szgo, REF_12, REF_13, REF11}, entre otros.
+
+
+
+\section{Sistemas de Polinomios Ortogonales}\label{a}
+
+Una clase particular de sistemas ortogonales de especial inter\'es, es el de los sistemas formados por polinomios que forman una base ortogonal en un espacio de Hilbert, estos son llamados \textit{Sistemas de Polinomios Ortogonales (S.P.O.)} y pueden estudiarse considerando medidas $\mu$  absolutamente continuas, es decir cuando existe una funci\'on medible en el conjunto $X,$  positiva y finita, tal que
+$$ d\mu(x)=w(x)dx,$$ donde la funci\'on $w(x)$ se llama funci\'on peso, encontramos que la convergencia de estos sistemas en
+$L^{p}(X,\mu)$ depende del comportamiento de la funci\'on peso.
+
+\vspace{0.3cm}
+
+Sea $\mu$ una medida finita de Borel cuyo soporte $supp(\mu)$ está contenido en un subconjunto cerrado $\Omega$ del eje real y está formado por una cantidad infinita de puntos $\left(supp(\mu)\subset \Omega\subset \RR\right)$. Si $E$ es un conjunto no acotado, supondremos además que $x^n\in \mathfrak{L_1}[\mu]$ para todo $n\in \ZZ^{+}$. Al espacio de las medidas soportadas en $E$ con las propiedades anteriores lo denotaremos por $\mathfrak{M}(\Omega)$. Denotemos a $\PP$ como el espacio vectorial de todos los polinomios y por $\PP_n$ el espacio vectorial de todos los polinomios de grado a lo sumo $n$.
+
+\vspace{0.25cm}
+
+Se define el producto interior $\left<\cdot,\cdot\right>_{\mu}: \PP \longrightarrow\RR$ por:
+
+\begin{equation}\label{inner}
+\left<P,Q\right>_{\mu} = \displaystyle \int_{\Omega} P(x)Q(x)d\mu(x)
+\end{equation}
+Donde $P,Q \in \PP.$
+
+\vspace{0.25cm}
+
+Además como es usual, se define la norma asociada
+\begin{equation}\label{norm}
+ ||P||_{\mu}=\displaystyle\left[\int_{\Omega}|P(x)|^{2}d\mu(x)\right]^{1/2}
+\end{equation}
+
+\vspace{0.25cm}
+
+\begin{definition}
+Se dice que $\{P_n (x)\}_{n=0}^\infty$ es una sucesión de polinomios Ortogonales con respecto al producto  $\left<.,.\right>_{\mu}$ si:\\
+\begin{enumerate}
+\item Para todo $n\in \ZZ^{+}$ se cumple que $gr(P_n (x))= n$
+\item
+\[\left<P_n,P_m\right>_{\mu} = \displaystyle \int_{\Omega} P_n(x)P_m(x)d\mu(x) =\left\{ \begin{array}{rcl}
+0 & \mbox{si} & n\neq m\\
+& & \\
+\neq 0 & \mbox{si} & n=m\\
+\end{array}
+\right. \]
+\end{enumerate}
+\end{definition}
+
+Si el coeficiente principal de $P_n(x)$ es 1 para todo $n$, se dice que $\{P_n(x)\}$ es una sucesión de polinomios ortogonales mónicos, (SPOM).
+
+\vspace{0.25cm}
+
+Sea $\mathcal{L}:\PP\longrightarrow \RR $ un funcional lineal definido en $\PP$. Dado $p(x)\in\PP$,
+representaremos por $\mathcal{L}[P] = \displaystyle \int_{\Omega} P(x)d\mu(x)$ la imagen de $P$ por $\mathcal{L}$. Lo anterior permite establecer una relación entre el funcional lineal $\mathcal{L}$ y el producto interior definido en (\ref{inner}):\\
+\begin{equation}
+\mathcal{L}[P_nP_m] = \displaystyle \int_{a}^{b} P_n(x)P_m(x)d\mu(x)= \left<P_n,P_m\right>_{\mu}
+\end{equation}
+Consideraremos también la base can\'onica $\left\{x^{n}\right\}_{n\geq 0}$ del espacio vectorial $\PP.$
+
+\vspace{0.25cm}
+
+\begin{definition}\label{py1}
+Sea $\left\{m_{n}\right\}_{n\geq 0}$ una sucesi\'on de n\'umeros reales y $L$ un funcional lineal definido en $\PP$, tal que
+$$\mathcal{L}[x^{n}]=m_{n}<+\infty,\quad\quad n\geq 0.$$
+La sucesi\'on $\left\{m_{n}\right\}_{n\geq 0}$ se denomina sucesi\'on de momentos. $\mathcal{L}$ se denomina funcional de momentos asociado
+a la sucesi\'on $\left\{m_{n}\right\}_{n\geq 0}.$ El valor $m_{n},$ se denomina $n$-\'esimo momento asociado al funcional lineal $\mathcal{L}.$
+\end{definition}
+
+\vspace{0.25cm}
+
+A continuaci\'on estudiaremos algunas propiedades de estos sistemas ortogonales.
+
+\vspace{0.25cm}
+
+\begin{teo}
+Sea $\{P_n\}$ un S.P.O. con respecto al operador $\mathcal{L}$, entonces para cada polinomio $\pi(x)$ de grado $n$ ocurre:
+\begin{equation}
+\pi(x)=\sum\limits_{k=0}^{n}C_kP_k(x),
+\end{equation}
+donde, $C_k=\displaystyle \frac{\mathcal{L}[\pi(x)P_k(x)]}{\mathcal{L}[P_k^{2}(x)]}$, $k=0,1,2,\cdots, n.$
+\end{teo}
+
+\vspace{0.25cm}
+El siguiente teorema muestra las condiciones necesarias y suficientes para la existencia de un S.P.O. para un funcional lineal $\mathcal{L}$.
+\begin{teo}
+Sea $\mathcal{L}$ un funcional de momento asociado a la sucesión de momentos $\{m_n\}$.Una condición necesaria y suficiente para la existencia de un S.P.O. para $\mathcal{L}$ es: $\Delta_n\neq 0 \quad n=0,1,2,\cdots$, donde:
+
+\begin{equation}\nonumber
+\Delta_n= \det\left(m_{i+j}\right)_{i,j=0}^n = \left| \begin{array}{lcr}
+m_0 & m_1\cdots & m_n \\
+m_1 & m_2\cdots & m_{n+1} \\
+\vdots & \vdots & \vdots \\
+m_n & m_{n+1}\cdots & m_{2n}
+\end{array}
+\right|
+\end{equation}
+\end{teo}
+
+\vspace{0.25cm}
+
+\begin{definition}
+Un funcional de momento $\mathcal{L}$ es llamado definido positivo si $\mathcal{L}[\pi(x)]>0$ para todo $\pi(x)\not\equiv 0$ y es no negativo $\forall x \in \RR$.
+\end{definition}
+
+\vspace{0.25cm}
+
+\begin{teo}
+$\mathcal{L}$ es definido positivo si y sólo si sus momentos son todos reales y\\ $\Delta_n>0, \quad (n\geq 0).$
+\end{teo}
+
+\begin{obs}
+Si $\mathcal{L}$ es definido positivo podemos definir:
+\begin{equation}\label{inner2}
+\left<P,Q\right>=\mathcal{L}[P(x)\overline{Q(x)}]
+\end{equation}
+para todos los polinomios $P(x)$ y $P(x)$. Claramente (\ref{inner2}) define un producto interior sobre el espacio $\PP$. En partícular, si $\{P_n(x)\}$ es un S.P.O. para $\mathcal{L}$ se tiene:
+\begin{equation}\nonumber
+\left<P_m,P_n\right>=\mathcal{L}[P_m(x)\overline{P_n(x)}],
+\end{equation}
+como $P_n(x)$ es de coeficientes reales entonces $\overline{P_n(x)}=P_n(x)$, por lo tanto:
+\begin{equation}\nonumber
+\left<P_m,P_n\right>=\mathcal{L}[P_m(x)P_n(x)],
+\end{equation}
+la ortogonalidad del producto interior (\ref{inner2}) coincide con la ortogonalidad de los polinomios.
+\end{obs}
+
+\section{Algunos Sistemas de Polinomios Ortogonales}
+
+Las familias de polinomios ortogonales sobre la recta real más estudiadas y con un extenso campo de aplicaciones son los llamados polinomios ortogonales clásicos debido a que estos aparecen en diversas \'areas de las matem\'aticas; el inter\'es de su estudio se debe a sus m\'ultiples aplicaciones que han enriquecido de manera notable la teor\'ia cl\'asica. Dentro de estas familias  est\'an incluidos los polinomios de Jacobi (este incluye como casos particulares los polinomios de Chebyshev de primera y segunda clase, los de  Gegenbauer o Ultraesf\'ericos y los polinomios de Legendre), Laguerre y Hermite. Las caracter\'isticas m\'as importantes que distinguen a estas familias de polinomios son sus propiedades diferenciales, siendo las m\'as relevantes las siguientes:
+\begin{enumerate}
+ \item[$\bullet$] Existen dos polinomios, $\phi$ y $\Psi$ y una sucesi\'on de n\'umeros reales $\{\lambda_{n}\}_{n\geq 0}$ con $\lambda_{n}\neq 0$, $n\geq 1$, tales que $P_{n}$ es soluci\'on de la ecuaci\'on diferencial de segundo orden
+$$\phi(x)y^{''}(x)+  \Psi(x)y^{'}(x)+\lambda_{n}y(x)=0.$$
+\item[$\bullet$] Pueden ser generados por una fórmula que contiene derivadas de orden $n$, conocida como f\'ormula de Rodrigues,
+dada por $$P_{n}(x)=\frac{1}{k_{n}w(x)}\frac{d^{n}}
+{dx^{n}}[w(x)\phi^{n}(x)],$$
+\vspace{0.2cm}
+donde, $k_{n}$ es una constante que depende de $n$, $w(x)$ es una funci\'on no negativa e integrable en un intervalo de la recta real y $\phi(x)$ es un polinomio que no depende de $n$ de grado no mayor que dos.
+\end{enumerate}
+
+\vspace{0.3cm}
+Describimos a continuación algunas de las propiedades de estos polinomios. Comenzamos con los polinomios de Jacobi.
+
+
+\subsection{Polinomios Ortogonales de Jacobi}
+Esta familia de polinomios fue introducida por Jacobi en 1989 y cumplen las siguientes relaciones de ortogonalidad:
+\begin{equation}
+\left<P^{(\alpha,\beta)}_n,P^{(\alpha,\beta)}_m\right>= \displaystyle \int_{-1}^{1} P^{(\alpha,\beta)}_n(x)P^{(\alpha,\beta)}_m(x)d\mu_{(\alpha,\beta)}(x)\\
+\end{equation}
+\begin{center}
+\[=\left\{\begin{array}{rcl}
+\displaystyle \frac{2^{\alpha+\beta+1}}{n!(2n+\alpha+\beta)} \frac{\Gamma(n+\alpha+1)\Gamma(n+\beta+1)}{\Gamma(n+\alpha+\beta+1)} & \mbox{si} & n=m\\
+& & \\
+0 & \mbox{si} & n\neq m\\
+\end{array}
+\right. \]
+\end{center}
+Donde $d\mu_{(\alpha,\beta)}(x)=(1-x)^{\alpha}(1+x)^{\beta}dx$, $x\in [-1,1]$,$\alpha>-1$ y $\beta>-1.$
+
+\vspace{0.25cm}
+
+Hay muchas definiciones equivalentes de $P_{n}^{(\alpha,\beta)}(x)$, los polinomios de Jacobi de grado $n$ y orden $(\alpha, \beta)$, con $\alpha,\beta>-1$, una de ellas es la siguiente:
+\begin{definition}
+Los polinomios de Jacobi $P^{(\alpha, \beta)}_n(x)$ (ver \cite{Szgo}) se definen a través de la siguiente expresión (fórmula Rodrigues):
+\begin{equation}\label{eq30}
+P_{n}^{(\alpha,\beta)}(x)=(1-x)^{-\alpha}(1+x)^{-\beta}\frac{(-1)^{n}}{2^{n}n!}\frac{d^{n}}{dx^{n}}\left\{ (1-x)^{\alpha+n}(1+x)^{n+\beta}\right\},\quad x\in (-1,1),
+\end{equation}
+y el valor en puntos de los extremos del intervalo $[-1,1]$ está dado por:
+$$
+ P^{(\alpha,\beta)}_{n}(1)=\binom{n+\alpha}{n},\quad  P^{(\alpha,\beta)}_{n}(-1)=(-1)^{n}\binom{n+\beta}{n}.
+$$
+\end{definition}
+
+Históricamente, una de las razones principales para estudiar polinomios de Jacobi $P_{n}^{(\alpha,\beta)}$ es el hecho de que sus ceros $x_{n,k}^{(\alpha,\beta)}, \, k=1,\ldots, n$, tiene una interpretación electrostática muy interesante. De hecho, ellos son los puntos de equilibrio de $n$ cargas unitarias en $(-1,1)$ en el campo generado por las cargas $\frac{\alpha+1}{2}$ en 1 y $\frac{\beta+1}{2}$ en $-1$, donde las cargas iguales se repelen entre sí de acuerdo a la ley de interacción bajo un potencial logarítmica. También, los polinomios de Jacobi constituyen un sistema ortogonal completo en $L^{2}([-1,1]$.\\
+
+\begin{definition}
+Se define el símbolo de Pochhammer o factorial trasladado, como
+\begin{equation}\label{poch}
+(a)_n = a(a+1)(a+2)\cdots(a+n-1),
+\end{equation}
+para $n>0$ y $(a)_0 = 1$, donde $a$ es un número complejo cualquiera. Este símbolo verifica las siguientes propiedades:
+\begin{align}
+& (1)_n = n!,\\
+& (a)_n = \displaystyle \frac{\Gamma(a+n)}{\Gamma(a)}.
+\end{align}
+\end{definition}
+
+\begin{lemma}
+Los polinomios de Jacobi $P^{(\alpha, \beta)}_n(x)$ verifican la siguiente relación:
+\begin{equation}\label{eq31}
+x^m=m!\displaystyle\sum\limits_{k=0}^{m}(-1)^k\binom{m+\alpha}{m-k}
+\frac{\alpha+\beta+2k+1}{(\alpha+\beta+k+1)_{m+1}}P_k^{(\alpha,\beta)}(1-2x),
+\end{equation}
+donde $(a)_k$ es el símbolo de Pochhammer (\ref{poch}).
+\end{lemma}
+
+\proof Para los detalles de la prueba de resultado anterior, ver \cite{REF_13}, p.262, Ec.(2).
+
+\subsection{Polinomios Ortogonales de Laguerre}
+Los polinomios ortogonales mónicos de Laguerre
+$L_n^{(\alpha)}(x)$ (en honor al matemático francés Edmond Nicolas Laguerre (1834-1886)), satisfacen la siguiente relación de ortogonalidad:
+
+\begin{center}
+\[\left<L^{(\alpha)}_n,L^{(\alpha)}_m\right>= \displaystyle \int_{0}^{\infty} L^{(\alpha)}_n(x)L^{(\alpha)}_m(x) d\mu_{(\alpha)}(x)=\left\{\begin{array}{rcl}
+\displaystyle \frac{\Gamma(n+\alpha+1)}{n!} & \mbox{si} & n=m\\
+& & \\
+0 & \mbox{si} & n\neq m\\
+\end{array}
+\right. \]
+\end{center}
+Donde $d\mu_{(\alpha)}(x)=x^{\alpha}e^{-x}dx$, $x\in \RR^{+}$ y $\alpha>-1.$
+
+\vspace{0.25cm}
+
+Hay muchas definiciones equivalentes de $L^{(\alpha)}_n(x)$, los polinomios de Laguerre de grado $n$ y orden $\alpha$, con $\alpha>-1$, una de ellas es la siguiente:
+\begin{definition}
+Los polinomios de Laguerre $L^{(\alpha)}_n(x)$ (ver \cite{Szgo}) se calculan a través de la siguiente expresión (fórmula Rodrigues):
+\begin{equation}\label{lag}
+L^{(\alpha)}_n(x)=\displaystyle \frac{e^x}{n!x^{\alpha}}\frac{d^{n}}{dx^{n}}\left[ e^{-x}x^{n+\alpha}\right].
+\end{equation}
+\end{definition}
+
+\vspace{0.25cm}
+
+\begin{lemma}
+Los polinomios de Laguerre $L^{(\alpha)}_n(x)$ verifican la siguiente relación:
+\begin{equation}\label{lg1}
+x^m=m!\displaystyle\sum\limits_{k=0}^{m}(-1)^k\binom{m+\alpha}{m-k} L^{(\alpha)}_k(x).
+\end{equation}
+\end{lemma}
+
+\proof Para los detalles de la prueba de resultado anterior, ver \cite{REF_13}, p.207, Ec.(2).
+
+\subsection{Polinomios Ortogonales de Hermite y 2VHKdFP}
+Los polinomios de Hermite son un ejemplo de polinomios ortogonales que encuentran su principal ámbito de aplicaciones en mecánica cuántica, sobre todo en el estudio del oscilador armónico unidimensional. Son nombrados así en honor de Charles Hermite, satisfacen la siguiente relación de ortogonalidad:
+
+\begin{center}
+\[\left<H_n,H_m\right>= \displaystyle \int_{-\infty}^{\infty} H_n(x)H_m(x) d\mu(x)=\left\{\begin{array}{rcl}
+\sqrt{\pi}2^nn! & \mbox{si} & n=m\\
+& & \\
+0 & \mbox{si} & n\neq m\\
+\end{array}
+\right. \]
+\end{center}
+Donde $d\mu(x)=e^{-x^2}dx$, $x\in \RR$.
+
+\vspace{0.25cm}
+
+\begin{definition}
+Los polinomios de Hermite $H_n(x)$ (ver \cite{Szgo}) se pueden calcular a través de la siguiente expresión (fórmula Rodrigues):
+\begin{equation}\label{her}
+H_n(x)=\displaystyle (-1)^ne^{x^2}\frac{d^{n}}{dx^{n}}\left[ e^{-{x^{2}}}\right].
+\end{equation}
+\end{definition}
+
+Otra forma de calcularlos es a trav\'es de la siguiente funci\'on generatriz (ver sección \ref{fung}):
+\begin{equation}\label{her2}
+e^{2xt-t^2} = \displaystyle\sum\limits_{n=0}^{\infty}H_n(x)\frac{t^n}{n!}.
+\end{equation}
+
+\vspace{0.25cm}
+
+\begin{lemma}
+Los polinomios de Hermite $H_n(x)$ verifican la siguiente relación:
+\begin{equation}\label{her1}
+(2x)^m=\displaystyle\sum\limits_{k=0}^{[m/2]}\binom{m}{2k}\frac{(2k)!}{k!} H_{n-2k}(x).
+\end{equation}
+\end{lemma}
+
+\proof Para los detalles de la prueba de resultado anterior, ver \cite{REF_13}, p.55, Ec.(70).
+
+\vspace{0.25cm}
+
+\begin{definition}
+Los polinomios de Hermite-Kamp\'e de F\'eriet de dos variables (2VHKdFP) $H_n(x,y)$ están definidos por la serie
+\begin{align}
+& \label{hermite2} H_n(x,y)=n!\displaystyle\sum\limits_{r=0}^{[n/2]}\frac{(x^{n-2r}y^r}{r!(n-2r)!},\\
+\intertext{con la siguiente función generatriz}
+& \label{hermite3} \exp(xt+yt^2)=\displaystyle\sum\limits_{n=0}^{\infty}\frac{t^n}{n!}H_n(x,y).
+\end{align}
+\end{definition}
+
+Los 2VHKdFP $H_n(x,y)$ son definidos también por la siguiente identidad operacional
+\begin{equation}\label{hermite4}
+\exp\left(y\frac{\partial^2}{\partial x^2}\right)\{x^n\}=H_n(x,y)
+\end{equation}
+
+\vspace{0.25cm}
+
+\begin{lemma}
+El operador $\exp\left(y\frac{\partial^2}{\partial x^2}\right)$ satisface la siguiente identidad
+\begin{equation}\label{hermite5}
+\exp\left(y\frac{\partial^2}{\partial x^2}\right)\{\exp(-ax^2+bx)\}=\displaystyle\frac{1}{\sqrt{1+4ay}}\exp\left(-\frac{ax^2-bx-b^2y}{1+4ay}\right)
+\end{equation}
+\end{lemma}
+
+\proof Para los detalles de la prueba de resultado anterior, ver \cite{Hermitenew}.
+
+
+
+\subsection{Polinomios Ortogonales de Charlier}
+Podemos definir los polinomios de Charlier (ver \cite{Ch}), $C_n^{(a)}(x)$, por la siguiente función generatríz (ver sección \ref{fung}):
+\begin{equation}\label{chr1}
+e^{-aw}(1+w)^x= \displaystyle\sum\limits_{n=0}^{\infty}C_n^{(a)}(x)\frac{t^n}{n!} \quad a\neq 0.
+\end{equation}
+La representación explícita es
+\begin{equation}\label{chr2}
+C_n^{(a)}(x)= \displaystyle\sum\limits_{k=0}^{n}\binom{n}{k}\binom{x}{k}k!(-a)^{n-k},
+\end{equation}
+y su relación de ortogonalidad
+\begin{center}
+\[\left<C_n^{(a)},C_n^{(a)}\right>= \displaystyle \int_{0}^{\infty} C_n^{(a)}(x)C_m^{(a)}(x) d\psi^{(a)}(x)=\left\{\begin{array}{rcl}
+a^{n}n! & \mbox{si} & n=m\\
+& & \\
+0 & \mbox{si} & n\neq m\\
+\end{array}
+\right. \]
+\end{center}
+
+Donde $d\psi^{(a)}(x)=\displaystyle \frac{e^{-a}a^x}{x!}dx$, $x = 0, 1, 2, \cdots$.
+Por lo tanto el caso definido positivo ocurre para $a>0$ y en este caso $d\psi^{(a)}(x)$ es la distribución de Poisson de la teoría de probabilidad.
+
+\vspace{0.25cm}
+
+\begin{lemma}
+Los polinomios de Charlier pueden ser expresados en términos de los polinomios de Laguerre a través de la siguiente relación (Ver \cite{Ch},p.171, Ec(1.5)):
+\begin{equation}\label{ch3}
+C_n^{(a)}(x)=n!L_{n}^{(x-n)}(a).
+\end{equation}
+\end{lemma}
+
+
+\vspace{0.25cm}
+
+\subsection{Polinomios Ortogonales de Bessel}
+La solución de la ecuación de onda en coordenadas esféricas por la técnica estándar de separación de variables lleva a la ecuación diferencial de Bessel. Por una variación en esta técnica, Krall y Frink \cite{Krall} obtienen la ecuación diferencial
+\begin{equation}\label{difeq}
+x^2y^{''}+2(x+1)y^{'}-n(n+1)y=0.
+\end{equation}
+Donde $n$ es un entero no negativo, (\ref{difeq}) tiene un polinomio solución $y_n(x)$ el cual, con la estandarización $y_n(0)=1$, ellos son llamados \textit{Polinomios de Bessel}.\\
+En el mismo artículo, Krall y Frink introducen una generalización de (\ref{difeq}):
+\begin{equation}\label{difeq1}
+x^2y^{''}+(ax+b)y^{'}-n(n+a+1)y=0.
+\end{equation}
+$b\neq 0, a\neq 0,-1,-2,\cdots$
+Ellos definen los \textit{Polinomios  generalizados de Bessel} $y_n(a,b,x)$ como el polinomio solución de (\ref{difeq1}) satisfaciendo la condición inicial $y_n(a,b,0)=1.$
+
+\vspace{0.25cm}
+
+Si definimos $Y_n^{\alpha}(x)=y_n(\alpha+2,2,x)$ como los polinomios de Bessel ordinarios, entonces $\{Y_n^{\alpha}(x)\}$ es un S.P.O. cuasi-definido y Krall y Frink dan su relación de ortogonalidad
+\begin{equation}\label{bess}
+\displaystyle \frac{1}{2\pi i}\int_{C}Y_m^{\alpha}(x)Y_n^{\alpha}(x)\rho^{\alpha}(z)dz=\frac{2(-1)^{n+1}n!}{(2n+\alpha+1)(\alpha+1)_n}
+\end{equation}
+donde
+\begin{equation}\label{bess2}
+\rho^{\alpha}(z)=\displaystyle\sum\limits_{k=0}^{\infty} \frac{1}{(\alpha+1)_n}\left(-\frac{2}{z}\right)^k
+\end{equation}
+ y la integración es alrededor del círculo unitario.
+
+\vspace{0.25cm}
+
+Consideremos el siguiente polinomio estándar
+\begin{equation}\label{sta}
+\varphi_n (x,c)=\displaystyle \frac{(c)_n}{n!}  {_2}F_{0}(-n,c+n;-;x).
+\end{equation}
+Los polinomios de Bessel son un caso especial de (\ref{sta}) con $c=1$ y $x$ reemplazado por $(-\frac{1}{2}x)$. Para obtener los polinomios de Bessel generalizados, introducimos el parámetro $b$ reemplazando $x$ por $(-x/b)$, haciendo $c=a-1$ y multiplicando $\varphi_n (a-1,-x/b)$ por $n!/(a-1)_n$.
+
+\vspace{0.25cm}
+
+\begin{lemma}
+Los polinomios de Bessel satisfacen la siguiente relación:
+\begin{equation}\label{lbess}
+x^m=\displaystyle \sum\limits_{k=0}^{m}\binom{m}{k}k!\frac{(-1)^k(c+2k)\varphi_k (x,c)}{(c)_{m+k+1}}.
+\end{equation}
+\end{lemma}
+
+\proof Para detalles ver \cite{REF_13}, p. 294, ec(7).
+
+\vspace{0.25cm}
+
+\section{Polinomios de Bernoulli, Euler y Genocchi}
+En esta sección estudiaremos inicialmente los conceptos de función generatríz y series de Taylor con el objetivo de introducir las definiciones y algunas propiedades de los números y polinomios de Euler, Bernoulli y Genocchi. De igual forma se abordaremos las definiciones y propiedades de los llamados números de Stirling de primera y segunda clase. Para m\'as detalles puede consultarse \cite{REF_1, REF_2, REF_3, REF11, REF_12}.
+
+
+\subsection{Función Generatríz}\index{polinomios!ortogonales}\label{fung}
+Si una sucesión de números $g_1, g_2, \cdots,$ está determinada como la sucesión de coeficientes de la expansión en una serie infinita de un cierta función, esta función es llamada la \textit{Función Generatriz} de los números $g_n$.\\
+El tipo más frecuente de las series infinitas que puede tener lugar es una \textit{serie de potencias}\\
+\begin{equation}
+G(t)=\displaystyle \sum\limits_{n=0}^{\infty}g_nt^n.
+\end{equation}
+A menudo, los $g_n$ son funciones de una o varias variables, $x_1, x_2, \cdots, x_p,$ decimos, y tenemos la relación de la forma\\
+\begin{equation}\label{eq:genf8}
+G(x_1, \cdots, x_p;t)=\displaystyle \sum\limits_{n=0}^{\infty}g_n(x_1, \cdots, x_p)t^n.
+\end{equation}
+Aquí $G$ es llamada la función generatriz de las funciones $g_n(x_1, \cdots, x_p)$, y $x_1, \cdots, x_p$, $t$ son considerados como p+1 variables independientes.\\
+
+ Cuando $p=1$ en (\ref{eq:genf8}), escribimos\\
+\begin{equation}
+G(x,t)=\displaystyle \sum\limits_{n=0}^{\infty}g_n(x)t^n.
+\end{equation}
+para la función generatriz $G(x,t)$ de las funciones $g_n(x)$ de una sola variable.\\
+
+
+\subsection{Series de Taylor}\index{polinomios!ortogonales}\label{stay}
+La serie de Taylor de una función $f$ real o compleja $f(x)$ infinitamente diferenciable en el entorno de un número real o complejo $a$ es la siguiente serie de potencias:
+\begin{equation}
+\displaystyle \sum\limits_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n,
+\end{equation}
+si esta serie converge en algún entorno de $a$, entonces f puede ser expresada en términos de la serie así:
+\begin{equation}
+\displaystyle f(x)=\sum\limits_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n.
+\end{equation}
+
+\vspace{0.25cm}
+
+Claramente la serie de Taylor es una serie de potencia de la forma
+\begin{equation}
+\displaystyle \sum\limits_{n=0}^{\infty}a_n(x-a)^n,
+\end{equation}
+donde $a_n=\displaystyle\frac{f^{(n)}(a)}{n!}$, para todo $n=0,1,2,\cdots$.
+
+\vspace{0.25cm}
+
+Teniendo en cuenta lo anterior podemos estudiar la convergencia de la serie de Taylor a partir del comportamiento de $a_n$ como se sigue a continuación:
+
+\begin{lemma}
+Para una serie de potencia dada $\displaystyle\sum\limits_{n=0}^{\infty}a_n(x-a)^n$ se define el número $R$, $0 \leq R \leq \infty$, por:
+\begin{equation}
+\displaystyle \frac{1}{R}=\limsup |a_n|^{1/n},
+\end{equation}
+entonces:
+\begin{enumerate}
+\item[(a)] si $|x-a|<R$, la serie converge absolutamente:
+\item[(b)] si $|x-a|>R$, los términos de las series se vuelven sin límites y así la serie diverge:
+\item[(c)] si $0<r<R$ entonces la serie converge uniformemente en $\{x: |x|\leq r\}$.
+\end{enumerate}
+\end{lemma}
+Al número $R$ se le llama \textit{Radio de Convergencia}.
+
+\vspace{0.25cm}
+
+\begin{lemma}
+Si $\displaystyle\sum\limits_{n=0}^{\infty}a_n(x-a)^n$ es una serie dada con radio de convergencia $R$, entonces
+\begin{equation}
+R= \lim|a_n/a_{n+1}|
+\end{equation}
+\end{lemma}
+
+\subsection{Números de Bernoulli, Euler y Genocchi}\index{polinomios!ortogonales}\label{h}
+\begin{definition}
+Los números de Bernoulli $B_0, B_1, B_2, \cdots$ están definidos como los coeficientes de la funcion generatriz:
+\begin{equation}
+\displaystyle \frac{z}{e^z-1}=\displaystyle \sum\limits_{n=0}^{\infty} \frac{B_nz^n}{n!}, \quad (|t|<2\pi).
+\end{equation}
+\end{definition}
+
+\vspace{0.25cm}
+
+Estos números satisfacen la siguiente relación de recurrencia con $B_0 = 1$:\\
+\begin{equation}\label{eq1}
+  \displaystyle \sum\limits_{k=0}^{n}\binom{n+1}{k}B_k = 0, B_n = \displaystyle -\frac{1}{n+1}\displaystyle \sum\limits_{n=0}^{n-1}\binom{n+1}{k}B_k, (n = 1,2,3,\cdots).
+\end{equation}
+
+\vspace{0.25cm}
+
+La importancia de los números de Bernoulli es que para algunos valores enteros ($k$ es un entero par) están relacionados con la función Zeta de Riemmand como se sigue:\\
+\begin{equation}
+\zeta(k) = \displaystyle\frac{1}{2}(-1)^{(k/2)+1}(2\pi)^{k}\frac{B_k}{k!}
+\end{equation}
+
+\vspace{0.25cm}
+
+\begin{definition}
+Los números de euler $E_0, E_1, E_2, \cdots$ están definidos por el siguiente desarrollo de la serie de Taylor:
+\begin{equation}\label{eq2}
+\displaystyle\frac{1}{\cosh t}= \frac{2}{e^t+e^{-t}}=\displaystyle \sum\limits_{n=0}^{\infty} \frac{E_nt^n}{n!},
+\end{equation}
+expresados de otra forma:
+\begin{center}
+$\displaystyle\frac{2e^t}{e^{2t}+1}=\displaystyle \sum\limits_{n=0}^{\infty} \frac{E_nt^n}{n!}$,  por $t=z/2$ tenemos:
+\end{center}\label{eq:neu1}
+\begin{equation}
+\displaystyle\frac{2e^{\frac{1}{2}z}}{e^{z}+1}=\displaystyle \sum\limits_{n=0}^{\infty} \frac{E_nz^n}{2^nn!}.
+\end{equation}
+\end{definition}
+
+\vspace{0.25cm}
+
+Estos números satisfacen la siguiente relación de recurrencia con $E_0 = 1$:
+\begin{equation}\label{eq:neul}
+  \displaystyle{\sum_{\substack{k=0\\2|n-k}}^n\binom{n}{k}E_k}=0, E_n = -\displaystyle{\sum_{\substack{k=0\\2|n-k}}^{n-1}\binom{n}{k}E_k}, (n = 1,2,3,\cdots)
+\end{equation}
+Los números de Euler también aparecen en los desarrollos de Taylor de la secante trigonométrica circular.
+
+\vspace{0.25cm}
+
+\begin{definition}
+Los números de Genocchi, así nombrados en honor a Angelo Genocchi $G_0, G_1, G_2, \cdots$ están definidos a través de la siguiente función generatríz:
+\begin{equation}\label{geno}
+ \displaystyle \frac{2t}{e^t+1}=\sum\limits_{n=0}^{\infty} \frac{G_nt^n}{n!},\quad (|t|<2\pi).
+\end{equation}
+\end{definition}
+
+\vspace{0.25cm}
+
+Los números de genocchi de índice par están en relación directa con los polinomios de Bernoulli
+\begin{equation}
+ G_{2n}=2(1-2^{2n})B_{2n}.
+\end{equation}
+
+
+\vspace{0.25cm}
+
+Por inducción, todos los números de Bernoulli son racionales y todos los números de Euler y de Genocchi son enteros.
+
+\vspace{0.25cm}
+
+A continuación se muestra una lista de $B_n$ y $E_n$ con $n \leq 10$.
+
+\newcolumntype{M}{>{$}c<{$}} %Las columnas M aceptan texto matem\'atico
+\begin{table}[h]
+\centering
+\begin{tabular}{|M|M|M|M|M|M|M|M|M|M|M|M|}\hline
+n & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+B_n & 1 & -1/2 & 1/6 & 0 & -1/30 & 0 & 1/42 & 0 & -1/30 & 0 & 5/66 \\ \hline
+E_n & 1 & 0 & -1 & 0 & 5 & 0 & -61 & 0 & 1385 & 0 & -50521 \\ \hline
+G_n & 0 & 1 & -1 & 0 & 1 & 0 & -3 & 0 & 17 & 0 & -155 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Polinomios de Bernoulli, Euler y Genocchi}\index{polinomios!ortogonales}\label{polbeg}
+\begin{definition}
+Para $n\in\NN = \{0,1,2,\cdots\}$ el $n$-ésimo polinoio de Bernoulli polynomial $B_n(x)$, el  $n$-ésimo polinomio de Euler $E_n(x)$ y el $n$-ésimo polinomio de Genocchi $G_n(x)$ están definidos como los coeficientes de las siguientes funciones generatrices
+\begin{equation}\label{bern}
+\displaystyle \frac{ze^{zx}}{e^z-1}=\displaystyle \sum\limits_{k=0}^{\infty} \frac{B_n(x)z^n}{k!} \quad (|z|<2\pi),
+\end{equation}
+\begin{equation}\label{euler}
+\displaystyle \frac{2e^{zx}}{e^z+1}=\displaystyle \sum\limits_{k=0}^{\infty} \frac{E_n(x)z^n}{k!} \quad (|z|<\pi),
+\end{equation}
+y
+\begin{equation}\label{genpol23}
+\displaystyle \frac{2te^{zx}}{e^z+1}=\displaystyle \sum\limits_{k=0}^{\infty} \frac{G_n(x)z^n}{k!} \quad (|z|<2\pi),
+\end{equation}
+\end{definition}
+
+El siguiente lema muestra que las funciones $B_n(x)$, $E_n(x)$ y $G_n(x)$ son de hecho polinomios,
+y están determinados por los números de Bernoulli, Euler y Genocchi respectivamente:\\
+
+\begin{lemma}
+Para los polinomios de Bernoulli, de Euler y de Genocchi se cumple:
+\begin{equation}\label{t1}
+B_n(x) = \displaystyle \sum\limits_{k=0}^{n}\binom{n}{k}B_kx^{n-k},
+\end{equation}
+
+\begin{equation}\label{t2}
+E_n(x) = \displaystyle \sum\limits_{k=0}^{n}\binom{n}{k}\frac{E_k}{2^k}\left(x-\frac{1}{2}\right)^{n-k}
+\end{equation}
+y
+\begin{equation}\label{t3}
+G_n(x) = \displaystyle \sum\limits_{k=0}^{n}\binom{n}{k}\frac{G_k}x^{n-k}
+\end{equation}
+\end{lemma}
+
+\proof
+Para los polinomios de Bernoulli, tenemos:
+\begin{center}
+$\displaystyle \displaystyle \sum\limits_{n=0}^{\infty} \frac{B_n(x)z^n}{n!}=\frac{ze^{xz}}{e^z-1}=\left(\sum\limits_{n=0}^{\infty} \frac{B_nz^n}{n!}\right)\left(\sum\limits_{n=0}^{\infty} \frac{x^n}{n!}z^n\right)$,
+\end{center}
+aplicando el producto de series de Cauchy, tenemos:
+\begin{center}
+$=\sum\limits_{n=0}^{\infty} \left(\sum\limits_{k=0}^{n} \displaystyle \frac{B_k}{k!}\frac{x^{n-k}}{(n-k)!}\right)z^n$,
+\end{center}
+entonces, comparando los coeficientes de la serie de potencia, se sigue que:
+\begin{center}
+$B_n(x) = n!\sum\limits_{k=0}^{n} \displaystyle \frac{B_k}{k!}\frac{x^{n-k}}{(n-k)!}=\sum\limits_{k=0}^{n}\binom{n}{k}B_kx^{n-k}$.
+\end{center}
+
+\vspace{0.25cm}
+
+Analogamente, para los polinomios de Euler, tenemos:
+\begin{center}
+$\displaystyle \displaystyle \sum\limits_{n=0}^{\infty} \frac{E_n(x)z^n}{n!}=\frac{2e^{xz}}{e^z+1}=\frac{2e^{z\frac{1}{2}}}{e^z+1}e^{(x-\frac{1}{2})z}=\left(\sum\limits_{n=0}^{\infty} \frac{E_nz^n}{2^nn!}\right)\left(\sum\limits_{n=0}^{\infty} \frac{(x-\frac{1}{2})^n}{n!}z^n\right)$,
+\end{center}
+aplicando el producto de series de Cauchy, tenemos:
+\begin{center}
+$=\sum\limits_{n=0}^{\infty} \left(\sum\limits_{k=0}^{n} \displaystyle \frac{E_k}{2^kk!}\frac{(x-\frac{1}{2})^{n-k}}{(n-k)!}\right)z^n$,
+\end{center}
+por lo tanto, comparando los coeficientes de la serie de potencia, se sigue que:
+\begin{center}
+$E_n(x) = n!\displaystyle \sum\limits_{k=0}^{n} \displaystyle \frac{E_k}{2^kk!}\frac{(x-\frac{1}{2})^{n-k}}{(n-k)!}=\sum\limits_{k=0}^{n}\binom{n}{k}\frac{E_k}{2^k}\left(x-\frac{1}{2}\right)^{n-k}$.
+\end{center}
+
+\vspace{0.25cm}
+
+Finalmente, para los polinomios de Genocchi, tenemos:
+\begin{center}
+$\displaystyle \displaystyle \sum\limits_{n=0}^{\infty} \frac{G_n(x)z^n}{n!}=\frac{2ze^{xz}}{e^z+1}=\left(\sum\limits_{n=0}^{\infty} \frac{G_nz^n}{n!}\right)\left(\sum\limits_{n=0}^{\infty} \frac{x^n}{n!}z^n\right)$,
+\end{center}
+aplicando el producto de series de Cauchy, tenemos:
+\begin{center}
+$=\sum\limits_{n=0}^{\infty} \left(\sum\limits_{k=0}^{n} \displaystyle \frac{G_k}{k!}\frac{x^{n-k}}{(n-k)!}\right)z^n$,
+\end{center}
+Entonces, comparando los coeficientes de la serie de potencia, se sigue que:
+\begin{center}
+$G_n(x) = n!\sum\limits_{k=0}^{n} \displaystyle \frac{G_k}{k!}\frac{x^{n-k}}{(n-k)!}=\sum\limits_{k=0}^{n}\binom{n}{k}G_kx^{n-k}$.
+\end{center}
+\lqqd
+
+\vspace{0.25cm}
+
+\begin{obs}
+Claramente $B_n(x)$, $E_n(x)$ y $G_n$ son polinomios mónicos con coeficientes racionales. Note que $B_n(0)= B_n$,  $E_n(1/2)=E_n/2^n$ y $G_n(0)= G_n$.
+\end{obs}
+
+\vspace{0.25cm}
+
+ A continuación presentamos una lista de $B_n(x)$, $E_n(x)$ y $G_n(x)$ con $n \leq 5$.
+
+\newcolumntype{M}{>{$}c<{$}} %Las columnas M aceptan texto matem\'atico
+\begin{table}[h]
+\centering
+\begin{tabular}{|M|M|M|M|M|M|M|}\hline
+n & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+B_n(x) & 1 & x-\frac{1}{2} & x^2-x+\frac{1}{6} & x^3-\frac{3}{2}x^2+\frac{x}{2} & x^4-2x^3+x^2-\frac{1}{30} & x^5-\frac{5}{4}x^4+\frac{5}{3}x^3-\frac{x}{6} \\ \hline
+E_n(x) & 1 & x-\frac{1}{2} & x^2-x & x^3-\frac{3}{2}x^2+\frac{1}{6} & x^4-2x^3+\frac{2}{3}x & x^5-\frac{5}{2}x^4+\frac{5}{3}x^2-\frac{1}{2} \\ \hline
+G_n(x) & 0 & 1 & 2x-1 & 3x^2-3x & 4x^3-6x^2+1 & 5x^4-10x^3+5x \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.25cm}
+
+\begin{lemma}
+Los polinomios de Genocchi $G_n(x)$ verifican la siguiente relación:
+\begin{equation}\label{eq12}
+x^m=\displaystyle\frac{1}{2(m+1)}\left[\sum\limits_{k=0}^{m}\binom{m+1}{k+1}G_{k+1}(x)+G_{m+1}(x)\right].
+\end{equation}
+\end{lemma}
+Para los detalles de la prueba de resultado anterior, consulte \cite{REF11}.
+
+\vspace{0.25cm}
+
+\subsection{Polinomios de Appell}\index{polinomios!ortogonales}\label{Appell}
+Appell \cite{Appell} en el año de 1832 demostró que los polinomios de Bernoulli $B_n(x)$ forman un tipo especial de polinomios que llevan su nombre y dió una definición alternativa de estos polinomios.
+
+\begin{definition}
+Sea $\{R_n(x)\}$ una suceción de polinomios de grado $n$, se dice que $\{R_n(x)\}$ es una sucesión de polinomios de Appell si $R_n(x)$ es generado por la siguiente función generatriz:
+\begin{equation}
+A(t)e^{xt}=\displaystyle \sum\limits_{n=0}^{\infty}\frac{R_n(x)}{n!}t^n,
+\end{equation}
+donde
+\begin{equation}
+A(t)=\displaystyle \sum\limits_{k=0}^{\infty}\frac{R_k}{k!}t^k; \quad (A(0)\neq 0),
+\end{equation}
+es una función analítica en $t=0$ y se cumple que:
+\begin{equation}\label{ruler}
+nR_{n-1}(x)=\displaystyle \frac{d}{dx}R_n(x); \quad (\forall n\geq 1).
+\end{equation}
+En este caso llamamos a $R_n(x)$ polinomios de Appell de grado $n$.
+\end{definition}
+
+\vspace{0.25cm}
+
+\begin{lemma}\label{lemapp}
+Los polinomios de Appell $R_n(x)$ satisfacen la ecuación diferencial:
+\begin{equation}\label{eqappell}
+\displaystyle \frac{\alpha_{n-1}}{(n-1)!}y^{(n)}+\frac{\alpha_{n-2}}{(n-2)!}y^{(n-1)}+\cdots+\frac{\alpha_{1}}{1!}y^{''}+(x+\alpha_0)y^{'}-ny=0,
+\end{equation}
+donde los coeficientes numéricos $\alpha_{k}$, $k = 1,2,\cdots,n-1$ están definidos por
+\begin{equation}\label{eqalpha}
+\displaystyle\frac{A'(t)}{A(t)}= \sum\limits_{n=0}^{\infty}\alpha_{k}\frac{t^n}{n!}.
+\end{equation}
+\end{lemma}
+
+\vspace{0.25cm}
+
+Para ver detalles del resultado anterior ver \cite{Appell2}.
+
+\vspace{0.25cm}
+
+\section{Las generalizaciones más importantes para los Polinomios de Bernoulli, Euler y Genocchi}
+En está sección mostraremos las dos generalizaciones más importantes de los polinomios de Bernoulli $B_n(x)$, de los polinomios de Euler $E_n(x)$ y de los polinomios de Genocchi $G_n(x)$ definidos en (\ref{bern}), (\ref{euler}) y (\ref{genpol23}) respectivamente.
+
+\subsection{Los Polinomios de Bernoulli, Euler y Genocchi generalizados}
+
+\begin{definition}
+Los polinomios de Bernoulli generalizados $B_n^{(\alpha)}(x)$, los polinomios de Euler generalizados $E_n^{(\alpha)}(x)$ y los polinomios de Genocchi generalizados $G_n^{(\alpha)}(x)$ de orden $\alpha$ (real o complejo) están definidos por las siguientes funciones generatrices:
+
+\begin{equation}\label{bern1}
+\displaystyle \left(\frac{z}{e^z-1}\right)^{\alpha} e^{zx}= \sum\limits_{k=0}^{\infty} \frac{B_n^{\alpha}(x)z^n}{k!} \quad (|z|<2\pi),
+\end{equation}
+\begin{equation}\label{euler1}
+\displaystyle \left(\frac{2}{e^z+1}\right)^{\alpha} e^{zx}= \sum\limits_{k=0}^{\infty} \frac{E_n^{\alpha}(x)z^n}{k!} \quad (|z|<\pi),
+\end{equation}
+and
+\begin{equation}\label{gen1}
+\displaystyle \left(\frac{2z}{e^z+1}\right)^{\alpha} e^{zx}= \sum\limits_{k=0}^{\infty} \frac{G_n^{\alpha}(x)z^n}{k!} \quad (|z|<\pi).
+\end{equation}
+\end{definition}
+
+\vspace{0.25cm}
+
+\begin{obs}
+Para $\alpha=1$ tenemos $B_n^{(1)}(x)=B_n(x)$, $E_n^{(1)}(x)=E_n(x)$ y $G_n^{(1)}(x)=G_n(x)$.
+\end{obs}
+
+
+\subsection{Los Polinomios de Apostol-Bernoulli, Apostol-Euler y Apostol-Genocchi}
+
+\begin{definition}\label{abp}
+ Los polinomios de Apostol-Bernoulli $\mathfrak{B}_{n}(x;\lambda)$, los polinomios de Apostol-Euler $\mathfrak{E}_{n}(x;\lambda)$ y los polinomios de Apostol-Genocchi $\mathfrak{G}_{n}(x;\lambda)$ de grado $n$ y $\lambda \in \CC$ están definidos por las siguientes funciones generatrices:
+\begin{equation}\label{eq3}
+\displaystyle\frac{ze^{xz}}{\lambda e^z-1} =\displaystyle \sum\limits_{n=0}^{\infty}
+\mathfrak{B}_{n}(x;\lambda)\frac{z^n}{n!},
+\end{equation}
+$(|z|<2\pi$ cuando $\lambda=1; |z|<|\log(\lambda)|$ cuando $ \lambda\neq 1)$.
+\begin{equation}\label{eq300}
+\displaystyle\frac{2e^{xz}}{\lambda e^z+1} =\displaystyle \sum\limits_{n=0}^{\infty}
+\mathfrak{E}_{n}(x;\lambda)\frac{z^n}{n!},
+\end{equation}
+$(|z|<\pi$ cuando $\lambda=1; |z|<|\log(\lambda)|$ cuando $ \lambda\neq 1)$.
+\begin{equation}\label{eq301}
+\displaystyle\frac{2ze^{xz}}{\lambda e^z+1} =\displaystyle \sum\limits_{n=0}^{\infty}
+\mathfrak{G}_{n}(x;\lambda)\frac{z^n}{n!},
+\end{equation}
+$(|z|<\pi$ cuando $\lambda=1; |z|<|\log(\lambda)|$ cuando $ \lambda\neq 1)$.
+\end{definition}
+
+\vspace{0.25cm}
+
+\begin{obs}
+Para $\lambda=1$ tenemos $\mathfrak{B}_n(x;1)=B_n(x)$, $\mathfrak{E}_n(x;1)=E_n(x)$ y $\mathfrak{G}_n(x;1)=G_n(x)$.
+\end{obs}
+
+\vspace{0.25cm}
+
+\begin{lemma}\label{lemeu}
+Los polinomios de Apostol-Euler $\mathfrak{E}_{n}(x;\lambda)$ verifican la siguiente relación:
+\begin{equation}
+x^n=\displaystyle \frac{1}{2}\left[\lambda \sum\limits_{k=0}^{n}\binom{n}{k}\mathfrak{E}_{k}(x;\lambda)+\mathfrak{E}_{n}(x;\lambda)\right]
+\end{equation}
+\end{lemma}
+
+\vspace{0.25cm}
+
+Para detalles de la prueba del anterior resultado, ver \cite{REF9}, p.635, Ec.(32).
+
+\vspace{0.25cm}
+
+\section{Números de Stirling}
+
+En esta sección estudiaremos los números de Stirling cuya importancia está inmersa en la teoría combinatoria.
+
+\subsection{Números de Stirling de Primera Clase}
+Notamos $S(m,n)$ a los números de Stirling de primera clase, se definen como sigue a continuación:
+\begin{enumerate}
+\item[A.] $(-1)^{n-m}S(n,m)$ es el número de permutaciones de $n$ símbolos los cuales tienen exactamente $m$ ciclos.
+\item[B.] A través de funciones generatrices:\\
+\begin{equation}
+x(x-1)\cdots(x-n+1)=\displaystyle \sum\limits_{m=0}^{n}S(n,m)x^m
+\end{equation}
+\begin{equation}\{\ln(1+x)\}^{m}=m!\displaystyle \sum\limits_{m=0}^{n}S(n,m)\frac{x^n}{n!} \quad (|x|<1)
+\end{equation}
+\end{enumerate}
+
+\subsection{Números de Stirling de Segunda Clase}
+\begin{definition}
+Los números de Stirling de segunda clase $\mathfrak{S}(n,k)$ (ver \cite{REF_12}, p.58, Eq.(15)) están definidos a através de las siguientes funciones generatrices:
+\begin{equation}\label{eq27}
+z^n = \displaystyle\sum\limits_{k=0}^{n}\mathfrak{S}(n,k)t(t-1)\cdots(t-k+1),
+\end{equation}
+
+\begin{equation}\label{eq28}
+(e^t+1)^k = \displaystyle k!\sum\limits_{n=k}^{\infty}\mathfrak{S}(n,k)\frac{t^n}{n!},
+\end{equation}
+
+\begin{equation}\label{eq29}
+(1-t)^{-1}(1-2t)^{-1}\cdots (1-kt)^{-1} = \displaystyle\sum\limits_{n=k}^{\infty}\mathfrak{S}(n,k)t^{n-k}\, (|t|<k^{-1}),
+\end{equation}
+donde $\mathfrak{S}(n,k)$ denota el números de maneras de particionar un conjunto de $n$ elementos en $k$ subconjuntos no vacíos.
+\end{definition}
+
+\begin{lemma}
+Los números de Stirling de segunda clase $\mathfrak{S}(n,k)$ verificican la siguiente relación:
+\begin{equation}\label{eq15}
+x^m=\displaystyle\sum\limits_{k=0}^{m}\binom{x}{k}k!\mathfrak{S}(m,k).
+\end{equation}
+\end{lemma}
+Para detalles de la prueba de este resultado ver \cite{REF_12}, p.58, Eq.(15).
+
+
